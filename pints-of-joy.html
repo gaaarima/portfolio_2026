@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pints of Joy — Inventory App · Garima Shrestha</title>
+  <meta name="description" content="From my first UX case study to a working product a real business uses every day. Inventory management web app — design and front-end build." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%237a1f2b'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23f7f2e9' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="site-head">
+    <div class="wrap nav">
+      <a href="index.html" class="brand">Garima Shrestha<span class="dot">.</span></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="work.html" aria-current="page">Work</a>
+        <a href="teesa.html">Teesa</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero wrap cs-hero">
+      <span class="eyebrow reveal">Case study · Web app</span>
+      <h1 class="cs-title reveal" data-delay="1" style="margin-top:1.2rem;">Pints of Joy —<br />Inventory Management App</h1>
+      <p class="cs-tagline reveal" data-delay="2">From my first UX case study to a working product a real business uses every day.</p>
+
+      <div class="snapshot reveal" data-delay="2">
+        <div class="snapshot__cell"><div class="snapshot__k">Role</div><div class="snapshot__v">Lead UX Designer &amp; Researcher (P1) · Front-End Developer (P2)</div></div>
+        <div class="snapshot__cell"><div class="snapshot__k">Timeline</div><div class="snapshot__v">Sep 2024 – Mar 2025 (design) · <span class="todo">[build dates]</span></div></div>
+        <div class="snapshot__cell"><div class="snapshot__k">Tools</div><div class="snapshot__v">Figma, <span class="todo">Vue.js / HTML / CSS</span>, Illustrator</div></div>
+        <div class="snapshot__cell"><div class="snapshot__k">Outcome</div><div class="snapshot__v">Designed &amp; built an inventory app now used daily by <span class="todo">[Company]</span></div></div>
+      </div>
+    </section>
+
+    <section class="section--tight wrap">
+      <figure class="fig reveal">
+        <!-- Replace with: <img src="assets/pints-home.png" alt="Pints of Joy homepage screen"> -->
+        <div class="frame frame--wide"><span class="frame__cap">Pints of Joy homepage — Figma</span></div>
+        <figcaption>Pints of Joy homepage screen — created in Figma.</figcaption>
+      </figure>
+    </section>
+
+    <!-- BODY -->
+    <section class="section--tight wrap">
+      <div class="cs-body">
+        <h2 class="reveal">Overview</h2>
+        <p class="reveal">Pints of Joy is an inventory app that helps small businesses order and organize stock without the shortages, missed counts, and last-minute supply runs that plague manual systems. It began as my first end-to-end UX project and grew into a functional web app in real-world use.</p>
+        <p class="reveal"><strong>The problem.</strong> Small-restaurant inventory is plagued by recurring shortages and missed orders, forcing managers to constantly run out for minor essentials.</p>
+        <p class="reveal"><strong>The goal.</strong> Close those gaps so stock flows continuously — no shortages, no scramble.</p>
+
+        <!-- ===== PHASE 1 ===== -->
+        <span class="phase-tag reveal" style="margin-top:3rem;">Phase 1</span>
+        <h2 class="reveal" style="margin-top:0.4rem;">Designing the concept</h2>
+        <p class="reveal">This was the first product I ever designed end to end. I leaned on the UX process I was learning — research, personas, wireframes, prototypes, usability testing, and accessibility — and I owned every step.</p>
+
+        <h3 class="reveal">Understanding the user</h3>
+        <p class="reveal">I focused on the people doing daily inventory work — mostly restaurant managers and owners — and interviewed them to understand their pain points and whether the process could be automated through an app.</p>
+        <h4 class="reveal">Pain points</h4>
+        <ol class="reveal">
+          <li><strong>Time</strong> — counting and ordering inventory is slow, tedious work.</li>
+          <li><strong>Human error</strong> — people forget to count or order items, which disrupts operations.</li>
+          <li><strong>Not inclusive</strong> — most inventory apps target warehouses and big numbers, not small-scale restaurants.</li>
+        </ol>
+
+        <div class="persona reveal">
+          <div class="persona__name">Sugam Pokhrel</div>
+          <div class="persona__role">Restaurant Manager</div>
+          <p class="persona__need">Needs to manage inventory efficiently so the restaurant runs smoothly. Goals: manage inventory more efficiently; track stock in and out with less hassle.</p>
+          <div class="persona-quotes">
+            <p>"Even with a thorough list, we're human — we forget sometimes."</p>
+            <p>"My employees don't always coordinate, so we over- or under-order."</p>
+          </div>
+        </div>
+
+        <div class="persona reveal">
+          <div class="persona__name">Sandra Smith</div>
+          <div class="persona__role">Senior Manager</div>
+          <p class="persona__need">Needs to get the right items to every restaurant, or pay for expensive express shipping. Goals: coordinate across branches; track invoices and expenses; build an ordering system every employee can use.</p>
+          <div class="persona-quotes">
+            <p>"Coordinating orders across all the restaurants is hard."</p>
+            <p>"Miscommunication and delays lead to shortages — and that's hectic."</p>
+          </div>
+        </div>
+
+        <h3 class="reveal">User journey — Sugam (managing inventory)</h3>
+        <p class="reveal">The task isn't hard; human error makes it hard. Across the flow — checking inventory, making a list, ordering, confirming receipt, and organizing — the opportunities were clear: coordinate with employees, build a complete item list, give easy access to all items, and keep storage well organized.</p>
+
+        <h3 class="reveal">User journey — Sandra (managing 15 corporate restaurants)</h3>
+        <p class="reveal">Sending orders to 15 restaurants makes communication the key challenge. The opportunities: a pre-made list, one channel for all incoming orders, an automated system that compares orders against existing inventory, shipment tracking, and easy manager-to-manager communication.</p>
+
+        <h3 class="reveal">Starting the design</h3>
+        <p class="reveal">Paper wireframes → digital wireframes → low-fidelity prototype. Core flow: users land on the homepage and scan an item to add it to or subtract it from inventory.</p>
+        <figure class="fig reveal">
+          <!-- Replace with: <img src="assets/pints-wireframes.png" alt="Wireframes"> -->
+          <div class="frame"><span class="frame__cap">Wireframes → low-fi prototype</span></div>
+          <figcaption>Paper and digital wireframes — created in Figma.</figcaption>
+        </figure>
+
+        <h3 class="reveal">Usability studies</h3>
+        <p class="reveal">I ran a moderated, in-person study on the low-fi prototype and an unmoderated, in-person study on the high-fi prototype.</p>
+        <p class="reveal"><strong>Round 1 found:</strong> users wanted a clearer flow and a back button; easier item scanning; and an organized area for items and their counts.</p>
+        <p class="reveal"><strong>Round 2 found:</strong> users wanted a tabulated item list; easy access with icons and a back button; and more information on the home screen.</p>
+
+        <h3 class="reveal">Refining the design</h3>
+        <p class="reveal">Mockups → high-fidelity prototype → accessibility updates.</p>
+        <p class="reveal"><strong>Accessibility:</strong> added icons and back buttons for easier navigation; used high-contrast colors for visually impaired users; and added item images for quick recognition.</p>
+
+        <!-- ===== PHASE 2 =====
+             NOTE TO GARIMA: Only keep this section if a real business actually uses the
+             app. Replace every .todo marker with true details, or delete the whole
+             Phase 2 block (down to "What I learned") if it didn't ship. -->
+        <span class="phase-tag reveal" style="margin-top:3rem;">Phase 2</span>
+        <h2 class="reveal" style="margin-top:0.4rem;">Building it for real</h2>
+        <p class="reveal">After designing the concept, I partnered with <span class="todo">[Company]</span> to turn it into a working product. I built the front end in <span class="todo">Vue.js</span>, translating my high-fidelity designs into a live interface their team could actually use on the floor.</p>
+        <p class="reveal"><strong>What I built:</strong> <span class="todo">[scan-to-update inventory, searchable item list, low-stock alerts, order list]</span>. I designed a dark theme because the tool is used throughout long shifts — lower glare is easier on the eyes.</p>
+        <p class="reveal"><strong>Impact:</strong> <span class="todo">[Company]</span> now uses Pints of Joy as part of daily operations. <span class="todo">[Add one real number: tracks X items · cut weekly inventory time from X to Y · X fewer missed orders per month.]</span></p>
+
+        <blockquote class="pullquote reveal">
+          "This will make my life a lot easier and save a lot of time."
+          <cite>— <span class="todo">[user / owner], [Company]</span></cite>
+        </blockquote>
+
+        <h2 class="reveal">What I learned</h2>
+        <p class="reveal">As my first UX project, this taught me to design for the way people actually work, not the way a process looks on paper. Putting myself in the users' shoes — and applying Gestalt principles to keep the interface readable at a glance — made the design more intuitive. Building the front end myself taught me where clean design meets real engineering constraints.</p>
+
+        <h2 class="reveal">Next steps</h2>
+        <ol class="reveal">
+          <li>Another round of usability testing on the scanner screen — it's the heart of the app.</li>
+          <li>Add features and subtle animation for clearer feedback.</li>
+          <li>Expand alt text and assistive-tech support.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section--tight wrap reveal">
+      <a href="work.html" class="link-underline">← Back to all work</a>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <div>
+        <div class="foot-big">Next: Teesa →</div>
+        <div class="foot-meta" style="margin-top:1.5rem;">© 2026 Garima Shrestha. All rights reserved.</div>
+      </div>
+      <div class="foot-links">
+        <a href="teesa.html" class="link-underline">Teesa</a>
+        <a href="fittrack.html" class="link-underline">FitTrack</a>
+        <a href="contact.html" class="link-underline">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

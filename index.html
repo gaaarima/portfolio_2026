@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garima Shrestha — UX &amp; Digital Designer</title>
+  <meta name="description" content="UX & digital designer turning scattered, complex tasks into clear, guided experiences. Product design from research to shipped front-end, with a fine-jewelry eye." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%237a1f2b'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23f7f2e9' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="site-head">
+    <div class="wrap nav">
+      <a href="index.html" class="brand">Garima Shrestha<span class="dot">.</span></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="work.html">Work</a>
+        <a href="teesa.html">Teesa</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow reveal">UX &amp; Digital Designer</span>
+          <h1 class="display reveal" data-delay="1" style="margin-top:1.4rem;">
+            Clarity,<br />by <span class="serif-it accent">design.</span>
+          </h1>
+          <p class="lead hero-sub reveal" data-delay="2">
+            I turn scattered, complex tasks into clear, guided experiences — designing
+            digital products end to end, from research to shipped front-end, with a
+            visual eye drawn from fine jewelry, illustration, and photography.
+          </p>
+          <div class="hero-cta reveal" data-delay="3">
+            <a href="work.html" class="btn">View work <span class="arrow">↗</span></a>
+            <a href="about.html" class="btn btn--ghost">About me</a>
+          </div>
+        </div>
+
+        <!-- Replace this block with your custom Illustrator illustration:
+             <div class="hero-art"><img src="assets/hero-illustration.png" alt="Digital illustration by Garima"></div> -->
+        <div class="hero-art reveal" data-delay="2">
+          <svg class="lattice" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <pattern id="newari" width="56" height="56" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <rect width="56" height="56" fill="none"/>
+                <path d="M28 4 L52 28 L28 52 L4 28 Z" fill="none" stroke="#b0863c" stroke-width="1.1"/>
+                <circle cx="28" cy="28" r="4.5" fill="#7a1f2b"/>
+                <path d="M28 14 L42 28 L28 42 L14 28 Z" fill="none" stroke="#7a1f2b" stroke-width="0.7"/>
+              </pattern>
+            </defs>
+            <rect width="400" height="500" fill="url(#newari)"/>
+          </svg>
+          <div style="position:relative;text-align:center;padding:1.5rem;">
+            <div style="font-family:var(--display);font-size:clamp(2.4rem,6vw,3.6rem);color:var(--claret);font-style:italic;line-height:1;">Garima</div>
+            <div style="font-size:0.72rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink-soft);margin-top:0.9rem;">Digital illustration · Adobe Illustrator · 2026</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED -->
+    <section class="section wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Featured</span>
+        <h2>Selected projects</h2>
+      </div>
+      <div class="tiles">
+        <a href="pints-of-joy.html" class="tile reveal" data-delay="1">
+          <div class="tile__img"><div class="frame"><span class="frame__cap">Pints of Joy</span></div></div>
+          <div class="tile__body">
+            <span class="tile__kicker">Web app · Real client</span>
+            <div class="tile__title">Pints of Joy</div>
+            <p class="tile__desc">An inventory app I designed and built — now in daily use by a real business.</p>
+            <span class="tile__more">Read case study <span class="arrow">→</span></span>
+          </div>
+        </a>
+        <a href="teesa.html" class="tile reveal" data-delay="2">
+          <div class="tile__img"><div class="frame"><span class="frame__cap">Teesa</span></div></div>
+          <div class="tile__body">
+            <span class="tile__kicker">Brand &amp; packaging</span>
+            <div class="tile__title">Teesa</div>
+            <p class="tile__desc">A luxury jewelry brand rooted in Newari textile heritage and Nepali craft.</p>
+            <span class="tile__more">Explore the brand <span class="arrow">→</span></span>
+          </div>
+        </a>
+        <a href="fittrack.html" class="tile reveal" data-delay="3">
+          <div class="tile__img"><div class="frame"><span class="frame__cap">FitTrack</span></div></div>
+          <div class="tile__body">
+            <span class="tile__kicker">Mobile · AI</span>
+            <div class="tile__title">FitTrack</div>
+            <p class="tile__desc">An all-in-one fitness app with AI coaching for workouts, nutrition &amp; weight.</p>
+            <span class="tile__more">Read case study <span class="arrow">→</span></span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <div>
+        <div class="foot-big">Let's build<br />something clear.</div>
+        <div class="foot-meta" style="margin-top:1.5rem;">© 2026 Garima Shrestha. All rights reserved.</div>
+      </div>
+      <div class="foot-links">
+        <a href="contact.html" class="link-underline">Contact</a>
+        <a href="mailto:garimaartcam@gmail.com" class="link-underline">Email</a>
+        <a href="work.html" class="link-underline">Work</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
