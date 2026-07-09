@@ -15,7 +15,6 @@ Suggested file names (match what the comments reference):
 - `pints-home.png`, `pints-wireframes.png` — Pints of Joy
 - `fittrack-home.png`, `fittrack-screens.png` — FitTrack
 - `teesa-identity.png`, `teesa-packaging.png` — Teesa
-- `sethi-grid.png` — Sethi Fine Jewelry
 - `garima.jpg` — your About portrait
 - `resume.pdf` — downloadable resume
 

@@ -11,7 +11,6 @@ dependencies. Open `index.html` in a browser to view.
 | `pints-of-joy.html` | Pints of Joy — inventory web app (anchor case study) |
 | `fittrack.html` | FitTrack — AI fitness app |
 | `teesa.html` | Teesa — luxury jewelry brand |
-| `sethi.html` | Sethi Fine Jewelry — selected e-commerce work |
 | `about.html` | About + skills |
 | `contact.html` | Contact |
 

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%237a1f2b'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23f7f2e9' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%239b1b3f'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23faf6ef' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
   <header class="site-head">
@@ -42,21 +42,20 @@
 
     <section class="section--tight wrap">
       <figure class="fig reveal">
-        <!-- Replace with: <img src="assets/fittrack-home.png" alt="FitTrack home screen"> -->
-        <div class="frame frame--wide"><span class="frame__cap">FitTrack home screen — Figma</span></div>
-        <figcaption>FitTrack home screen — created in Figma.</figcaption>
+        <img src="assets/fittrack-userflow-hifi.png" alt="High-fidelity FitTrack screens — start page, body diagram, workout plan, workout log, stats, protein intake, streak, and profile — connected by a user-flow map">
+        <figcaption>High-fidelity screens &amp; user flow — created in Figma.</figcaption>
       </figure>
     </section>
 
     <section class="section--tight wrap">
       <div class="cs-body">
         <h2 class="reveal">Overview</h2>
-        <p class="reveal">FitTrack helps users optimize their fitness journey in one place — tracking workouts, protein intake, and weight progress, enhanced with AI for personalized coaching, smarter nutrition tracking, and adaptive progress monitoring.</p>
+        <p class="reveal">FitTrack is an all-in-one mobile solution for tracking workouts, protein intake, and weight progress — enhanced with artificial intelligence. Designed for fitness enthusiasts and beginners alike, it uses AI to deliver personalized coaching, smarter nutrition tracking, and adaptive progress monitoring, making healthy living simpler, more motivating, and more effective.</p>
         <p class="reveal"><strong>Problem.</strong> Generic, one-size-fits-all fitness plans with low motivation, plus the hassle of stitching together separate apps for fitness, nutrition, and health data.</p>
         <p class="reveal"><strong>Goal.</strong> Track and optimize the user's fitness journey while monitoring daily protein intake and weight progress.</p>
 
         <h2 class="reveal">My role &amp; deliverables</h2>
-        <p class="reveal">UX designer from concept to delivery · wireframing · low- and high-fidelity prototyping · usability studies · accessibility · design iteration.</p>
+        <p class="reveal">UX designer from concept to delivery · low- to high-fidelity wireframing · interactive prototyping &amp; user-flow mapping · UI design system.</p>
 
         <h2 class="reveal">User research</h2>
         <p class="reveal">Research showed that enthusiasts and beginners alike are motivated by visible results and mental-health benefits, but struggle with fragmented experiences across multiple apps, tedious manual entry, and generic plans. Many find it hard to interpret their metrics and know what to do next, which — combined with low motivation and time constraints — leads to inconsistent logging and disengagement. The takeaway: people need an integrated, AI-powered tool that automates tracking, delivers personalized insight, and keeps them accountable.</p>
@@ -68,26 +67,40 @@
         </ul>
 
         <h2 class="reveal">Design process</h2>
-        <!-- NOTE TO GARIMA: fill these with your real screens & findings, or keep the
-             "In progress" tag below until they're ready. -->
-        <p class="reveal"><span class="phase-tag">In progress</span></p>
-        <h4 class="reveal">Wireframes</h4>
-        <p class="reveal"><span class="todo">[paper → digital — add your wireframe images]</span></p>
-        <h4 class="reveal">Prototype</h4>
-        <p class="reveal"><span class="todo">[Figma prototype link]</span></p>
-        <h4 class="reveal">Usability study findings</h4>
-        <p class="reveal"><span class="todo">[your real findings]</span></p>
-        <h4 class="reveal">Accessibility</h4>
-        <p class="reveal"><span class="todo">[contrast, labels, alt text, etc.]</span></p>
 
+        <h4 class="reveal">Wireframes</h4>
+        <p class="reveal">I started low-fidelity — gray boxes for every core screen: the body-diagram workout picker, weekly plan, workout log, stats, protein intake, streaks, and profile. Once the layout logic held up, I moved into digital wireframes and gave the app its name and nav bar, still in grayscale so the structure stayed the focus.</p>
         <figure class="fig reveal">
-          <!-- Replace with: <img src="assets/fittrack-screens.png" alt="FitTrack screens"> -->
-          <div class="frame"><span class="frame__cap">High-fidelity screens — Figma</span></div>
-          <figcaption>Add a montage of your high-fidelity screens here.</figcaption>
+          <img src="assets/fittrack-wireframes-lofi.png" alt="Low-fidelity paper-style wireframes for FitTrack: start page, front and back body diagrams, workout list, weekly plan, workout log, stats, inspiration, set list, protein intake, streak page, and profile">
+          <figcaption>Low-fidelity wireframes — every core screen blocked out first.</figcaption>
+        </figure>
+        <figure class="fig reveal">
+          <img src="assets/fittrack-wireframes-midfi.png" alt="Digital mid-fidelity wireframes with the FIT.TRACK nav bar, still in grayscale, covering the same core screens plus settings and search">
+          <figcaption>Digital wireframes — grayscale, with the FIT.TRACK nav bar in place.</figcaption>
         </figure>
 
+        <h4 class="reveal">Prototype &amp; user flow</h4>
+        <p class="reveal">Next I mapped how a session actually connects screen to screen — tapping into the body diagram to start a workout, logging sets, and landing back on stats or streaks — before carrying that same flow into the high-fidelity visual design shown above.</p>
+        <figure class="fig reveal">
+          <img src="assets/fittrack-userflow-midfi.png" alt="Mid-fidelity FitTrack screens connected by blue user-flow lines showing how a workout session moves between screens">
+          <figcaption>Mapping the user flow — grayscale, before visual design.</figcaption>
+        </figure>
+
+        <h4 class="reveal">Design system</h4>
+        <p class="reveal">FitTrack's visual language leans into gym energy: a black-and-maroon palette, high-contrast type, and a bottom nav built for one-handed use mid-workout. I built a small component library — buttons, tags, the numeric keypad, streak and stat cards — so every screen stayed consistent as the screen count grew.</p>
+        <figure class="fig reveal">
+          <img src="assets/fittrack-design-system.png" alt="FitTrack design system: navigation bar, buttons, color palette, numeric keypad, streak and stat components, and a motivational card reading 'Sore today, stronger tomorrow'">
+          <figcaption>Design system — color, type, and reusable components.</figcaption>
+        </figure>
+
+        <h2 class="reveal">Next steps</h2>
+        <ul class="reveal">
+          <li>Usability testing on the AI suggestion flow — check that recommendations feel earned, not intrusive.</li>
+          <li>A full accessibility pass — contrast ratios, labels, and alt text across every screen.</li>
+        </ul>
+
         <h2 class="reveal">Takeaways</h2>
-        <p class="reveal"><span class="todo">[What you learned designing an AI-assisted experience — e.g., how to keep AI suggestions feeling helpful rather than pushy, and how to surface progress to sustain motivation.]</span></p>
+        <p class="reveal">Designing the AI touches — "Protein Intake AI Suggestions," "AI Workout Suggestions" — taught me to label them clearly as suggestions the user can ignore, not automated decisions made for them. And building the streak flame and weekly/monthly stat charts showed me how a small, honest progress marker does more for motivation than a louder gamified system would.</p>
       </div>
     </section>
 
@@ -105,6 +118,7 @@
       <div class="foot-links">
         <a href="teesa.html" class="link-underline">Teesa</a>
         <a href="pints-of-joy.html" class="link-underline">Pints of Joy</a>
+        <a href="rabina.html" class="link-underline">Rabina Beauty</a>
         <a href="contact.html" class="link-underline">Contact</a>
       </div>
     </div>

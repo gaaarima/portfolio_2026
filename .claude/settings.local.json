@@ -14,7 +14,16 @@
       "Bash(git push *)",
       "Bash(sed -i '' 's/garimaartcam@gmail\\\\.com/gaaarima11@gmail.com/g' contact.html about.html index.html work.html)",
       "Bash(sed -i '' 's/571\\\\.205\\\\.4723/713.287.0320/g' contact.html about.html)",
-      "Bash(sed -i '' 's/+15712054723/+17132870320/g' contact.html about.html)"
+      "Bash(sed -i '' 's/+15712054723/+17132870320/g' contact.html about.html)",
+      "WebFetch(domain:cmst385-umgc-gshrestha5.azurewebsites.net)",
+      "Bash(echo \"exit: $?\")",
+      "WebFetch(domain:cmst386-umgc-gshrestha5.azurewebsites.net)",
+      "Bash(curl -s https://cmst386-umgc-gshrestha5.azurewebsites.net/cmst386/project4/index.html -o /tmp/rabina_index.html)",
+      "Bash(curl -s https://cmst386-umgc-gshrestha5.azurewebsites.net/cmst386/project4/about.html -o /tmp/rabina_about.html)",
+      "Bash(curl -s https://cmst386-umgc-gshrestha5.azurewebsites.net/cmst386/index.html -o /tmp/rabina_portfolio_index.html)",
+      "Bash(curl -s https://cmst386-umgc-gshrestha5.azurewebsites.net/cmst386/project4/css/style.css -o /tmp/rabina_style.css)",
+      "Bash(curl -s https://cmst386-umgc-gshrestha5.azurewebsites.net/cmst386/project4/appointment.html -o /tmp/rabina_appt.html)",
+      "Bash(curl -s https://cmst386-umgc-gshrestha5.azurewebsites.net/cmst386/project4/services.html -o /tmp/rabina_services.html)"
     ]
   }
 }

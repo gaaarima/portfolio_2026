@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rabina Beauty Parlor — Website Design &amp; Development · Garima Shrestha</title>
+  <meta name="description" content="A full, accessible, 13-page website built from scratch for a beauty salon and training center in Kathmandu, Nepal — HTML, CSS, and JavaScript, start to launch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%239b1b3f'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23faf6ef' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="site-head">
+    <div class="wrap nav">
+      <a href="index.html" class="brand">Garima Shrestha<span class="dot">.</span></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="work.html" aria-current="page">Work</a>
+        <a href="teesa.html">Teesa</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap cs-hero">
+      <span class="eyebrow reveal">Case study · Website · Full build</span>
+      <h1 class="cs-title reveal" data-delay="1" style="margin-top:1.2rem;">Rabina Beauty —<br />Salon &amp; Training Center Website</h1>
+      <p class="cs-tagline reveal" data-delay="2">A complete, accessible, 13-page website built from the ground up for a beauty salon and training center in Kathmandu.</p>
+
+      <div class="snapshot reveal" data-delay="2">
+        <div class="snapshot__cell"><div class="snapshot__k">Role</div><div class="snapshot__v">Web Designer &amp; Developer</div></div>
+        <div class="snapshot__cell"><div class="snapshot__k">Course</div><div class="snapshot__v">CMST 386 — Web Development</div></div>
+        <div class="snapshot__cell"><div class="snapshot__k">Tools</div><div class="snapshot__v">HTML5, CSS3, JavaScript</div></div>
+        <div class="snapshot__cell"><div class="snapshot__k">Scope</div><div class="snapshot__v">13 pages, fully responsive &amp; accessible</div></div>
+      </div>
+    </section>
+
+    <section class="section--tight wrap">
+      <figure class="fig reveal">
+        <!-- Replace with: <img src="assets/rabina-home.png" alt="Rabina Beauty Parlor homepage"> -->
+        <div class="frame frame--wide"><span class="frame__cap">Rabina Beauty Parlor — homepage</span></div>
+        <figcaption>Rabina Beauty Parlor homepage — hero, signature services, and testimonials.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section--tight wrap">
+      <div class="cs-body">
+        <h2 class="reveal">Overview</h2>
+        <p class="reveal">Rabina Beauty Parlor &amp; Training Center is a beauty salon and CTEVT-affiliated training center in Kathmandu, Nepal. I designed and built its website from scratch for my Web Development coursework — a full, production-style multi-page site covering services, bridal packages, training programs, appointment booking, the salon's story, its team, and client testimonials.</p>
+        <p class="reveal"><strong>The brief.</strong> Unlike my UX case studies, which start from a research problem, this project started from a build brief: give a real-feeling local business a complete web presence — one that looks trustworthy, loads fast, and works for every visitor, including people using screen readers or older devices.</p>
+        <p class="reveal"><strong>The goal.</strong> Ship a full, accessible, SEO-ready site — not a prototype — that a real salon could hand to a developer and launch as-is.</p>
+
+        <h2 class="reveal">My role &amp; deliverables</h2>
+        <p class="reveal">Sole designer &amp; developer · information architecture across 13 pages · low-fidelity wireframes · custom HTML/CSS/JS build · typography &amp; color system · accessibility pass · on-page SEO.</p>
+
+        <h2 class="reveal">Wireframes</h2>
+        <p class="reveal">Before touching real markup, I sitemapped and wireframed every page — 13 low-fidelity layouts covering the full site, from the homepage down to the individual service and scheduling pages. Blocking out each page in gray boxes first let me settle the content hierarchy and page count before I ever wrote a line of CSS.</p>
+        <figure class="fig reveal">
+          <img src="assets/rabina-wireframes.png" alt="Low-fidelity wireframes for all 13 pages of the Rabina Beauty Parlor site: Home, Services, Book Appointment, Appointment Scheduler, About, Our Story, Meet the Team, Hair, Gallery, Contact, Skin and Face, Bridal, and Testimonials.">
+          <figcaption>Full-site wireframes — 13 pages, blocked out before any visual design.</figcaption>
+        </figure>
+
+        <h2 class="reveal">Information architecture</h2>
+        <p class="reveal">The site is organized around how a client actually decides to book: browse services, check pricing, see the work, then book. Services and About each carry a nested dropdown in the main nav so deeper pages stay one click away without cluttering the top-level menu.</p>
+        <ul class="reveal">
+          <li><strong>Home</strong> — hero, signature services, why-choose-us, testimonials preview, CTA.</li>
+          <li><strong>Services</strong>, plus dedicated <strong>Hair</strong>, <strong>Skin and Face</strong>, and <strong>Bridal</strong> pages.</li>
+          <li><strong>Book Appointment</strong> and a separate <strong>Appointment Scheduler</strong> for picking a date and time.</li>
+          <li><strong>About</strong>, with <strong>Our Story</strong> and <strong>Meet the Team</strong> nested underneath.</li>
+          <li><strong>Gallery</strong> — a grid of salon and client photos.</li>
+          <li><strong>Testimonials</strong> and <strong>Contact</strong>.</li>
+        </ul>
+
+        <h2 class="reveal">Design approach</h2>
+        <p class="reveal">I chose a palette and type system to match a salon, not a generic template: warm cream and charcoal ink, with a single sharp rose-pink accent pulled straight from the salon's own logo. Playfair Display carries the headings, Great Vibes adds a signature script flourish, and Jost handles body text — polished and feminine without tipping into cliché.</p>
+
+        <h2 class="reveal">What I built</h2>
+        <ul class="reveal">
+          <li>A homepage with signature-service cards that carry real pricing badges, an icon-based "why choose us" grid, and a rotating testimonials preview.</li>
+          <li>A real appointment-request form — name, service, preferred date, time preference, interests, and message.</li>
+          <li>An About page telling the founder's story, plus a separate team page.</li>
+          <li>A sitewide footer with quick links and a working site search.</li>
+          <li>Accessibility built in from the first line of markup: a skip-to-content link, <code>aria-labelledby</code> landmarks, descriptive alt text on every image, visually-hidden headings for screen-reader structure, and a fully labeled nav.</li>
+        </ul>
+
+        <figure class="fig reveal">
+          <!-- Replace with: <img src="assets/rabina-services.png" alt="Rabina Beauty Parlor services page"> -->
+          <div class="frame"><span class="frame__cap">Services &amp; appointment booking</span></div>
+          <figcaption>Services page with pricing, and the appointment-request form.</figcaption>
+        </figure>
+
+        <h2 class="reveal">Takeaways</h2>
+        <p class="reveal">My other case studies live in Figma — this one had to actually run in a browser. Building a real multi-page site taught me to think in information architecture (what goes in the nav, what's nested under what) and to bake accessibility in from the start rather than bolt it on at the end.</p>
+
+        <p class="reveal"><a href="https://cmst386-umgc-gshrestha5.azurewebsites.net/cmst386/project4/index.html" class="link-underline" target="_blank" rel="noopener">View the live site →</a></p>
+      </div>
+    </section>
+
+    <section class="section--tight wrap reveal">
+      <a href="work.html" class="link-underline">← Back to all work</a>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <div>
+        <div class="foot-big">Built to<br />actually ship.</div>
+        <div class="foot-meta" style="margin-top:1.5rem;">© 2026 Garima Shrestha. All rights reserved.</div>
+      </div>
+      <div class="foot-links">
+        <a href="pints-of-joy.html" class="link-underline">Pints of Joy</a>
+        <a href="fittrack.html" class="link-underline">FitTrack</a>
+        <a href="contact.html" class="link-underline">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
