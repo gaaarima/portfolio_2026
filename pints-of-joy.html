@@ -141,33 +141,62 @@
     </section>
 
     <!-- ===== SECTION 02 — PINTS OF JOY (REAL-WORLD BUILD) =====
-         NOTE TO GARIMA: Only keep this section if a real business actually uses the
-         app. Replace every .todo marker with true details, or delete the whole
-         section if it didn't ship. -->
+         NOTE TO GARIMA: Remaining .todo markers are details I don't know
+         (build dates, tools, one real number, quote attribution). Fill them in
+         with true details, or delete the line if you'd rather not include it. -->
     <section class="section--tight wrap" id="pints-of-joy" style="border-top:1px solid var(--line); padding-top:clamp(3rem,6vw,5rem);">
       <div class="cs-body">
         <span class="phase-tag reveal">Section 02 · Real-world build</span>
         <h2 class="reveal" style="margin-top:0.4rem;">Pints of Joy</h2>
-        <p class="reveal">One of the case study's own next steps actually happened: I partnered with Pints of Joy — a real business — to turn that certificate-program project into a working product, and built the front end myself.</p>
+        <p class="reveal">One of the case study's own next steps actually happened. A restaurant reached out wanting an inventory system of their own, and I got to turn that certificate-program project into a working product a real business uses — designing it, building the front end, and shaping it with an AI collaborator along the way.</p>
 
         <div class="snapshot reveal" style="margin-top:1.8rem;">
-          <div class="snapshot__cell"><div class="snapshot__k">Role</div><div class="snapshot__v">Front-End Developer</div></div>
+          <div class="snapshot__cell"><div class="snapshot__k">Role</div><div class="snapshot__v">UX Designer &amp; Front-End Developer</div></div>
           <div class="snapshot__cell"><div class="snapshot__k">Timeline</div><div class="snapshot__v"><span class="todo">[build dates]</span></div></div>
           <div class="snapshot__cell"><div class="snapshot__k">Tools</div><div class="snapshot__v"><span class="todo">Vue.js / HTML / CSS</span></div></div>
-          <div class="snapshot__cell"><div class="snapshot__k">Outcome</div><div class="snapshot__v">Used daily by Pints of Joy</div></div>
+          <div class="snapshot__cell"><div class="snapshot__k">Outcome</div><div class="snapshot__v">Used weekly by Pints of Joy</div></div>
         </div>
 
-        <p class="reveal" style="margin-top:1.8rem;">I built the front end in <span class="todo">Vue.js</span>, translating my high-fidelity designs into a live interface their team could actually use on the floor.</p>
-        <p class="reveal"><strong>What I built:</strong> <span class="todo">[scan-to-update inventory, searchable item list, low-stock alerts, order list]</span>. I designed a dark theme because the tool is used throughout long shifts — lower glare is easier on the eyes.</p>
-        <p class="reveal"><strong>Impact:</strong> Pints of Joy now uses the app as part of daily operations. <span class="todo">[Add one real number: tracks X items · cut weekly inventory time from X to Y · X fewer missed orders per month.]</span></p>
+        <h3 class="reveal" style="margin-top:2rem;">Why this problem mattered to me</h3>
+        <p class="reveal">Working in a restaurant showed me how much damage poor inventory management does. It creates friction for everyone: employees lose time counting, and managers lose time running back to the store for items that should have been ordered days earlier. That frustration is what pushed me to design my first inventory app. When a real restaurant asked for one, I was thrilled — it was the first time something I'd imagined would land in the hands of people who'd use it for real.</p>
+
+        <h3 class="reveal">Learning what they actually needed</h3>
+        <p class="reveal">Before designing anything, I sat down with the owner and the manager to ask what they really wanted from an inventory tool. They were running everything in Microsoft Excel. It worked, and they had formulas doing some of the heavy lifting, but it wasn't a real system: nothing tracked trends, and nothing could produce a plan on its own.</p>
+        <p class="reveal">The pain was the weekly ritual. Every week the manager counted stock, typed in every number, ran the calculations, and built a production plan — and even with formulas, it took a lot of time. Our goal became clear: cut the time and friction of that ritual, and build toward an app that increasingly does the work itself, with AI at the center.</p>
+
+        <h3 class="reveal">Designing around automation</h3>
+        <p class="reveal">I mapped their process and reimagined it.</p>
+        <p class="reveal"><strong>Before:</strong> count stock → enter every number → calculate what's required → build the production plan, by hand, every week.</p>
+        <p class="reveal"><strong>After:</strong> count what's on hand → the app weighs stock levels, requirements, and trends → it generates the weekly production report automatically.</p>
+        <p class="reveal">One decision mattered most: the manager stays in the loop. Before anything becomes the final production plan, they can review it, edit it, and send it on. Automation handles the busywork, and people keep the judgment. The first weeks still need a production plan entered by hand; from there, the more data the app collects, the more it can do on its own.</p>
+
+        <h3 class="reveal">Building it with AI</h3>
+        <p class="reveal">To make that automation real, I collaborated with Vijay, an AI specialist. We built the project together: I owned the UX, design, and front end; Vijay built the AI layer that powers the reports.</p>
+
+        <h3 class="reveal">Iterating every week</h3>
+        <p class="reveal">I made an initial version and then worked on it week by week. Each week I brought the latest build back to the manager, watched how he used it, asked what he needed next, and folded his feedback into the following version. It took many, many iterations, and every one came from his real workflow rather than my assumptions.</p>
+
+        <h3 class="reveal">What I built</h3>
+        <ol class="reveal">
+          <li><strong>Weekly stock count</strong> — only the existing inventory needs counting.</li>
+          <li><strong>Auto-generated production report</strong> — built from stock levels, requirements, and trends.</li>
+          <li><strong>Manager review and edit</strong> — the plan is confirmed by a person before it goes to production.</li>
+          <li><strong>Employee logging and task assignment</strong> — the app grew beyond production planning into a broader operations tool.</li>
+        </ol>
+        <p class="reveal">I designed a dark theme because the tool is used throughout long shifts — lower glare is easier on the eyes.</p>
+
+        <p class="reveal"><strong>Impact:</strong> Pints of Joy uses the app as part of their weekly operations, replacing the manual Excel routine it grew out of. <span class="todo">[Add one real number: cut weekly inventory time from X to Y · X fewer manual entries per week.]</span></p>
 
         <blockquote class="pullquote reveal">
           "This will make my life a lot easier and save a lot of time."
           <cite>— <span class="todo">[user / owner]</span>, Pints of Joy</cite>
         </blockquote>
 
+        <h3 class="reveal">Where it's headed</h3>
+        <p class="reveal">What began as a production-planning tool is becoming a holistic operations app: inventory, production, employees, and tasks in one place, so a manager can run the floor from a single screen.</p>
+
         <h3 class="reveal">What I learned</h3>
-        <p class="reveal">Building the front end myself taught me where clean design meets real engineering constraints. What started as a case study for my Google UX Design Professional Certificate is the project I'm proudest of, because it didn't stay in Figma. A real business took a chance on the concept, and I got to carry it all the way from a classroom assignment to a tool people actually rely on during their shift.</p>
+        <p class="reveal">Building alongside an AI specialist and a working manager taught me where clean design meets real constraints. The best decisions came from watching someone use the app in their actual week, not from my own assumptions. What started as a case study for my Google UX Design Professional Certificate is the project I'm proudest of, because it didn't stay in Figma. A real business took a chance on the concept, and I got to carry it from a classroom assignment to a tool people rely on.</p>
       </div>
     </section>
 
