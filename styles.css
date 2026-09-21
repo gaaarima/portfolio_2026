@@ -515,3 +515,35 @@ em, .italic { font-style: italic; }
   .snapshot { grid-template-columns: 1fr; }
   .contact-list li { flex-direction: column; gap: 0.3rem; }
 }
+
+/* ---------- Accessibility: skip link ---------- */
+.skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 100; background: var(--ink); color: var(--ivory); padding: 0.7rem 1.1rem; border-radius: var(--radius-sm); font-weight: 600; transition: top 0.25s var(--ease); }
+.skip-link:focus { top: 1rem; }
+
+/* ---------- Home: proof strip, process, CTA ---------- */
+.proof { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--line); margin-top: clamp(1rem, 3vw, 2rem); }
+.proof li { padding: 1.6rem 1.2rem; display: flex; flex-direction: column; gap: 0.3rem; border-left: 1px solid var(--line); }
+.proof li:first-child { border-left: 0; padding-left: 0; }
+.proof strong { font-family: var(--display); font-weight: 400; font-size: clamp(1.5rem, 3vw, 2.2rem); color: var(--claret); line-height: 1.1; }
+.proof span { font-size: 0.82rem; color: var(--ink-soft); }
+
+.steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.2rem, 3vw, 2.5rem); }
+.steps li { border-top: 2px solid var(--gold); padding-top: 1.2rem; }
+.steps__n { font-family: var(--display); font-style: italic; color: var(--gold); font-size: 1.1rem; }
+.steps h3 { margin: 0.4rem 0 0.7rem; }
+.steps p { color: var(--ink-soft); font-size: 0.97rem; }
+
+.cta-band { display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; padding: clamp(2rem, 5vw, 3.5rem); border-radius: var(--radius); background: var(--obsidian); color: var(--ivory); position: relative; overflow: hidden; }
+.cta-band::before { content: ""; position: absolute; inset: -40% -10% auto auto; width: 50%; aspect-ratio: 1; background: radial-gradient(circle, color-mix(in srgb, var(--claret) 45%, transparent), transparent 70%); pointer-events: none; }
+.cta-band > * { position: relative; }
+.cta-band h2 { max-width: 20ch; font-size: clamp(1.6rem, 3.4vw, 2.4rem); }
+.cta-band .eyebrow { color: var(--gold-soft); }
+
+/* ---------- Reading progress (case studies) ---------- */
+.read-progress { position: fixed; top: 0; left: 0; height: 3px; width: 100%; z-index: 70; background: var(--ink); transform-origin: 0 50%; transform: scaleX(0); pointer-events: none; }
+
+@media (max-width: 900px) {
+  .proof { grid-template-columns: repeat(2, 1fr); }
+  .proof li:nth-child(3) { border-left: 0; padding-left: 0; }
+  .steps { grid-template-columns: 1fr; }
+}
