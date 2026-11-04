@@ -10,7 +10,10 @@ dependencies. Open `index.html` in a browser to view.
 | `work.html` | Work (links to all case studies) |
 | `pints-of-joy.html` | Pints of Joy — inventory web app (anchor case study) |
 | `fittrack.html` | FitTrack — AI fitness app |
-| `teesa.html` | Teesa — luxury jewelry brand |
+| `rabina.html` | Rabina Beauty — salon website |
+| `bishal.html` | Bishal Imagery — photographer website (UX, UI, front-end) |
+| `nyc-lifestyle.html` | NYC Nepali Lifestyle — studio website (design + build, live) |
+| `teesa.html` | Teesa — luxury jewelry brand (hidden for now: not linked from any page) |
 | `about.html` | About + skills |
 | `contact.html` | Contact |
 

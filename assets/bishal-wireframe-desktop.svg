@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1760" viewBox="0 0 900 1760" font-family="Arial, Helvetica, sans-serif">
+  <rect width="900" height="1760" fill="#ffffff"/>
+  <!-- frame -->
+  <rect x="40" y="20" width="820" height="1720" fill="#fbfbfa" stroke="#d8d4cf" stroke-width="2"/>
+
+  <!-- NAV -->
+  <rect x="40" y="20" width="820" height="60" fill="#f1efea" stroke="#d8d4cf" stroke-width="2"/>
+  <rect x="64" y="38" width="24" height="24" fill="#c9c3bb"/>
+  <text x="98" y="55" font-size="15" font-weight="bold" fill="#7a746c">BISHAL IMAGERY</text>
+  <text x="470" y="55" font-size="12" fill="#9a9490">HOME   PORTFOLIO   ABOUT   SERVICES   CONTACT</text>
+  <rect x="760" y="32" width="80" height="34" rx="2" fill="none" stroke="#8B7355" stroke-width="1.5"/>
+  <text x="772" y="54" font-size="11" fill="#8B7355">BOOK NOW</text>
+
+  <!-- HERO -->
+  <rect x="40" y="80" width="820" height="420" fill="#e8e4de"/>
+  <text x="60" y="110" font-size="11" fill="#9a9490">[ full-bleed hero image · ken-burns zoom ]</text>
+  <text x="70" y="235" font-size="12" letter-spacing="2" fill="#8B7355">BAY AREA PHOTOGRAPHER · SUNNYVALE, CA</text>
+  <text x="70" y="290" font-size="46" font-weight="bold" fill="#6f6a62">Framing Your Story</text>
+  <text x="70" y="325" font-size="16" fill="#8a847c">Timeless and natural photography across the Bay Area</text>
+  <rect x="70" y="355" width="200" height="48" fill="#8B7355"/>
+  <text x="100" y="384" font-size="12" fill="#ffffff">BOOK YOUR SESSION</text>
+  <rect x="290" y="355" width="170" height="48" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="315" y="384" font-size="12" fill="#ffffff">VIEW MY WORK</text>
+  <text x="430" y="478" font-size="10" letter-spacing="2" fill="#bcb6ae">SCROLL ↓</text>
+
+  <!-- PORTFOLIO -->
+  <text x="60" y="548" font-size="11" letter-spacing="2" fill="#8B7355">PORTFOLIO</text>
+  <text x="60" y="578" font-size="26" font-weight="bold" fill="#6f6a62">A Glimpse of Our Work</text>
+  <text x="60" y="600" font-size="11" fill="#9a9490">Masonry gallery · 6 categories · click opens full-screen lightbox</text>
+  <!-- gallery grid -->
+  <g fill="#e2ddd6" stroke="#d8d4cf">
+    <rect x="60" y="616" width="250" height="180"/>
+    <rect x="325" y="616" width="250" height="120"/>
+    <rect x="590" y="616" width="250" height="180"/>
+    <rect x="325" y="748" width="250" height="140"/>
+    <rect x="60" y="808" width="250" height="150"/>
+    <rect x="590" y="808" width="250" height="150"/>
+  </g>
+  <text x="80" y="710" font-size="10" fill="#9a9490">Wedding</text>
+  <text x="345" y="680" font-size="10" fill="#9a9490">Event</text>
+  <text x="610" y="710" font-size="10" fill="#9a9490">Family</text>
+  <text x="345" y="822" font-size="10" fill="#9a9490">Portrait</text>
+  <text x="80" y="888" font-size="10" fill="#9a9490">Landscape</text>
+  <text x="610" y="888" font-size="10" fill="#9a9490">Architecture</text>
+
+  <!-- SERVICES -->
+  <rect x="40" y="1000" width="820" height="300" fill="#f5efe6"/>
+  <text x="60" y="1040" font-size="11" letter-spacing="2" fill="#8B7355">SERVICES</text>
+  <text x="60" y="1070" font-size="26" font-weight="bold" fill="#6f6a62">Photography Services</text>
+  <g>
+    <g font-size="11" fill="#7a746c">
+      <rect x="60" y="1090" width="240" height="90" fill="#ffffff" stroke="#e4ddd2"/>
+      <text x="76" y="1120">◭ Wedding Photography</text>
+      <rect x="320" y="1090" width="240" height="90" fill="#ffffff" stroke="#e4ddd2"/>
+      <text x="336" y="1120">◭ Engagement Shoots</text>
+      <rect x="580" y="1090" width="240" height="90" fill="#ffffff" stroke="#e4ddd2"/>
+      <text x="596" y="1120">◭ Family Sessions</text>
+      <rect x="60" y="1190" width="240" height="90" fill="#ffffff" stroke="#e4ddd2"/>
+      <text x="76" y="1220">◭ Portrait Photography</text>
+      <rect x="320" y="1190" width="240" height="90" fill="#ffffff" stroke="#e4ddd2"/>
+      <text x="336" y="1220">◭ Event Coverage</text>
+      <rect x="580" y="1190" width="240" height="90" fill="#ffffff" stroke="#e4ddd2"/>
+      <text x="596" y="1220">◭ Baby Shower</text>
+    </g>
+  </g>
+
+  <!-- ABOUT -->
+  <text x="60" y="1348" font-size="11" letter-spacing="2" fill="#8B7355">ABOUT</text>
+  <rect x="60" y="1364" width="360" height="300" fill="#e2ddd6" stroke="#d8d4cf"/>
+  <text x="90" y="1520" font-size="10" fill="#9a9490">[ photo carousel · dots + swipe ]</text>
+  <text x="450" y="1400" font-size="22" font-weight="bold" fill="#6f6a62">Meet the Photographer</text>
+  <g fill="#cfc9c1">
+    <rect x="450" y="1420" width="380" height="10"/>
+    <rect x="450" y="1440" width="380" height="10"/>
+    <rect x="450" y="1460" width="340" height="10"/>
+    <rect x="450" y="1485" width="380" height="10"/>
+    <rect x="450" y="1505" width="300" height="10"/>
+  </g>
+  <rect x="450" y="1545" width="150" height="44" fill="#8B7355"/>
+  <text x="474" y="1572" font-size="11" fill="#ffffff">GET IN TOUCH</text>
+
+  <!-- CONTACT -->
+  <rect x="40" y="1684" width="820" height="56" fill="#1a1a1a"/>
+  <text x="60" y="1718" font-size="12" fill="#e8e4de">CONTACT · Booking form (First/Last · Email* · Phone* · Service · Message) → delivers to inbox</text>
+
+  <!-- caption -->
+  <text x="40" y="12" font-size="11" fill="#9a9490">Wireframe — Desktop home (1280px). Bishal Imagery.</text>
+</svg>
