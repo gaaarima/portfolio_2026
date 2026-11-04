@@ -176,16 +176,43 @@
         <p class="reveal">The manager's week was the brief: count the stock, type every number into Excel, run the calculations, build a production plan, all by hand. The spreadsheet worked and the formulas were real, but it was a weekly time sink that couldn't surface a single trend. So before designing anything, I sat down with the owner and the manager to understand the process as it actually happened. The data model came straight from their sheet: pints, 3G, boxes, 4oz cups, popsicles, sandwiches, flavors like Rasmalai, Kulfi and Falooda, verification columns, and weekly production tabs.</p>
 
         <h3 class="reveal">The process, mapped from real conversations</h3>
-        <figure class="fig reveal">
-          <img src="assets/pints-process-board.png" alt="A five-column UX process board for the Pints of Joy Inventory Management App: Empathize, Define, Ideate, Prototype, Test, each with handwritten-style notes." loading="lazy" />
-          <figcaption>The synthesis board for the project.</figcaption>
-        </figure>
         <ol class="reveal">
-          <li><strong>Empathize.</strong> I learned the week before touching a screen. The team was running everything through Excel: functional, with formulas, but not built to track trends or cut the manual load.</li>
-          <li><strong>Define.</strong> The goal was to cut that time and move toward a system that could generate reports and plans on its own, powered by AI. Scope grew from a production planner to an operations tool.</li>
-          <li><strong>Ideate.</strong> I reimagined the flow so the app does the heavy lifting while the manager still signs off.<br /><em>Before:</em> count → calculate → plan by hand.<br /><em>After:</em> count inventory → app analyzes stock, needs and trends → auto weekly report → manager reviews and edits.</li>
-          <li><strong>Prototype.</strong> I built a first version and walked the manager through each new build weekly, folding his feedback into the next round. I owned UX and design; Vijay built the AI layer. Over time it grew to include employee logging and task assignment.</li>
-          <li><strong>Test.</strong> Every iteration was tested against the manager's real weekly workflow, through many rounds, until the final build replaced the manual Excel process.</li>
+          <li><strong>Empathize.</strong>
+            <ul>
+              <li>Sat down with the owner and manager to understand their real process before designing anything.</li>
+              <li>Learned they were running everything through Microsoft Excel — functional, with formulas, but not built to track trends or reduce their manual workload.</li>
+              <li>Discovered the weekly grind: count stock, input every number by hand, run the calculations — even with formulas, still a significant time sink for the manager.</li>
+            </ul>
+          </li>
+          <li><strong>Define.</strong>
+            <ul>
+              <li>Identified the challenge: a time-consuming, manual weekly ritual that ate into the manager's schedule despite already having Excel formulas in place.</li>
+              <li>The goal: reduce that time and friction, and move toward a system that could eventually generate reports and plans on its own, powered by AI.</li>
+              <li>Scope grew beyond production planning alone — toward a holistic operations tool, not just an inventory tracker.</li>
+            </ul>
+          </li>
+          <li><strong>Ideate.</strong>
+            <ul>
+              <li>Mapped the current process: count stock → calculate requirements → build a production plan, entirely by hand.</li>
+              <li>Reimagined it as: count existing inventory → app analyzes stock levels, requirements, and trends → app auto-generates a weekly production report.</li>
+              <li>Designed the manager's review and edit step to stay in the loop before anything becomes final — automation that speeds things up without taking the manager out of the loop.</li>
+            </ul>
+          </li>
+          <li><strong>Prototype.</strong>
+            <ul>
+              <li>Built an initial version of the app and brought it to the manager for a first look.</li>
+              <li>I owned the UX and design; Vijay built the AI layer — working together to bring the concept to life.</li>
+              <li>Iterated weekly: each week I'd walk the manager through the latest version and fold his feedback directly into the next round.</li>
+              <li>Expanded the prototype over time to include employee logging and task assignment, turning it into a broader operations tool.</li>
+            </ul>
+          </li>
+          <li><strong>Test.</strong>
+            <ul>
+              <li>Every iteration was tested directly with the manager's real weekly workflow, not a simulated one.</li>
+              <li>Feedback from each round shaped the next — many iterations before landing on the final build.</li>
+              <li>The app is now used as part of the business's actual weekly operations, replacing the manual Excel process it grew out of.</li>
+            </ul>
+          </li>
         </ol>
 
         <h3 class="reveal">Design decisions</h3>
