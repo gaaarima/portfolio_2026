@@ -74,6 +74,29 @@
       </div>
     </section>
 
+    <!-- PATH CHOOSER -->
+    <section class="wrap path-choice" id="paths">
+      <div class="path-choice__head reveal">
+        <span class="eyebrow">Choose your path</span>
+        <h2 style="margin-top:0.8rem;">What are you here for?</h2>
+        <p>Pick a view and the site shows you just what's relevant. You can switch anytime from the top bar.</p>
+      </div>
+      <div class="path-cards">
+        <a href="work.html?path=ux" class="path-card reveal" data-choose="ux" data-go="work.html?path=ux">
+          <span class="path-card__k">For hiring teams</span>
+          <div class="path-card__t">UX case studies</div>
+          <p class="path-card__d">Four in-depth projects: research, process, design decisions and outcomes. The fast route to how I work.</p>
+          <span class="path-card__go">See the UX work <span>→</span></span>
+        </a>
+        <a href="work.html?path=all" class="path-card reveal" data-choose="all" data-go="work.html?path=all" data-delay="1">
+          <span class="path-card__k">For schools, collaborators &amp; the curious</span>
+          <div class="path-card__t">Everything</div>
+          <p class="path-card__d">Every project: UX, websites, and the creative range behind them. The full picture.</p>
+          <span class="path-card__go">Explore it all <span>→</span></span>
+        </a>
+      </div>
+    </section>
+
     <!-- PROOF STRIP -->
     <section class="wrap">
       <ul class="proof reveal">
@@ -88,10 +111,10 @@
     <section class="section wrap">
       <div class="sec-head reveal">
         <span class="eyebrow">Featured</span>
-        <h2>Selected projects</h2>
+        <h2><span data-show="ux" hidden>UX case studies</span><span data-show="all">Selected projects</span></h2>
       </div>
       <div class="tiles">
-        <a href="pints-of-joy.html" class="tile reveal" data-delay="1">
+        <a href="pints-of-joy.html" data-tags="ux" class="tile reveal" data-delay="1">
           <div class="tile__img"><div class="frame"><span class="frame__cap">Pints of Joy</span></div></div>
           <div class="tile__body">
             <span class="tile__kicker">Web app · Real client</span>
@@ -100,7 +123,7 @@
             <span class="tile__more">Read case study <span class="arrow">→</span></span>
           </div>
         </a>
-        <a href="rabina.html" class="tile reveal" data-delay="2">
+        <a href="rabina.html" data-tags="web" class="tile reveal" data-delay="2">
           <div class="tile__img"><div class="frame"><span class="frame__cap">Rabina Beauty</span></div></div>
           <div class="tile__body">
             <span class="tile__kicker">Website · Real client</span>
@@ -109,7 +132,7 @@
             <span class="tile__more">Read case study <span class="arrow">→</span></span>
           </div>
         </a>
-        <a href="fittrack.html" class="tile reveal" data-delay="3">
+        <a href="fittrack.html" data-tags="ux" class="tile reveal" data-delay="3">
           <div class="tile__img"><div class="frame"><span class="frame__cap">FitTrack</span></div></div>
           <div class="tile__body">
             <span class="tile__kicker">Mobile · AI</span>
@@ -118,7 +141,7 @@
             <span class="tile__more">Read case study <span class="arrow">→</span></span>
           </div>
         </a>
-        <a href="bishal.html" class="tile reveal" data-delay="1">
+        <a href="bishal.html" data-tags="ux web" class="tile reveal" data-delay="1">
           <div class="tile__img"><img src="assets/bishal-hero-desktop.jpg" alt="Bishal Imagery homepage" loading="lazy" /></div>
           <div class="tile__body">
             <span class="tile__kicker">Website · Real client</span>
@@ -127,12 +150,21 @@
             <span class="tile__more">Read case study <span class="arrow">→</span></span>
           </div>
         </a>
-        <a href="nyc-lifestyle.html" class="tile reveal" data-delay="2">
+        <a href="nyc-lifestyle.html" data-tags="web" class="tile reveal" data-delay="2">
           <div class="tile__img"><div class="frame"><span class="frame__cap">NYC Nepali Lifestyle</span></div></div>
           <div class="tile__body">
             <span class="tile__kicker">Website · Real client</span>
             <div class="tile__title">NYC Nepali Lifestyle</div>
             <p class="tile__desc">A live 12-page website framework for a Queens photo &amp; film studio, from content audit to launch.</p>
+            <span class="tile__more">Read case study <span class="arrow">→</span></span>
+          </div>
+        </a>
+        <a href="nwgnca.html" data-tags="ux web" class="tile reveal" data-delay="3">
+          <div class="tile__img"><img src="assets/nwgnca-after-hero.jpg" alt="NWGN-CA homepage" loading="lazy" /></div>
+          <div class="tile__body">
+            <span class="tile__kicker">Website redesign · Non-profit</span>
+            <div class="tile__title">NWGN-CA</div>
+            <p class="tile__desc">A redesign of a Bay Area Nepalese women's non-profit site: real faces first, clear ways to join and donate.</p>
             <span class="tile__more">Read case study <span class="arrow">→</span></span>
           </div>
         </a>

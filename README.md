@@ -13,6 +13,7 @@ dependencies. Open `index.html` in a browser to view.
 | `rabina.html` | Rabina Beauty — salon website |
 | `bishal.html` | Bishal Imagery — photographer website (UX, UI, front-end) |
 | `nyc-lifestyle.html` | NYC Nepali Lifestyle — studio website (design + build, live) |
+| `nwgnca.html` | NWGN-CA — non-profit website redesign (live at nwgnca.com) |
 | `teesa.html` | Teesa — luxury jewelry brand (hidden for now: not linked from any page) |
 | `about.html` | About + skills |
 | `contact.html` | Contact |
@@ -39,3 +40,10 @@ python3 -m http.server 8000   # then open http://localhost:8000
 ## Deploy (free options)
 - **GitHub Pages** — push this repo, then Settings → Pages → deploy from `main` / root.
 - **Netlify / Vercel** — drag the folder in, or connect the GitHub repo.
+
+## Audience paths
+The site adapts to who is looking (`main.js` + `data-tags` attributes):
+- **UX** (`?path=ux`): only projects tagged `ux`.
+- **Everything** (`?path=all`): every project.
+- Visitors choose on the home page or with the UX / Everything switch in the header; the choice is remembered.
+- To change what counts as UX, edit the `data-tags` on the tiles in `index.html` and rows in `work.html`.
