@@ -116,8 +116,9 @@
     var tx = r.left + r.width / 2 - SIZE / 2 + window.scrollX, ty = vy + window.scrollY;
     try { sessionStorage.setItem("chirp-from", JSON.stringify({ x: r.left + r.width / 2 - SIZE / 2, y: vy })); } catch (er) {}
     closePanel();
-    fly(tx, ty, reduce ? 0 : 650, function () { location.href = a.href; });
-    if (reduce) location.href = a.href;
+    var went = false, go = function () { if (!went) { went = true; location.href = a.href; } };
+    fly(tx, ty, reduce ? 0 : 650, go);
+    setTimeout(go, reduce ? 0 : 900);   /* fallback: never get stuck if the animation event doesn't fire */
   }, true);
 
   /* ---------- Chat ---------- */
