@@ -6,28 +6,30 @@
 :root {
   /* Color — warm base */
   --ivory:      #ffffff;
-  --ivory-2:    #f5f5f3;
+  --ivory-2:    #f4f3fc;
   --paper:      #ffffff;
-  --ink:        #1c1420;
-  --ink-soft:   #4a3d48;
-  --muted:      #8c7f87;
-  --line:       #e8dcc8;
+  --ink:        #14132e;
+  --ink-soft:   #46456b;
+  --muted:      #8a89ab;
+  --line:       #e4e2f5;
 
   /* Color — jewel accents */
-  --claret:     #9b1b3f;   /* garnet — Newari textile red, deepened */
-  --claret-dk:  #6b1230;
-  --gold:       #c9963e;   /* antique gold, brightened */
-  --gold-soft:  #e3c285;
-  --emerald:    #1f6f5c;   /* new: modern jewel-tone accent */
-  --emerald-dk: #14493d;
+  --claret:     #4a45c8;   /* garnet — Newari textile red, deepened */
+  --claret-dk:  #1b1a4d;
+  --gold:       #ff9b71;   /* antique gold, brightened */
+  --gold-soft:  #ffd3c0;
+  --emerald:    #2aa59a;   /* new: modern jewel-tone accent */
+  --emerald-dk: #17786f;
 
   /* Color — dark contrast section */
-  --obsidian:   #1b1220;
-  --obsidian-2: #241a2e;
-  --obsidian-line: #3a2c3e;
+  --obsidian:   #12113a;
+  --obsidian-2: #1b1a4d;
+  --obsidian-line: #2d2c6b;
 
   /* Gradients */
-  --grad-jewel: linear-gradient(135deg, var(--claret) 0%, var(--gold) 52%, var(--emerald) 100%);
+  --grad-jewel: linear-gradient(90deg, var(--claret) 0%, #8b86ec 55%, var(--gold) 100%);
+  --lav: #b9b5f5;
+  --lav-soft: #e9e8fb;
   --grad-warm:  linear-gradient(135deg, var(--claret) 0%, var(--gold) 100%);
   --grad-mesh:
     radial-gradient(60% 55% at 85% 8%, color-mix(in srgb, var(--gold) 30%, transparent), transparent 60%),
@@ -36,7 +38,7 @@
 
   /* Type */
   --display: "Fraunces", Georgia, "Times New Roman", serif;
-  --body: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+  --body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Space */
   --maxw: 1180px;
@@ -46,10 +48,10 @@
   --facet: 26px;
 
   /* Shadow — tinted, not flat black */
-  --shadow-sm: 0 2px 10px -4px rgba(28, 20, 32, 0.14);
-  --shadow-md: 0 20px 44px -18px rgba(155, 27, 63, 0.32);
-  --shadow-gold: 0 16px 34px -14px rgba(201, 150, 62, 0.4);
-  --shadow-lg: 0 34px 70px -24px rgba(28, 20, 32, 0.4);
+  --shadow-sm: 0 2px 10px -4px rgba(20, 19, 46, 0.14);
+  --shadow-md: 0 20px 44px -18px rgba(74, 69, 200, 0.32);
+  --shadow-gold: 0 16px 34px -14px rgba(255, 155, 113, 0.4);
+  --shadow-lg: 0 34px 70px -24px rgba(20, 19, 46, 0.4);
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -666,7 +668,7 @@ body.leaving { opacity: 0; }
 .phone-rail { display: flex; gap: clamp(1rem, 2vw, 1.6rem); overflow-x: auto; scroll-snap-type: x mandatory; padding: 0.5rem 0.2rem 1.4rem; margin-top: 1.2rem; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: var(--claret) transparent; }
 .phone-rail:focus-visible { outline: 2px solid var(--claret); outline-offset: 4px; border-radius: 12px; }
 .phone { flex: 0 0 clamp(190px, 22vw, 240px); margin: 0; scroll-snap-align: start; }
-.phone img { width: 100%; height: auto; border-radius: 28px; box-shadow: 0 22px 44px -22px rgba(28, 20, 32, .55); transition: transform .45s var(--ease, ease); }
+.phone img { width: 100%; height: auto; border-radius: 28px; box-shadow: 0 22px 44px -22px rgba(20, 19, 46, .55); transition: transform .45s var(--ease, ease); }
 .phone:hover img { transform: translateY(-8px) scale(1.02); }
 .phone figcaption { margin-top: 0.8rem; font-size: 0.82rem; color: var(--ink-soft); line-height: 1.45; }
 .phone figcaption b { display: block; color: var(--ink); font-size: 0.9rem; margin-bottom: 0.15rem; }
@@ -720,3 +722,58 @@ body.leaving { opacity: 0; }
 .hf__ctl { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(28,20,32,.72); color: #fff; font-size: 1.1rem; cursor: pointer; }
 .hf__ctl:hover { background: var(--claret); } .hf__ctl--p { left: 10px; } .hf__ctl--n { right: 10px; }
 @media (prefers-reduced-motion: reduce) { .proto-tabs button { transition: none; } }
+
+/* ============================================================
+   UX-portfolio skin — indigo gradient, device frames, numbered pills
+   ============================================================ */
+body::before { opacity: 0.02; }
+h1, h2 { letter-spacing: -0.02em; }
+
+/* Hero: periwinkle gradient stage with italic watermark and a phone */
+.hero-art {
+  clip-path: none; border-radius: 28px; aspect-ratio: 5 / 6;
+  background:
+    radial-gradient(90% 70% at 20% 0%, #5b57d6 0%, transparent 60%),
+    radial-gradient(80% 70% at 100% 100%, #ffb391 0%, transparent 55%),
+    linear-gradient(160deg, #6f6bdc, #3d39a3 70%, #2a2780);
+  isolation: isolate;
+}
+.hero-art .lattice { display: none; }
+.hero-art::before {
+  content: "Clarity"; position: absolute; left: -4%; right: -4%; top: 38%; z-index: 0;
+  font-family: var(--display); font-style: italic; font-weight: 400; text-align: center;
+  font-size: clamp(5rem, 13vw, 9rem); line-height: 1; color: rgba(255,255,255,.14); pointer-events: none;
+}
+.hero-art .device { position: relative; z-index: 1; width: min(52%, 220px); transform: rotate(-4deg); }
+.hero-art .device--b { position: absolute; z-index: 0; width: min(40%, 170px); right: 6%; bottom: -6%; transform: rotate(7deg); opacity: .96; }
+.hero-art .hero-tag { position: absolute; left: 1.1rem; bottom: 1rem; z-index: 2; color: #fff; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; opacity: .85; }
+
+/* Device frame: use around any screenshot */
+.device { position: relative; border-radius: 34px; padding: 7px; background: #0f0e2a; box-shadow: 0 30px 60px -24px rgba(10,10,40,.7), inset 0 0 0 1.5px #3a3970; }
+.device::before { content: ""; position: absolute; top: 13px; left: 50%; width: 30%; height: 14px; transform: translateX(-50%); border-radius: 10px; background: #0f0e2a; z-index: 2; }
+.device img { width: 100%; height: auto; border-radius: 27px; box-shadow: none; display: block; }
+/* Optional hand: drop a transparent PNG at assets/hand-phone.png and add class device--hand */
+.device--hand { padding-bottom: 7px; }
+.device--hand::after { content: ""; position: absolute; left: -22%; right: -22%; bottom: -26%; height: 46%; background: url("assets/hand-phone.png") center top / contain no-repeat; pointer-events: none; z-index: 3; }
+
+/* Phone rails get the device frame */
+.phone img { padding: 6px; background: #0f0e2a; border-radius: 30px; box-shadow: 0 22px 44px -22px rgba(20,19,46,.6), inset 0 0 0 1.5px #3a3970; }
+.phone-rail { padding-top: 1.2rem; }
+
+/* Numbered section pills (like "04 · Typography & Colors") */
+.sec-pill { display: inline-flex; align-items: center; gap: .6rem; margin-bottom: 1.2rem; }
+.sec-pill i { font-style: normal; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--lav-soft); color: #8d8bb5; font-size: .78rem; font-weight: 600; }
+.sec-pill b { font-weight: 600; font-size: .92rem; color: #fff; background: var(--obsidian); padding: .5rem 1.1rem; border-radius: 999px; }
+
+/* Case-study sections: subtle lavender wash on alternating blocks, dots progress */
+.cs-band { background: var(--lav-soft); border-radius: 28px; padding: clamp(1.5rem, 4vw, 3rem); }
+.cs-band--navy { background: var(--obsidian); color: #e9e8fb; }
+.cs-band--navy h3, .cs-band--navy h2 { color: #fff; }
+.dots-nav { position: fixed; right: 18px; top: 50%; transform: translateY(-50%); z-index: 50; display: flex; flex-direction: column; gap: 12px; }
+.dots-nav a { width: 10px; height: 10px; border-radius: 50%; background: var(--lav); opacity: .55; transition: transform .25s var(--ease), background .25s, opacity .25s; position: relative; }
+.dots-nav a:hover { opacity: 1; transform: scale(1.3); }
+.dots-nav a.on { background: var(--claret); opacity: 1; transform: scale(1.35); }
+.dots-nav a span { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); white-space: nowrap; font-size: .72rem; background: var(--obsidian); color: #fff; padding: .25rem .6rem; border-radius: 999px; opacity: 0; pointer-events: none; transition: opacity .2s; }
+.dots-nav a:hover span, .dots-nav a:focus-visible span { opacity: 1; }
+@media (max-width: 900px) { .dots-nav { display: none; } }
+@media (max-width: 760px) { .hero-art { aspect-ratio: 1 / 1; } .hero-art .device { width: 40%; } }

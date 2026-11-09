@@ -136,6 +136,36 @@
 
   applyPath();
 
+  // Case-study numbered pills + dots navigation
+  (function () {
+    if (!document.querySelector(".cs-hero")) return;
+    var blocks = Array.prototype.filter.call(document.querySelectorAll("main .cs-body"), function (b) { return b.querySelector("h2"); });
+    if (blocks.length < 2) return;
+    var nav = document.createElement("nav"); nav.className = "dots-nav"; nav.setAttribute("aria-label", "Case study sections");
+    var dots = [];
+    blocks.forEach(function (b, i) {
+      var h2 = b.querySelector("h2"), tag = b.querySelector(".phase-tag");
+      var label = (tag ? tag.textContent : h2.textContent).trim();
+      if (label.length > 34) label = label.slice(0, 32).trim() + "\u2026";
+      var n = String(i + 1).padStart(2, "0");
+      var pill = document.createElement("div"); pill.className = "sec-pill reveal";
+      pill.innerHTML = "<i>" + n + "</i><b></b>"; pill.querySelector("b").textContent = label;
+      if (tag) tag.remove();
+      b.insertBefore(pill, b.firstChild);
+      if (h2.style.marginTop) h2.style.marginTop = "0";
+      b.id = b.id || "sec-" + (i + 1);
+      var a = document.createElement("a"); a.href = "#" + b.id; a.setAttribute("aria-label", label);
+      a.innerHTML = "<span></span>"; a.firstChild.textContent = label; nav.appendChild(a); dots.push(a);
+    });
+    document.body.appendChild(nav);
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { var i = blocks.indexOf(e.target); dots.forEach(function (d, j) { d.classList.toggle("on", i === j); }); } });
+      }, { rootMargin: "-40% 0px -50% 0px" });
+      blocks.forEach(function (b) { io.observe(b); });
+    }
+  })();
+
   // Reading progress bar on case-study pages
   if (document.querySelector(".cs-body")) {
     var bar = document.createElement("div");
