@@ -118,7 +118,15 @@
 
         <h3 class="reveal">Starting the design</h3>
         <p class="reveal">Paper wireframes → digital wireframes → low-fidelity prototype. Core flow: users land on the homepage and scan an item to add it to or subtract it from inventory.</p>
-        <!-- TODO Part 1: wireframe / lo-fi screens from Figma (file SWznY3ZKtLvxzbPuDaISL3: Android 360x640 frames 1:81, 1:117, 1:131, 1:174) - Figma MCP rate-limited -->
+        <div class="phone-rail reveal" tabindex="0" aria-label="Low-fidelity screens, scroll horizontally">
+          <figure class="phone"><img src="assets/v1-wire-notification.png" alt="Digital wireframe of the notifications screen" loading="lazy"><figcaption><b>Digital wireframe</b>Notifications, sketched in grayscale to settle layout before any styling.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-lofi-dashboard.png" alt="Low-fidelity home screen" loading="lazy"><figcaption><b>Home</b>Add or subtract stock, vendors, and an inventory summary table.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-lofi-scanner.png" alt="Low-fidelity scanner screen" loading="lazy"><figcaption><b>Scanner</b>Point at the barcode; the flashlight sits in reach.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-lofi-scanned.png" alt="Low-fidelity scan confirmation" loading="lazy"><figcaption><b>Scan confirmation</b>Confirm the add, or cancel.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-lofi-item.png" alt="Low-fidelity item profile" loading="lazy"><figcaption><b>Item profile</b>Photo, description, delete, favourite, barcode and price.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-lofi-menu.png" alt="Low-fidelity side menu" loading="lazy"><figcaption><b>Menu</b>Settings, reports, history and sign out.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-lofi-profile.png" alt="Low-fidelity profile screen" loading="lazy"><figcaption><b>Profile</b>Business details and account fields.</figcaption></figure>
+        </div>
         <p class="reveal">View the <a href="https://www.figma.com/design/SWznY3ZKtLvxzbPuDaISL3/Inventory-app?t=EHQgOgSxjLslM8pS-1" class="link-underline" target="_blank" rel="noopener">low-fidelity prototype in Figma →</a></p>
 
         <h3 class="reveal">Usability studies</h3>
@@ -128,7 +136,23 @@
 
         <h3 class="reveal">Refining the design</h3>
         <p class="reveal">Mockups → high-fidelity prototype → accessibility updates.</p>
-        <div class="phone-rail reveal" tabindex="0" aria-label="Inventory app high-fidelity screens">
+        <div class="phone-rail reveal" tabindex="0" aria-label="First high-fidelity version, scroll horizontally">
+          <figure class="phone"><img src="assets/v1-hifi-dashboard.png" alt="First high-fidelity home screen" loading="lazy"><figcaption><b>Home</b>Colour and vendor tiles added; Add and Deduct stay on top.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-hifi-scanner.png" alt="First high-fidelity scanner" loading="lazy"><figcaption><b>Scanner</b>A clear call to action above the viewfinder.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-hifi-scanned.png" alt="First high-fidelity scan confirmation" loading="lazy"><figcaption><b>Scanned</b>A big green confirmation so there's no doubt it worked.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-hifi-subtract.png" alt="First high-fidelity subtract confirmation" loading="lazy"><figcaption><b>Subtract</b>Same flow for taking stock out.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-hifi-item.png" alt="First high-fidelity item profile" loading="lazy"><figcaption><b>Item profile</b>Item details with quick actions.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-hifi-notifications.png" alt="First high-fidelity notifications" loading="lazy"><figcaption><b>Notifications</b>Yes/No prompts to add low items to the order list.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-hifi-profile.png" alt="First high-fidelity profile" loading="lazy"><figcaption><b>Profile</b>Business photo and account details.</figcaption></figure>
+        </div>
+        <h4 class="reveal">The home screen, before and after testing</h4>
+        <div class="phone-rail reveal" tabindex="0" aria-label="Home screen across three stages">
+          <figure class="phone"><img src="assets/v1-lofi-dashboard.png" alt="Low-fidelity home screen" loading="lazy"><figcaption><b>1 · Low-fi</b>Layout and flow only.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-hifi-dashboard.png" alt="First high-fidelity home screen" loading="lazy"><figcaption><b>2 · First hi-fi</b>Colour, vendor tiles, summary table.</figcaption></figure>
+          <figure class="phone"><img src="assets/pints-home.png" alt="Final high-fidelity home screen" loading="lazy"><figcaption><b>3 · After testing</b>Live stock counts, a low-stock alert and icon navigation.</figcaption></figure>
+        </div>
+        <p class="reveal">Testing asked for more information on the home screen, so it moved from navigation-only to live counts (in stock, low, out, vendors) with a one-tap review of what needs ordering.</p>
+        <div class="phone-rail reveal" tabindex="0" aria-label="Final high-fidelity screens">
           <figure class="phone"><img src="assets/pints-home.png" alt="High-fidelity homepage: stock counts and review inventory alert" loading="lazy"><figcaption><b>Homepage</b>Stock counts at a glance and a one-tap review of what needs ordering.</figcaption></figure>
           <figure class="phone"><img src="assets/pints-v1-settings.png" alt="High-fidelity settings screen" loading="lazy"><figcaption><b>Settings</b>Account and app preferences.</figcaption></figure>
         </div>
