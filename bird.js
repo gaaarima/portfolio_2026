@@ -112,8 +112,9 @@
     if (u.origin !== location.origin || !/\.html?$|\/$/.test(u.pathname) || (u.pathname === location.pathname && u.search === location.search)) return;
     e.preventDefault();
     var r = a.getBoundingClientRect();
-    var tx = r.left + r.width / 2 - SIZE / 2 + window.scrollX, ty = r.top + window.scrollY - SIZE + 6;
-    try { sessionStorage.setItem("chirp-from", JSON.stringify({ x: r.left + r.width / 2 - SIZE / 2, y: r.top - SIZE + 6 })); } catch (er) {}
+    var vy = Math.max(6, r.top - SIZE + 6);
+    var tx = r.left + r.width / 2 - SIZE / 2 + window.scrollX, ty = vy + window.scrollY;
+    try { sessionStorage.setItem("chirp-from", JSON.stringify({ x: r.left + r.width / 2 - SIZE / 2, y: vy })); } catch (er) {}
     closePanel();
     fly(tx, ty, reduce ? 0 : 650, function () { location.href = a.href; });
     if (reduce) location.href = a.href;
