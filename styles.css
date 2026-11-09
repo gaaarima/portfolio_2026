@@ -773,3 +773,8 @@ h1, h2 { letter-spacing: -0.02em; }
 .dots-nav a:hover span, .dots-nav a:focus-visible span { opacity: 1; }
 @media (max-width: 900px) { .dots-nav { display: none; } }
 @media (max-width: 760px) { .hero-art { aspect-ratio: 1 / 1; } .hero-art .device { width: 32%; left: 18%; } .hero-art .device--b { width: 26%; } }
+
+.foot-next { display: inline-block; transition: color .25s var(--ease); }
+.foot-next span { display: inline-block; transition: transform .3s var(--ease); }
+.foot-next:hover { color: var(--gold); }
+.foot-next:hover span { transform: translateX(10px); }
