@@ -34,28 +34,22 @@
 
   <main id="main">
     <!-- HERO -->
-    <section class="hero wrap">
-      <div class="hero-grid">
-        <div>
-          <span class="eyebrow reveal">UX Designer · Research to front-end</span>
-          <h1 class="display reveal" data-delay="1" style="margin-top:1.4rem;">
-            Clarity,<br />by <span class="serif-it accent">design.</span>
-          </h1>
-          <p class="lead hero-sub reveal" data-delay="2">
-            I turn scattered, complex tasks into clear, guided experiences — designing
-            mobile and web products end to end: user research, flows, prototypes,
-            usability testing and shipped front-end.
-          </p>
+    <section class="stage-wrap wrap">
+      <div class="stage">
+        <span class="stage__mark" aria-hidden="true">Portfolio</span>
+        <div class="stage__top">
+          <span class="stage__pill reveal">Portfolio · 2026</span>
+          <h1 class="reveal" data-delay="1">Garima Shrestha</h1>
+          <p class="reveal" data-delay="2">UX Designer</p>
           <div class="hero-cta reveal" data-delay="3">
-            <a href="work.html" class="btn">View work <span class="arrow">↗</span></a>
-            <a href="about.html" class="btn btn--ghost">About me</a>
+            <a href="work.html?path=ux" class="btn btn--light">View my work <span class="arrow">↗</span></a>
+            <a href="contact.html" class="btn btn--glass">Let's talk</a>
           </div>
         </div>
-
-        <div class="hero-art reveal" data-delay="2" aria-hidden="true">
-          <figure class="device device--b"><img src="assets/fittrack-screen-body.png" alt="" /></figure>
-          <figure class="device"><img src="assets/pints-home.png" alt="" /></figure>
-          <span class="hero-tag">Inventory · Fitness · Web</span>
+        <div class="stage__phones reveal" data-delay="2" aria-hidden="true">
+          <figure class="device"><img src="assets/fittrack-screen-start.png" alt="" /></figure>
+          <figure class="device device--main"><img src="assets/pints-home.png" alt="" /></figure>
+          <figure class="device"><img src="assets/fittrack-screen-body.png" alt="" /></figure>
         </div>
       </div>
     </section>
@@ -65,19 +59,17 @@
       <div class="path-choice__head reveal">
         <span class="eyebrow">Choose your path</span>
         <h2 style="margin-top:0.8rem;">What are you here for?</h2>
-        <p>Pick a view and the site shows you just what's relevant. You can switch anytime from the top bar.</p>
+        
       </div>
       <div class="path-cards">
         <a href="work.html?path=ux" class="path-card reveal" data-choose="ux" data-go="work.html?path=ux">
           <span class="path-card__k">For hiring teams</span>
           <div class="path-card__t">UX case studies</div>
-          <p class="path-card__d">Four in-depth projects: research, process, design decisions and outcomes. The fast route to how I work.</p>
           <span class="path-card__go">See the UX work <span>→</span></span>
         </a>
         <a href="work.html?path=all" class="path-card reveal" data-choose="all" data-go="work.html?path=all" data-delay="1">
           <span class="path-card__k">For schools, collaborators &amp; the curious</span>
           <div class="path-card__t">Everything</div>
-          <p class="path-card__d">Every project: UX, websites, and the creative range behind them. The full picture.</p>
           <span class="path-card__go">Explore it all <span>→</span></span>
         </a>
       </div>
@@ -105,7 +97,6 @@
           <div class="tile__body">
             <span class="tile__kicker">Web app · Real client</span>
             <div class="tile__title">Pints of Joy</div>
-            <p class="tile__desc">An inventory app I designed for a real business, which runs its weekly operations on it.</p>
             <span class="tile__more">Read case study <span class="arrow">→</span></span>
           </div>
         </a>
@@ -114,7 +105,6 @@
           <div class="tile__body">
             <span class="tile__kicker">Website · Real client</span>
             <div class="tile__title">Rabina Beauty</div>
-            <p class="tile__desc">A full, accessible 11-page website built from scratch for a beauty salon &amp; training center in Kathmandu.</p>
             <span class="tile__more">Read case study <span class="arrow">→</span></span>
           </div>
         </a>
@@ -123,7 +113,6 @@
           <div class="tile__body">
             <span class="tile__kicker">Mobile · AI</span>
             <div class="tile__title">FitTrack</div>
-            <p class="tile__desc">An all-in-one fitness app with AI coaching for workouts, nutrition &amp; weight.</p>
             <span class="tile__more">Read case study <span class="arrow">→</span></span>
           </div>
         </a>
@@ -132,7 +121,6 @@
           <div class="tile__body">
             <span class="tile__kicker">Website · Real client</span>
             <div class="tile__title">Bishal Imagery</div>
-            <p class="tile__desc">A bookings-ready website for a Bay Area photographer, live on a custom domain.</p>
             <span class="tile__more">Read case study <span class="arrow">→</span></span>
           </div>
         </a>
@@ -141,7 +129,6 @@
           <div class="tile__body">
             <span class="tile__kicker">Website · Real client</span>
             <div class="tile__title">NYC Nepali Lifestyle</div>
-            <p class="tile__desc">A live 12-page website framework for a Queens photo &amp; film studio, from content audit to launch.</p>
             <span class="tile__more">Read case study <span class="arrow">→</span></span>
           </div>
         </a>
@@ -150,7 +137,6 @@
           <div class="tile__body">
             <span class="tile__kicker">Website redesign · Non-profit</span>
             <div class="tile__title">NWGN-CA</div>
-            <p class="tile__desc">A redesign of a Bay Area Nepalese women's non-profit site: real faces first, clear ways to join and donate.</p>
             <span class="tile__more">Read case study <span class="arrow">→</span></span>
           </div>
         </a>
@@ -164,9 +150,9 @@
         <h2>Empathy first, <span class="serif-it accent">then</span> the pixels.</h2>
       </div>
       <ol class="steps">
-        <li class="reveal" data-delay="1"><span class="steps__n">01</span><h3>Listen</h3><p>I start by sitting with the people who use the product all day — owners, managers, customers — because years in customer service and restaurants taught me where friction really hides.</p></li>
-        <li class="reveal" data-delay="2"><span class="steps__n">02</span><h3>Simplify</h3><p>I turn scattered tasks into one clear, guided flow, and I sweat the little things: positioning, hierarchy, the moments between the polished screens.</p></li>
-        <li class="reveal" data-delay="3"><span class="steps__n">03</span><h3>Ship</h3><p>I build the front end myself, so the design that reaches users is the design I intended — tested, accessible, and iterated on real feedback.</p></li>
+        <li class="reveal" data-delay="1"><span class="steps__n">01</span><h3>Listen</h3><p>Sit with the people who use the product all day.</p></li>
+        <li class="reveal" data-delay="2"><span class="steps__n">02</span><h3>Simplify</h3><p>Turn scattered tasks into one clear flow.</p></li>
+        <li class="reveal" data-delay="3"><span class="steps__n">03</span><h3>Ship</h3><p>Build it, test it, iterate on real feedback.</p></li>
       </ol>
     </section>
 
