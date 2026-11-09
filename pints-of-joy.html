@@ -49,9 +49,11 @@
 
     <section class="section--tight wrap">
       <figure class="fig reveal">
-        <!-- Replace with: <img src="assets/pints-home.png" alt="Pints of Joy homepage screen"> -->
-        <div class="frame frame--wide"><span class="frame__cap">Pints of Joy homepage — Figma</span></div>
-        <figcaption>Pints of Joy homepage screen — created in Figma.</figcaption>
+        <div class="browser">
+          <div class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span>Pints of Joy Inventory</span></div>
+          <img src="assets/pints-new-dashboard.jpg" width="1400" height="857" alt="The redesigned Pints of Joy Inventory dashboard, Stock Flow: a top navigation of icon pills, four weekly stat cards, and weekly report cards for the production schedule and drinks log." />
+        </div>
+        <figcaption>Part 2, the real Pints of Joy app: the redesigned Stock Flow dashboard.</figcaption>
       </figure>
     </section>
 
@@ -65,7 +67,7 @@
     <!-- ===== SECTION 01 — INVENTORY APP (UX CASE STUDY) ===== -->
     <section class="section--tight wrap" id="inventory-app">
       <div class="cs-body">
-        <span class="phase-tag reveal">Section 01 · UX case study</span>
+        <span class="phase-tag reveal">Part 1 · First passion project</span>
         <h2 class="reveal" style="margin-top:0.4rem;">Inventory App</h2>
         <p class="reveal">This was the first product I ever designed end to end — a capstone-style case study for my Google UX Design Professional Certificate. I leaned on the UX process I was learning in real time — research, personas, wireframes, prototypes, usability testing, and accessibility — and owned every step, from the first user interview to the final high-fidelity screen.</p>
 
@@ -116,11 +118,7 @@
 
         <h3 class="reveal">Starting the design</h3>
         <p class="reveal">Paper wireframes → digital wireframes → low-fidelity prototype. Core flow: users land on the homepage and scan an item to add it to or subtract it from inventory.</p>
-        <figure class="fig reveal">
-          <!-- Replace with: <img src="assets/pints-wireframes.png" alt="Wireframes"> -->
-          <div class="frame"><span class="frame__cap">Wireframes → low-fi prototype</span></div>
-          <figcaption>Paper and digital wireframes — created in Figma.</figcaption>
-        </figure>
+        <!-- TODO Part 1: add Figma wireframes image here: <img src="assets/pints-wireframes.png" alt="Wireframes"> -->
         <p class="reveal">View the <a href="https://www.figma.com/file/gjekPUvQJFD5TIQycXBmu6/Portfolio-Project?type=design&amp;node-id=0%3A1&amp;mode=design" class="link-underline" target="_blank" rel="noopener">low-fidelity prototype in Figma →</a></p>
 
         <h3 class="reveal">Usability studies</h3>
@@ -150,7 +148,7 @@
          NOTE: three image slots below need files saved into /assets (see comments). -->
     <section class="section--tight wrap" id="pints-of-joy" style="border-top:1px solid var(--line); padding-top:clamp(3rem,6vw,5rem);">
       <div class="cs-body">
-        <span class="phase-tag reveal">Section 02 · Real-world build</span>
+        <span class="phase-tag reveal">Part 2 · Turning it into a real project</span>
         <h2 class="reveal" style="margin-top:0.4rem;">Pints of Joy: from a weekly spreadsheet to an app the business runs on</h2>
         <p class="reveal">Pints of Joy is a small-batch Indian ice-cream maker with a Mountain View factory and three Bay Area stores. Every week, inventory, production planning, and store transfers lived in a hand-typed Excel sheet. I researched the real workflow and designed the app that replaced it.</p>
 
@@ -236,6 +234,78 @@
           <li><strong>People &amp; tasks.</strong> Employee session logging and task assignment, the step that turned it into an operations tool.</li>
         </ol>
 
+        <h3 class="reveal">Before and after: version 1 to the redesign</h3>
+        <p class="reveal">The first working version of the app proved the idea, then the manager's weekly use showed what to change. Drag the slider to compare the first version (left) with the redesign (right).</p>
+        <div class="proto-tabs reveal" role="group" aria-label="Choose a screen to compare">
+          <button type="button" class="on" data-ba-tab="dashboard" aria-pressed="true" data-ba-note="Dashboard: the side menu and marketing headline became a top icon menu, a plain 'Stock Flow' title and weekly report cards.">Dashboard</button>
+          <button type="button" data-ba-tab="production" aria-pressed="false" data-ba-note="Production: one package grid per day became a weekly requirements grid per store, with a batch number and a two-step plan.">Production</button>
+          <button type="button" data-ba-tab="transfers" aria-pressed="false" data-ba-note="Transfers: a sheet-style entry screen for store-to-store movement.">Transfers</button>
+          <button type="button" data-ba-tab="reserved" aria-pressed="false" data-ba-note="Reserved: the reserved-stock sheet in the new layout.">Reserved</button>
+          <button type="button" data-ba-tab="products" aria-pressed="false" data-ba-note="Products: the product list in the new layout.">Products</button>
+        </div>
+        <div class="ba2 reveal" data-ba>
+          <span class="ba2__tag ba2__tag--l">Before</span><span class="ba2__tag ba2__tag--r">After</span>
+          <img src="assets/pints-new-dashboard.jpg" alt="After: redesigned dashboard screen" />
+          <div class="ba2__before"><img src="assets/pints-old-dashboard.jpg" alt="Before: first version of the dashboard screen" /></div>
+          <div class="ba2__line"></div><div class="ba2__knob" aria-hidden="true">⇔</div>
+          <input type="range" min="0" max="100" value="50" aria-label="Reveal amount: before versus after" />
+        </div>
+        <p class="proto-note" data-ba-cap>Dashboard: the side menu and marketing headline became a top icon menu, a plain "Stock Flow" title and weekly report cards.</p>
+        <ul class="reveal">
+          <li><strong>Navigation:</strong> the left sidebar became a top row of icon pills, and new areas appeared: Closing, Consumption, Dry Inventory, Insights, Profile and notifications.</li>
+          <li><strong>Less talk, more work:</strong> the marketing headline ("Joyful stock flow, minus the spreadsheet juggling") became a plain "Stock Flow" title, with weekly reports on the dashboard.</li>
+          <li><strong>Per-store planning:</strong> production now plans by store (Sunnyvale, Fremont, Palo Alto) with consumed, operations and required columns, and a batch number.</li>
+          <li><strong>One clear action:</strong> a floating "Save Requirements" button stays in reach while you edit the grid.</li>
+        </ul>
+
+        <h3 class="reveal">Wireframes</h3>
+        <p class="reveal">The structure of the redesigned app in grayscale: sign-in, the dashboard, the production grid and transfers. Everything is a sheet you can fill in, matching how the team worked in Excel.</p>
+        <figure class="fig reveal">
+          <img src="assets/pints-wireframes-v2.svg" width="1040" height="700" loading="lazy" alt="Low-fidelity wireframes of four screens: sign-in, the Stock Flow dashboard with stat cards and report cards, the production requirements grid, and the transfers sheet." />
+          <figcaption>Low-fidelity wireframes of the redesigned structure.</figcaption>
+        </figure>
+
+        <h3 class="reveal">Lo-fi prototype</h3>
+        <p class="reveal">A clickable grayscale version of the flow. Try it: sign in, open Production, save, then start a transfer.</p>
+        <div class="lofi reveal" data-lofi>
+          <div class="lf-nav" role="group" aria-label="Lo-fi screens">
+            <button type="button" data-lf-tab="signin" aria-pressed="true">Sign in</button>
+            <button type="button" data-lf-tab="dash" aria-pressed="false">Dashboard</button>
+            <button type="button" data-lf-tab="prod" aria-pressed="false">Production</button>
+            <button type="button" data-lf-tab="trans" aria-pressed="false">Transfers</button>
+          </div>
+          <div class="lf-screen" id="lf-signin"><div class="lf-mid">
+            <h4>Inventory</h4><p>Sunnyvale · Fremont · Palo Alto</p><br />
+            <div class="lf-card"><span>Username</span><div class="lf-in"></div><span>Password</span><div class="lf-in"></div>
+            <button type="button" class="lf-btn" data-lf-go="dash" style="width:100%">Sign in</button><br /><br /><button type="button" class="lf-btn lf-btn--ghost" style="width:100%">Request access</button></div></div></div>
+          <div class="lf-screen" id="lf-dash" hidden>
+            <h4>Stock Flow</h4>
+            <div class="lf-stats"><div class="lf-stat">Transfers<b>0</b></div><div class="lf-stat">Production units<b>0</b></div><div class="lf-stat">Reserved units<b>0</b></div><div class="lf-stat">Needs verify<b>0</b></div></div>
+            <div class="lf-card"><b>Weekly reports</b><br /><br /><button type="button" class="lf-btn lf-btn--ghost" data-lf-go="prod">Production schedule</button> <button type="button" class="lf-btn lf-btn--ghost">Drinks log</button></div>
+            <button type="button" class="lf-btn" data-lf-go="trans">New transfer</button></div>
+          <div class="lf-screen" id="lf-prod" hidden>
+            <h4>Requirements for the week</h4>
+            <div class="lf-row"><span>Batch number *</span><div class="lf-in" style="margin:0 0 .5rem"></div></div>
+            <div class="lf-grid"><i class="h"></i><i class="h"></i><i class="h"></i><i class="h"></i><i class="h"></i><i class="h"></i><i class="h"></i>
+              <i class="n"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="n"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="n"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="n"></i><i></i><i></i><i></i><i></i><i></i><i></i></div><br />
+            <button type="button" class="lf-btn" data-lf-save>Save Requirements</button></div>
+          <div class="lf-screen" id="lf-trans" hidden>
+            <h4>Transfers</h4>
+            <div class="lf-row" style="grid-template-columns:1fr 1fr 1fr"><div>Route<div class="lf-in"></div></div><div>Date<div class="lf-in"></div></div><div>Invoice # (auto)<div class="lf-in"></div></div></div>
+            <div class="lf-grid" style="grid-template-columns:1.4fr 1fr 1fr 1fr"><i class="h"></i><i class="h"></i><i class="h"></i><i class="h"></i><i class="n"></i><i></i><i></i><i></i><i class="n"></i><i></i><i></i><i></i></div><br />
+            <button type="button" class="lf-btn lf-btn--ghost" data-lf-save>Send sign-off</button> <button type="button" class="lf-btn" data-lf-save>Receive sign-off</button></div>
+        </div>
+
+        <h3 class="reveal">Hi-fi prototype</h3>
+        <p class="reveal">The finished screens, as a click-through. Click a screen name, the arrows, or the screen itself to move on.</p>
+        <div class="hf reveal" data-hifi tabindex="0" aria-label="High-fidelity screen walkthrough">
+          <div class="hf__bar" aria-hidden="true"><i></i><i></i><i></i><span class="hf__url">inventory / sign in</span></div>
+          <div class="hf__view"><img class="hf__img" src="assets/pints-hf-signin.jpg" alt="Final sign-in screen" /><button type="button" class="hf__ctl hf__ctl--p" data-hf-prev aria-label="Previous screen">←</button><button type="button" class="hf__ctl hf__ctl--n" data-hf-next aria-label="Next screen">→</button></div>
+        </div>
+        <div class="proto-tabs reveal" role="group" aria-label="Choose a screen" data-hifi-tabs>
+          <button type="button" data-hf="signin" class="on" aria-pressed="true">Sign in</button><button type="button" data-hf="dashboard" aria-pressed="false">Dashboard</button><button type="button" data-hf="closing" aria-pressed="false">Closing</button><button type="button" data-hf="consumption" aria-pressed="false">Consumption</button><button type="button" data-hf="production" aria-pressed="false">Production</button><button type="button" data-hf="transfers" aria-pressed="false">Transfers</button><button type="button" data-hf="reserved" aria-pressed="false">Reserved</button><button type="button" data-hf="products" aria-pressed="false">Products</button><button type="button" data-hf="dry" aria-pressed="false">Dry inventory</button><button type="button" data-hf="drinks" aria-pressed="false">Drinks</button><button type="button" data-hf="insights" aria-pressed="false">Insights</button><button type="button" data-hf="profile" aria-pressed="false">Profile</button>
+        </div>
+
         <h3 class="reveal">Where it landed</h3>
         <div class="cards3">
           <div class="stat reveal"><b>Live</b><span>In the business's real weekly operations</span></div>
@@ -268,5 +338,6 @@
   </footer>
 
   <script src="main.js"></script>
+  <script src="proto.js"></script>
 </body>
 </html>

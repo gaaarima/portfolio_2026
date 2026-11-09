@@ -671,3 +671,52 @@ body.leaving { opacity: 0; }
 .phone figcaption { margin-top: 0.8rem; font-size: 0.82rem; color: var(--ink-soft); line-height: 1.45; }
 .phone figcaption b { display: block; color: var(--ink); font-size: 0.9rem; margin-bottom: 0.15rem; }
 @media (prefers-reduced-motion: reduce) { .phone img { transition: none; } .phone:hover img { transform: none; } }
+
+/* ============ Case-study prototypes (Pints of Joy) ============ */
+.proto-tabs { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 1.2rem 0 1rem; }
+.proto-tabs button { font: inherit; font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.45rem 0.95rem; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--ink-soft); cursor: pointer; transition: all .25s; }
+.proto-tabs button:hover { border-color: var(--claret); color: var(--claret); }
+.proto-tabs button.on { background: var(--ink); border-color: var(--ink); color: #fff; }
+.proto-tabs button:focus-visible, .ba2 input:focus-visible + .ba2__knob { outline: 2px solid var(--claret); outline-offset: 2px; }
+.proto-note { font-size: 0.82rem; color: var(--muted); margin-top: 0.7rem; }
+
+/* before/after */
+.ba2 { --pos: 50%; position: relative; aspect-ratio: 2940 / 1800; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow-sm, 0 8px 24px -14px rgba(0,0,0,.4)); touch-action: pan-y; user-select: none; background: #fff; }
+.ba2 img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top left; pointer-events: none; }
+.ba2__before { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.ba2__line { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.2); pointer-events: none; }
+.ba2__knob { position: absolute; top: 50%; left: var(--pos); width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; background: #fff; box-shadow: 0 4px 14px rgba(0,0,0,.35); display: grid; place-items: center; font-size: 1rem; color: var(--ink); pointer-events: none; }
+.ba2 input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+.ba2__tag { position: absolute; top: 10px; padding: 0.3rem 0.7rem; border-radius: 999px; background: rgba(20,16,14,.75); color: #fff; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none; z-index: 2; }
+.ba2__tag--l { left: 10px; } .ba2__tag--r { right: 10px; }
+
+/* lo-fi prototype */
+.lofi { border: 1px solid var(--line); border-radius: 12px; background: #f4f1ec; padding: clamp(0.8rem, 2vw, 1.4rem); font-family: "Helvetica Neue", Arial, sans-serif; }
+.lf-screen { background: #fff; border: 1.5px solid #bbb; border-radius: 8px; padding: 1rem; min-height: 320px; color: #666; font-size: 0.8rem; }
+.lf-screen h4 { font-size: 1.3rem; color: #555; margin: 0.2rem 0 0.8rem; font-family: inherit; font-weight: 700; }
+.lf-nav { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.9rem; }
+.lf-nav button, .lf-btn { font: inherit; font-size: 0.72rem; border: 0; border-radius: 999px; padding: 0.3rem 0.75rem; background: #e3e0db; color: #666; cursor: pointer; }
+.lf-nav button.on { background: #888; color: #fff; }
+.lf-btn { background: #888; color: #fff; padding: 0.5rem 1.1rem; font-weight: 600; }
+.lf-btn:hover, .lf-nav button:hover { filter: brightness(.92); }
+.lf-btn--ghost { background: #ccc; color: #555; }
+.lf-row { display: grid; gap: 0.5rem; }
+.lf-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom: 0.8rem; }
+.lf-stat { border: 1px solid #ccc; border-radius: 6px; padding: 0.5rem; background: #faf9f7; } .lf-stat b { display: block; font-size: 1.1rem; color: #666; }
+.lf-card { border: 1px solid #ccc; border-radius: 6px; padding: 0.7rem; background: #faf9f7; margin-bottom: 0.6rem; }
+.lf-in { height: 26px; border: 1px solid #ccc; border-radius: 4px; background: #fff; margin: 0.25rem 0 0.7rem; }
+.lf-grid { display: grid; grid-template-columns: 1.4fr repeat(6, 1fr); gap: 3px; }
+.lf-grid i { height: 18px; background: #fff; border: 1px solid #ccc; border-radius: 3px; display: block; } .lf-grid i.n { background: #d5d1ca; border-color: transparent; } .lf-grid i.h { background: #e3e0db; border-color: transparent; height: 14px; }
+.lf-mid { max-width: 320px; margin: 0 auto; text-align: center; } .lf-mid .lf-card { text-align: left; }
+@media (max-width: 640px) { .lf-stats { grid-template-columns: 1fr 1fr; } }
+
+/* hi-fi walkthrough */
+.hf { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--paper, #fff); }
+.hf__bar { display: flex; align-items: center; gap: 0.5rem; padding: 0.55rem 0.9rem; background: var(--ivory-2, #f5f1ea); border-bottom: 1px solid var(--line); }
+.hf__bar i { width: 10px; height: 10px; border-radius: 50%; background: #d9d2c8; display: block; } .hf__bar i:nth-child(1) { background: #ff6058; } .hf__bar i:nth-child(2) { background: #ffbd2e; } .hf__bar i:nth-child(3) { background: #28c840; }
+.hf__url { margin-left: 0.6rem; font-size: 0.72rem; color: var(--muted); }
+.hf__view { position: relative; background: #fff; }
+.hf__img { display: block; width: 100%; height: auto; cursor: pointer; }
+.hf__ctl { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(28,20,32,.72); color: #fff; font-size: 1.1rem; cursor: pointer; }
+.hf__ctl:hover { background: var(--claret); } .hf__ctl--p { left: 10px; } .hf__ctl--n { right: 10px; }
+@media (prefers-reduced-motion: reduce) { .proto-tabs button { transition: none; } }
