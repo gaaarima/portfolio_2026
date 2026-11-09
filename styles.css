@@ -660,3 +660,14 @@ body.leaving { opacity: 0; }
 .path-note { margin-top: 1rem; font-size: 0.9rem; color: var(--ink-soft); }
 .path-note button { font: inherit; background: none; border: 0; padding: 0; color: var(--claret); text-decoration: underline; cursor: pointer; }
 @media (prefers-reduced-motion: reduce) { body, .path-card, .path-card::before { transition: none; } .path-card:hover { transform: none; } }
+
+
+/* ============ Phone screen rail ============ */
+.phone-rail { display: flex; gap: clamp(1rem, 2vw, 1.6rem); overflow-x: auto; scroll-snap-type: x mandatory; padding: 0.5rem 0.2rem 1.4rem; margin-top: 1.2rem; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: var(--claret) transparent; }
+.phone-rail:focus-visible { outline: 2px solid var(--claret); outline-offset: 4px; border-radius: 12px; }
+.phone { flex: 0 0 clamp(190px, 22vw, 240px); margin: 0; scroll-snap-align: start; }
+.phone img { width: 100%; height: auto; border-radius: 28px; box-shadow: 0 22px 44px -22px rgba(28, 20, 32, .55); transition: transform .45s var(--ease, ease); }
+.phone:hover img { transform: translateY(-8px) scale(1.02); }
+.phone figcaption { margin-top: 0.8rem; font-size: 0.82rem; color: var(--ink-soft); line-height: 1.45; }
+.phone figcaption b { display: block; color: var(--ink); font-size: 0.9rem; margin-bottom: 0.15rem; }
+@media (prefers-reduced-motion: reduce) { .phone img { transition: none; } .phone:hover img { transform: none; } }
