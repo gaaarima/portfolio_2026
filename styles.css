@@ -736,12 +736,12 @@ h1, h2 { letter-spacing: -0.02em; }
 }
 .hero-art .lattice { display: none; }
 .hero-art::before {
-  content: "Clarity"; position: absolute; left: -4%; right: -4%; top: 38%; z-index: 0;
+  content: "Clarity"; position: absolute; left: -4%; right: -4%; top: 40%; z-index: 0;
   font-family: var(--display); font-style: italic; font-weight: 400; text-align: center;
   font-size: clamp(5rem, 13vw, 9rem); line-height: 1; color: rgba(255,255,255,.14); pointer-events: none;
 }
-.hero-art .device { position: relative; z-index: 1; width: min(52%, 220px); transform: rotate(-4deg); }
-.hero-art .device--b { position: absolute; z-index: 0; width: min(40%, 170px); right: 6%; bottom: -6%; transform: rotate(7deg); opacity: .96; }
+.hero-art .device { position: absolute; z-index: 2; width: 39%; left: 17%; top: 50%; transform: translateY(-50%) rotate(-5deg); }
+.hero-art .device--b { z-index: 1; width: 31%; left: auto; right: 9%; top: 56%; transform: translateY(-50%) rotate(7deg); opacity: .98; }
 .hero-art .hero-tag { position: absolute; left: 1.1rem; bottom: 1rem; z-index: 2; color: #fff; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; opacity: .85; }
 
 /* Device frame: use around any screenshot */
@@ -772,4 +772,4 @@ h1, h2 { letter-spacing: -0.02em; }
 .dots-nav a span { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); white-space: nowrap; font-size: .72rem; background: var(--obsidian); color: #fff; padding: .25rem .6rem; border-radius: 999px; opacity: 0; pointer-events: none; transition: opacity .2s; }
 .dots-nav a:hover span, .dots-nav a:focus-visible span { opacity: 1; }
 @media (max-width: 900px) { .dots-nav { display: none; } }
-@media (max-width: 760px) { .hero-art { aspect-ratio: 1 / 1; } .hero-art .device { width: 40%; } }
+@media (max-width: 760px) { .hero-art { aspect-ratio: 1 / 1; } .hero-art .device { width: 32%; left: 18%; } .hero-art .device--b { width: 26%; } }
