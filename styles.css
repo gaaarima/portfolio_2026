@@ -1,6 +1,6 @@
 /* ============================================================
    Garima Shrestha — Portfolio
-   Aesthetic: modern gem-cut editorial · Newari-rooted jewel tones
+   Aesthetic: UX portfolio · indigo gradient, device frames, peach accent
    ============================================================ */
 
 :root {
@@ -13,12 +13,12 @@
   --muted:      #8a89ab;
   --line:       #e4e2f5;
 
-  /* Color — jewel accents */
-  --claret:     #4a45c8;   /* garnet — Newari textile red, deepened */
+  /* Color — indigo + peach accents */
+  --claret:     #4a45c8;   /* primary indigo */
   --claret-dk:  #1b1a4d;
   --gold:       #ff9b71;   /* antique gold, brightened */
   --gold-soft:  #ffd3c0;
-  --emerald:    #2aa59a;   /* new: modern jewel-tone accent */
+  --emerald:    #2aa59a;   /* teal, focus + success */
   --emerald-dk: #17786f;
 
   /* Color — dark contrast section */
@@ -27,7 +27,7 @@
   --obsidian-line: #2d2c6b;
 
   /* Gradients */
-  --grad-jewel: linear-gradient(90deg, var(--claret) 0%, #8b86ec 55%, var(--gold) 100%);
+  --grad-brand: linear-gradient(90deg, var(--claret) 0%, #8b86ec 55%, var(--gold) 100%);
   --lav: #b9b5f5;
   --lav-soft: #e9e8fb;
   --grad-warm:  linear-gradient(135deg, var(--claret) 0%, var(--gold) 100%);
@@ -45,7 +45,6 @@
   --gut: clamp(1.25rem, 4vw, 4rem);
   --radius: 20px;
   --radius-sm: 12px;
-  --facet: 26px;
 
   /* Shadow — tinted, not flat black */
   --shadow-sm: 0 2px 10px -4px rgba(20, 19, 46, 0.14);
@@ -73,19 +72,19 @@ body {
 
 ::selection { background: var(--claret); color: var(--ivory); }
 
-/* Custom scrollbar — jewel tones */
+/* Custom scrollbar */
 html { scrollbar-color: var(--gold) var(--ivory-2); scrollbar-width: thin; }
 ::-webkit-scrollbar { width: 11px; height: 11px; }
 ::-webkit-scrollbar-track { background: var(--ivory-2); }
 ::-webkit-scrollbar-thumb { background: linear-gradient(var(--gold-soft), var(--gold)); border-radius: 20px; border: 3px solid var(--ivory-2); }
 ::-webkit-scrollbar-thumb:hover { background: var(--claret); }
 
-/* Signature top hairline — jewel gradient */
+/* Signature top hairline */
 body::after {
   content: "";
   position: fixed; inset: 0 0 auto 0;
   height: 3px; z-index: 60;
-  background: var(--grad-jewel);
+  background: var(--grad-brand);
 }
 
 /* Subtle paper grain + soft mesh glow */
@@ -256,7 +255,7 @@ em, .italic { font-style: italic; }
 .hero-art {
   position: relative;
   aspect-ratio: 4 / 5;
-  clip-path: polygon(0 0, calc(100% - var(--facet)) 0, 100% var(--facet), 100% 100%, 0 100%);
+  border-radius: var(--radius);
   background:
     radial-gradient(120% 100% at 75% 6%, color-mix(in srgb, var(--gold-soft) 45%, transparent), transparent 55%),
     radial-gradient(90% 90% at 0% 100%, color-mix(in srgb, var(--emerald) 20%, transparent), transparent 60%),
@@ -266,13 +265,11 @@ em, .italic { font-style: italic; }
   display: grid; place-items: center;
 }
 
-/* Decorative Newari-inspired lattice */
-.lattice { position: absolute; inset: 0; opacity: 0.55; }
 
 /* ---------- Image frames (swap for real <img>) ---------- */
 .frame {
   position: relative;
-  clip-path: polygon(0 0, calc(100% - var(--facet)) 0, 100% var(--facet), 100% 100%, 0 100%);
+  border-radius: var(--radius);
   background:
     radial-gradient(85% 70% at 88% 6%, color-mix(in srgb, var(--gold-soft) 24%, transparent), transparent 60%),
     linear-gradient(160deg, var(--paper), var(--ivory-2));
@@ -298,7 +295,7 @@ em, .italic { font-style: italic; }
 .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2.5vw, 2rem); }
 .tile {
   display: block;
-  clip-path: polygon(0 0, calc(100% - var(--facet)) 0, 100% var(--facet), 100% 100%, 0 100%);
+  border-radius: var(--radius);
   background: var(--paper);
   box-shadow: var(--shadow-sm);
   overflow: hidden;
@@ -383,7 +380,7 @@ em, .italic { font-style: italic; }
 }
 
 .persona {
-  clip-path: polygon(0 0, calc(100% - var(--facet)) 0, 100% var(--facet), 100% 100%, 0 100%);
+  border-radius: var(--radius);
   background: var(--paper);
   padding: 1.8rem;
   margin-top: 1.5rem;
@@ -444,7 +441,7 @@ em, .italic { font-style: italic; }
 .contact-list .k { font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
 .contact-list .v { font-family: var(--display); font-size: clamp(1.2rem, 2.5vw, 1.7rem); }
 
-/* ---------- Footer — dark jewel contrast ---------- */
+/* ---------- Footer — dark contrast ---------- */
 .site-foot {
   background: var(--obsidian);
   color: var(--ivory);
@@ -457,7 +454,7 @@ em, .italic { font-style: italic; }
 .site-foot::before {
   content: "";
   position: absolute; inset: auto 0 0 0; height: 2px;
-  background: var(--grad-jewel);
+  background: var(--grad-brand);
 }
 .site-foot::after {
   content: "";
@@ -501,7 +498,6 @@ em, .italic { font-style: italic; }
   .work-row__desc { display: none; }
 }
 @media (max-width: 640px) {
-  :root { --facet: 18px; }
   .nav-links {
     position: fixed; inset: 72px 0 auto 0;
     flex-direction: column; align-items: flex-start; gap: 0;
