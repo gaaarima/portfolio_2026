@@ -339,7 +339,8 @@ em, .italic { font-style: italic; }
 .snapshot__v { margin-top: 0.5rem; font-size: 0.96rem; color: var(--ink); }
 
 /* Case study content blocks */
-.cs-body { max-width: 760px; }
+.cs-body { max-width: none; }
+.cs-body p, .cs-body li, .cs-body .cs-tagline { max-width: none; }
 .cs-body h2 { margin-top: clamp(2.5rem, 5vw, 4rem); }
 .cs-body h3 { margin-top: 2.4rem; color: var(--claret-dk); }
 .cs-body h4 { margin-top: 1.8rem; }
