@@ -2,32 +2,32 @@
 (function () {
   "use strict";
   var BOOKS = [
-    { id: "pints", tags: "ux", t: "Pints of Joy", ty: "Web app · Real business", s: "An inventory app, designed twice", c: "#4a45c8", dk: "#2c2990", epi: "The task isn’t hard; human error makes it hard.",
+    { id: "pints", cover: "assets/cover-pints.jpg", tags: "ux", t: "Pints of Joy", ty: "Web app · Real business", s: "An inventory app, designed twice", c: "#4a45c8", dk: "#2c2990", epi: "The task isn’t hard; human error makes it hard.",
       img: "assets/pints-new-dashboard.jpg", cap: "The redesigned Stock Flow dashboard, Part 2 of the study.", href: "pints-of-joy.html", by: "Web app · Google UX capstone, then a real business",
       story: ["It began as my Google UX capstone: research, personas, wireframes, lo-fi and hi-fi prototypes, and two rounds of usability testing for a restaurant inventory app.", "Then it became real. I redesigned it for an actual business, with before-and-after screens, new navigation and a production sheet that plans by store."],
       quote: "Testing asked for more on the home screen, so counts and alerts moved front and centre.",
       facts: [["Type", "Web app, two parts"], ["Role", "Research, UX, UI"], ["Process", "Personas, wireframes, prototypes, usability studies"], ["Outcome", "A real build for a working business"]] },
-    { id: "fittrack", tags: "ux", t: "FitTrack", ty: "Mobile app · Personal", s: "A free AI fitness companion", c: "#0f5c55", dk: "#093b37", epi: "One app for training, protein and weight.",
+    { id: "fittrack", cover: "assets/cover-fittrack.jpg", tags: "ux", t: "FitTrack", ty: "Mobile app · Personal", s: "A free AI fitness companion", c: "#0f5c55", dk: "#093b37", epi: "One app for training, protein and weight.",
       img: "assets/fittrack-userflow-hifi.png", cap: "High-fidelity screens: start page, body diagram, workout plan.", href: "fittrack.html", by: "Mobile app · Personal project · Solo",
       story: ["I started going to the gym and wanted one place to track it all. At the time there was no easy, free AI fitness tracker, so I designed one.", "It adds my own customisations: weight and protein tracking, a tap-a-muscle body diagram and AI suggestions, all in one app."],
       quote: "Visible progress and encouragement keep people coming back.",
       facts: [["Type", "Mobile app"], ["Role", "Solo: research, UX and UI"], ["Tools", "Figma"], ["Outcome", "Ten hi-fi screens and a full flow"]] },
-    { id: "bishal", tags: "ux web", t: "Bishal Imagery", ty: "Website · Freelance", s: "A photographer’s booking website", c: "#26262f", dk: "#14141a", epi: "Let the work breathe.",
+    { id: "bishal", cover: "assets/cover-bishal.jpg", tags: "ux web", t: "Bishal Imagery", ty: "Website · Freelance", s: "A photographer’s booking website", c: "#26262f", dk: "#14141a", epi: "Let the work breathe.",
       img: "assets/bishal-hero-desktop.jpg", cap: "The live homepage, desktop view.", href: "bishal.html", by: "Website · Freelance client · UX, UI and front-end",
       story: ["A Bay Area photographer needed a site that lets the photographs lead and makes booking effortless.", "I designed and built it end to end, and it now lives on a custom domain."],
       quote: "Big images, little chrome, one clear way to book.",
       facts: [["Type", "Website, live"], ["Role", "UX, UI, front-end"], ["Client", "Bay Area photographer"], ["Outcome", "Bookings-ready site on a custom domain"]] },
-    { id: "nwgnca", tags: "ux web", t: "NWGN-CA", ty: "Website redesign · Non-profit", s: "A non-profit, redesigned", c: "#8a2b52", dk: "#5c1a37", epi: "Real faces first.",
+    { id: "nwgnca", cover: "assets/cover-nwgnca.jpg", tags: "ux web", t: "NWGN-CA", ty: "Website redesign · Non-profit", s: "A non-profit, redesigned", c: "#8a2b52", dk: "#5c1a37", epi: "Real faces first.",
       img: "assets/nwgnca-after-hero.jpg", cap: "After: the new homepage.", href: "nwgnca.html", by: "Website redesign · Non-profit · Live",
       story: ["The California chapter of the Nepalese Women Global Network had a crowded, hard-to-maintain site.", "The redesign puts real members’ faces first and makes two actions impossible to miss: join, and donate."],
       quote: "A calm, premium look the board can maintain itself.",
       facts: [["Type", "Website redesign"], ["Client", "NWGN-CA, a real chapter"], ["Focus", "Join and donate, mobile-first"], ["Live", "nwgnca.com"]] },
-    { id: "nyc", tags: "web", t: "NYC Nepali Lifestyle", ty: "Website · Client", s: "A studio website, audit to launch", c: "#2c4a7a", dk: "#1b3052", epi: "From content audit to launch.",
+    { id: "nyc", cover: "assets/cover-nyc.jpg", tags: "web", t: "NYC Nepali Lifestyle", ty: "Website · Client", s: "A studio website, audit to launch", c: "#2c4a7a", dk: "#1b3052", epi: "From content audit to launch.",
       img: "", href: "nyc-lifestyle.html", by: "Website · Client work",
       story: ["A live website framework for a Queens photo and film studio, taken from content audit all the way to launch."],
       quote: "",
       facts: [["Type", "Website, live"], ["Client", "Queens photo and film studio"], ["Scope", "Content audit to launch"]] },
-    { id: "rabina", tags: "web", t: "Rabina Beauty", ty: "Website · Client", s: "A salon and training center site", c: "#c2573a", dk: "#8b3a24", epi: "Built from scratch, built to be accessible.",
+    { id: "rabina", cover: "assets/cover-rabina.jpg", tags: "web", t: "Rabina Beauty", ty: "Website · Client", s: "A salon and training center site", c: "#c2573a", dk: "#8b3a24", epi: "Built from scratch, built to be accessible.",
       img: "", href: "rabina.html", by: "Website · Client work",
       story: ["A full, accessible website built from scratch for a beauty salon and training center in Kathmandu."],
       quote: "",
@@ -42,7 +42,7 @@
     var c = document.createElement("button");
     c.type = "button"; c.className = "cover-card"; c.dataset.tags = b.tags; c.style.cssText = "--c:" + b.c + ";--i:" + i;
     c.setAttribute("aria-label", "Open the book: " + b.t);
-    c.innerHTML = '<span class="no">No. ' + ROM[i] + '</span><span class="go" aria-hidden="true">↗</span><span><span class="tt">' + b.t + '</span><span class="ty">' + b.ty + '</span></span>';
+    c.innerHTML = '<img src="' + b.cover + '" alt="" loading="lazy" /><span class="no">No. ' + ROM[i] + '</span><span class="go" aria-hidden="true">↗</span><span class="cap"><span class="tt">' + b.t + '</span><span class="ty">' + b.ty + '</span></span>';
     c.addEventListener("click", function () { lastFocus = c; openBook(b); });
     shelf.appendChild(c);
 
@@ -70,7 +70,7 @@
 
   function pagesFor(b) {
     var P = [];
-    P.push('<div class="cover" role="button" aria-label="Open the book" tabindex="0"><span class="k">A case study</span><div><div class="t">' + b.t + '</div><div class="s">' + b.s + '</div></div><span class="by">Garima Shrestha · UX Designer</span><span class="open-hint">Open →</span></div>');
+    P.push('<div class="cover" role="button" aria-label="Open the book" tabindex="0"><img src="' + b.cover + '" alt="" /><div class="cover__bar"><span class="k">A case study</span><div class="t">' + b.t + '</div><div class="s">' + b.s + '</div></div><span class="open-hint">Open →</span></div>');
     P.push('<div class="endpaper"><q>' + b.epi + '</q></div>');
     P.push(page(run("Contents", "Garima Shrestha") + '<div class="toc"><h3>Inside</h3><ol><li><a href="#" data-go="2"><i>01</i><b>Title page</b><span>3</span></a></li><li><a href="#" data-go="2"><i>02</i><b>The work</b><span>4</span></a></li><li><a href="#" data-go="3"><i>03</i><b>The story</b><span>5</span></a></li><li><a href="#" data-go="3"><i>04</i><b>In brief</b><span>6</span></a></li></ol></div>' + folio(2)));
     P.push(page(run("Garima Shrestha", "Case study") + '<div class="k">Case study</div><h2>' + b.t + '</h2><div class="sub">' + b.s + '</div><div class="rule"></div>' + folio(3), "h-title"));
@@ -106,7 +106,7 @@
     });
     book.dataset.s = s === N ? "end" : s;
     prevB.disabled = s === 0; nextB.disabled = s === N;
-    where.textContent = s === 0 ? "Cover" : s === N ? "Back cover" : "Pages " + (2 * s - 1 < 2 ? "i" : 2 * s - 1) + "–" + 2 * s;
+    where.textContent = s === 0 ? "Cover" : s === N ? "Back cover" : "Pages " + (2 * s - 1 < 2 ? "i" : 2 * s - 1) + " and " + 2 * s;
   }
   function go(n) { n = Math.max(0, Math.min(N, n)); if (n === s) return; var p = s; s = n; render(p); }
   nextB.onclick = function () { go(s + 1); }; prevB.onclick = function () { go(s - 1); };
