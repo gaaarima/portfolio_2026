@@ -4,20 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Garima Shrestha — UX Design Portfolio</title>
-  <meta name="description" content="UX & digital designer turning scattered, complex tasks into clear, guided experiences. Product design from research to shipped front-end, with a fine-jewelry eye." />
+  <meta name="description" content="UX designer. Case studies as a library of books: research, flows, prototypes, usability testing and shipped front-end." />
   <meta name="theme-color" content="#4a45c8" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Garima Shrestha" />
   <meta property="og:title" content="Garima Shrestha — UX &amp; Digital Designer" />
-  <meta property="og:description" content="UX & digital designer turning scattered, complex tasks into clear, guided experiences. Product design from research to shipped front-end, with a fine-jewelry eye." />
+  <meta property="og:description" content="UX designer. Case studies as a library of books: research, flows, prototypes, usability testing and shipped front-end." />
   <meta name="twitter:card" content="summary" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="library.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%239b1b3f'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23faf6ef' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E" />
 </head>
-<body>
+<body class="lib-home">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-head">
     <div class="wrap nav">
@@ -33,134 +34,58 @@
   </header>
 
   <main id="main">
-    <!-- HERO -->
-    <section class="stage-wrap wrap">
-      <div class="stage">
-        <div class="stage__top">
-          <span class="stage__pill reveal">Garima Shrestha · UX Designer</span>
-          <h1 class="reveal" data-delay="1">Portfolio</h1>
-          <p class="reveal" data-delay="2">2026</p>
-          <div class="hero-cta reveal" data-delay="3">
-            <a href="work.html?path=ux" class="btn btn--light">View my work <span class="arrow">↗</span></a>
-            <a href="contact.html" class="btn btn--glass">Let's talk</a>
-          </div>
+    <!-- HERO: the shelf -->
+    <section class="lib-hero">
+      <div class="wrap lib-hero__top">
+        <span class="chip reveal"><i></i> Edition 2026 · Garima Shrestha</span>
+        <h1 class="reveal" data-delay="1"><em>Portfolio</em></h1>
+        <p class="lib-hero__sub reveal" data-delay="2">UX Designer. Every project is a book. Pick one up.</p>
+        <div class="view reveal" data-delay="3">Show
+          <div class="path-switch" role="group" aria-label="Choose what to show"><button type="button" data-path="ux">UX only</button><button type="button" data-path="all">Everything</button></div>
         </div>
       </div>
-    </section>
-
-    <!-- PATH CHOOSER -->
-    <section class="wrap path-choice" id="paths">
-      <div class="path-choice__head reveal">
-        <span class="eyebrow">Choose your path</span>
-        <h2 style="margin-top:0.8rem;">What are you here for?</h2>
-        
-      </div>
-      <div class="path-cards">
-        <a href="work.html?path=ux" class="path-card reveal" data-choose="ux" data-go="work.html?path=ux">
-          <span class="path-card__k">For hiring teams</span>
-          <div class="path-card__t">UX case studies</div>
-          <span class="path-card__go">See the UX work <span>→</span></span>
-        </a>
-        <a href="work.html?path=all" class="path-card reveal" data-choose="all" data-go="work.html?path=all" data-delay="1">
-          <span class="path-card__k">For schools, collaborators &amp; the curious</span>
-          <div class="path-card__t">Everything</div>
-          <span class="path-card__go">Explore it all <span>→</span></span>
-        </a>
+      <div>
+        <div class="lib-shelf wrap" id="shelf"></div>
+        <div class="shelf-line"></div>
+        <p class="shelf-caption">Click a cover to open it</p>
       </div>
     </section>
 
-    <!-- PROOF STRIP -->
-    <section class="wrap">
-      <ul class="proof reveal">
-        <li><strong>4.0</strong><span>GPA, B.S. Web &amp; Digital Design</span></li>
-        <li><strong>Google</strong><span>UX Design Professional Certificate</span></li>
-        <li><strong>1 real client</strong><span>ran weekly operations on my inventory app</span></li>
-        <li><strong>Design + code</strong><span>Figma to shipped front end</span></li>
-      </ul>
+    <!-- COLLECTION INDEX -->
+    <section class="collection wrap" id="collection">
+      <div class="collection__head reveal">
+        <h2>The<br />collection</h2>
+        <p><span data-show="ux" hidden>UX case studies.</span><span data-show="all">Every project, in order.</span> Open the book, or jump straight to the case study.</p>
+      </div>
+      <div class="rows reveal" id="rows"></div>
     </section>
 
-    <!-- FEATURED -->
-    <section class="section wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">Featured</span>
-        <h2><span data-show="ux" hidden>UX case studies</span><span data-show="all">Selected projects</span></h2>
-      </div>
-      <div class="tiles">
-        <a href="pints-of-joy.html" data-tags="ux" class="tile reveal" data-delay="1">
-          <div class="tile__img"><div class="frame"><span class="frame__cap">Pints of Joy</span></div></div>
-          <div class="tile__body">
-            <span class="tile__kicker">Web app · Real client</span>
-            <div class="tile__title">Pints of Joy</div>
-            <span class="tile__more">Read case study <span class="arrow">→</span></span>
-          </div>
-        </a>
-        <a href="rabina.html" data-tags="web" class="tile reveal" data-delay="2">
-          <div class="tile__img"><div class="frame"><span class="frame__cap">Rabina Beauty</span></div></div>
-          <div class="tile__body">
-            <span class="tile__kicker">Website · Real client</span>
-            <div class="tile__title">Rabina Beauty</div>
-            <span class="tile__more">Read case study <span class="arrow">→</span></span>
-          </div>
-        </a>
-        <a href="fittrack.html" data-tags="ux" class="tile reveal" data-delay="3">
-          <div class="tile__img"><div class="frame"><span class="frame__cap">FitTrack</span></div></div>
-          <div class="tile__body">
-            <span class="tile__kicker">Mobile · AI</span>
-            <div class="tile__title">FitTrack</div>
-            <span class="tile__more">Read case study <span class="arrow">→</span></span>
-          </div>
-        </a>
-        <a href="bishal.html" data-tags="ux web" class="tile reveal" data-delay="1">
-          <div class="tile__img"><img src="assets/bishal-hero-desktop.jpg" alt="Bishal Imagery homepage" loading="lazy" /></div>
-          <div class="tile__body">
-            <span class="tile__kicker">Website · Real client</span>
-            <div class="tile__title">Bishal Imagery</div>
-            <span class="tile__more">Read case study <span class="arrow">→</span></span>
-          </div>
-        </a>
-        <a href="nyc-lifestyle.html" data-tags="web" class="tile reveal" data-delay="2">
-          <div class="tile__img"><div class="frame"><span class="frame__cap">NYC Nepali Lifestyle</span></div></div>
-          <div class="tile__body">
-            <span class="tile__kicker">Website · Real client</span>
-            <div class="tile__title">NYC Nepali Lifestyle</div>
-            <span class="tile__more">Read case study <span class="arrow">→</span></span>
-          </div>
-        </a>
-        <a href="nwgnca.html" data-tags="ux web" class="tile reveal" data-delay="3">
-          <div class="tile__img"><img src="assets/nwgnca-after-hero.jpg" alt="NWGN-CA homepage" loading="lazy" /></div>
-          <div class="tile__body">
-            <span class="tile__kicker">Website redesign · Non-profit</span>
-            <div class="tile__title">NWGN-CA</div>
-            <span class="tile__more">Read case study <span class="arrow">→</span></span>
-          </div>
-        </a>
+    <!-- NUMBERS -->
+    <section class="band">
+      <div class="wrap">
+        <ul class="reveal">
+          <li><strong>4.0</strong><span>GPA, B.S. Web &amp; Digital Design</span></li>
+          <li><strong>Google</strong><span>UX Design Professional Certificate</span></li>
+          <li><strong>Real clients</strong><span>Inventory, photography, non-profit and beauty</span></li>
+          <li><strong>Design + code</strong><span>Figma to shipped front end</span></li>
+        </ul>
       </div>
     </section>
 
-    <!-- HOW I WORK -->
-    <section class="section wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">How I work</span>
-        <h2>Empathy first, <span class="serif-it accent">then</span> the pixels.</h2>
-      </div>
-      <ol class="steps">
-        <li class="reveal" data-delay="1"><span class="steps__n">01</span><h3>Listen</h3><p>Sit with the people who use the product all day.</p></li>
-        <li class="reveal" data-delay="2"><span class="steps__n">02</span><h3>Simplify</h3><p>Turn scattered tasks into one clear flow.</p></li>
-        <li class="reveal" data-delay="3"><span class="steps__n">03</span><h3>Ship</h3><p>Build it, test it, iterate on real feedback.</p></li>
-      </ol>
-    </section>
-
-    <!-- CLOSING CTA -->
-    <section class="wrap">
-      <div class="cta-band reveal">
-        <div>
-          <span class="eyebrow">Open to opportunities</span>
-          <h2 style="margin-top:0.8rem;">Looking for a UX &amp; digital designer who also builds?</h2>
-        </div>
-        <a href="contact.html" class="btn">Let's talk <span class="arrow">↗</span></a>
-      </div>
+    <!-- CLOSING -->
+    <section class="lib-cta wrap">
+      <span class="eyebrow reveal">Open to opportunities</span>
+      <h2 class="reveal" data-delay="1" style="margin-top:1.2rem;">Let’s make the next one <em>together.</em></h2>
+      <a href="contact.html" class="btn reveal" data-delay="2">Let’s talk <span class="arrow">↗</span></a>
     </section>
   </main>
+
+  <!-- Book reader -->
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Book reader">
+    <button class="close" id="close" type="button" aria-label="Close the book">&times;</button>
+    <div class="book" id="book" data-s="0"><div class="stack" id="stack"><div class="board board--l"></div><div class="board board--r"></div></div><div class="spine-shadow"></div></div>
+    <div class="ctrl"><button id="prev" type="button">← Back</button><span id="where">Cover</span><button id="next" type="button">Next →</button></div>
+  </div>
 
   <footer class="site-foot">
     <div class="wrap foot-grid">
@@ -176,6 +101,7 @@
     </div>
   </footer>
 
+  <script src="library.js"></script>
   <script src="main.js"></script>
   <script src="bird.js" defer></script>
 </body>
