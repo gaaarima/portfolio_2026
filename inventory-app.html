@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory App — Google UX Capstone · Garima Shrestha</title>
+  <meta name="description" content="Part 1 of 2: my Google UX capstone. An inventory app for restaurant managers, from interviews to usability-tested prototype." />
+  <meta name="theme-color" content="#4a45c8" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Garima Shrestha" />
+  <meta property="og:title" content="Inventory App — Google UX Capstone · Garima Shrestha" />
+  <meta property="og:description" content="Part 1 of 2: my Google UX capstone. An inventory app for restaurant managers, from interviews to usability-tested prototype." />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%239b1b3f'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23faf6ef' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-head">
+    <div class="wrap nav">
+      <a href="index.html" class="brand">Garima Shrestha<span class="dot">.</span></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="work.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero wrap cs-hero">
+      <span class="eyebrow reveal">Case study · Mobile app · Part 1 of 2</span>
+      <h1 class="cs-title reveal" data-delay="1" style="margin-top:1.2rem;">Inventory App</h1>
+      <p class="cs-tagline reveal" data-delay="2">My first UX project: an inventory app for restaurant managers, designed end to end for the Google UX Design Professional Certificate.</p>
+      <div class="snapshot reveal" data-delay="2">
+        <div class="snapshot__cell"><div class="snapshot__k">Role</div><div class="snapshot__v">Lead UX Designer &amp; Researcher</div></div>
+        <div class="snapshot__cell"><div class="snapshot__k">Timeline</div><div class="snapshot__v">Sep 2024 – Mar 2025</div></div>
+        <div class="snapshot__cell"><div class="snapshot__k">Tools</div><div class="snapshot__v">Figma, Illustrator</div></div>
+        <div class="snapshot__cell"><div class="snapshot__k">Deliverables</div><div class="snapshot__v">Wireframes, prototypes, usability studies</div></div>
+      </div>
+    </section>
+
+    <section class="section--tight wrap">
+      <div class="phone-rail reveal" tabindex="0" aria-label="The home screen across three stages, scroll horizontally">
+        <figure class="phone"><img src="assets/v1-lofi-dashboard.png" alt="Low-fidelity home screen" loading="lazy"><figcaption><b>1 · Low-fi</b>Layout and flow only.</figcaption></figure>
+        <figure class="phone"><img src="assets/v1-hifi-dashboard.png" alt="First high-fidelity home screen" loading="lazy"><figcaption><b>2 · First hi-fi</b>Colour, vendor tiles, summary table.</figcaption></figure>
+        <figure class="phone"><img src="assets/pints-home.png" alt="Final high-fidelity home screen" loading="lazy"><figcaption><b>3 · After testing</b>Live stock counts, a low-stock alert and icon navigation.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section--tight wrap">
+      <div class="cs-body">
+        <h2 class="reveal">The problem</h2>
+        <p class="reveal">Restaurant managers keep running out of small essentials because counts get forgotten and orders get missed. Most inventory apps are built for warehouses, not small restaurants.</p>
+        <p class="reveal"><strong>The goal.</strong> Keep stock flowing with no shortages and no scramble, using an app that is quick to use mid-shift.</p>
+
+        <h3 class="reveal">Understanding the user</h3>
+        <p class="reveal">I interviewed restaurant managers and owners about their daily inventory work. Three pain points came up again and again:</p>
+        <ol class="reveal">
+          <li><strong>Time.</strong> Counting and ordering is slow, tedious work.</li>
+          <li><strong>Human error.</strong> People forget to count or order items.</li>
+          <li><strong>Not inclusive.</strong> Most apps target warehouses and big numbers.</li>
+        </ol>
+        <div class="persona reveal">
+          <div class="persona__name">Sugam Pokhrel</div>
+          <div class="persona__role">Restaurant Manager</div>
+          <p class="persona__need">Needs to manage inventory efficiently so the restaurant runs smoothly.</p>
+          <div class="persona-quotes">
+            <p>"Even with a thorough list, we're human — we forget sometimes."</p>
+          </div>
+        </div>
+
+        <h3 class="reveal">Designing it</h3>
+        <p class="reveal">Paper sketches, then digital wireframes, then a low-fidelity prototype. The core flow: land on the home screen, scan an item, add it to or subtract it from stock.</p>
+        <div class="phone-rail reveal" tabindex="0" aria-label="Low-fidelity screens, scroll horizontally">
+          <figure class="phone"><img src="assets/v1-lofi-dashboard.png" alt="Low-fidelity home screen" loading="lazy"><figcaption><b>Home</b>Add or subtract stock, vendors, and a summary table.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-lofi-scanner.png" alt="Low-fidelity scanner screen" loading="lazy"><figcaption><b>Scanner</b>Point at the barcode; the flashlight sits in reach.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-lofi-scanned.png" alt="Low-fidelity scan confirmation" loading="lazy"><figcaption><b>Confirm</b>Confirm the add, or cancel.</figcaption></figure>
+          <figure class="phone"><img src="assets/v1-lofi-item.png" alt="Low-fidelity item profile" loading="lazy"><figcaption><b>Item profile</b>Photo, description, barcode and price.</figcaption></figure>
+        </div>
+
+        <h3 class="reveal">Testing and refining</h3>
+        <p class="reveal">I ran two rounds of in-person usability testing, one on the low-fi prototype and one on the hi-fi.</p>
+        <ul class="reveal">
+          <li><strong>Round 1:</strong> users wanted a clearer flow with a back button, easier scanning, and an organised item list.</li>
+          <li><strong>Round 2:</strong> users wanted a tabulated item list, icons for quick access, and more information on the home screen.</li>
+        </ul>
+        <p class="reveal">The home screen moved from navigation-only to live counts (in stock, low, out, vendors) with a one-tap review of what needs ordering. I also added icons, back buttons, high-contrast colour and item photos for accessibility.</p>
+        <p class="reveal">View the <a href="https://www.figma.com/design/SWznY3ZKtLvxzbPuDaISL3/Inventory-app?t=EHQgOgSxjLslM8pS-1" class="link-underline" target="_blank" rel="noopener">prototype in Figma →</a></p>
+
+        <h3 class="reveal">Takeaway</h3>
+        <p class="reveal">As my first UX project, it taught me to design for the way people actually work, not the way a process looks on paper.</p>
+
+        <div class="reveal" style="margin-top:2.4rem;">
+          <a href="pints-of-joy.html" class="btn">Part 2: Pints of Joy, the real build <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section--tight wrap reveal">
+      <a href="work.html" class="link-underline">← Back to all work</a>
+    </section>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="foot-big foot-next" href="pints-of-joy.html">Next: Pints of Joy <span aria-hidden="true">→</span></a>
+        <div class="foot-meta" style="margin-top:1.5rem;">© 2026 Garima Shrestha. All rights reserved.</div>
+      </div>
+      <div class="foot-links">
+        <a href="pints-of-joy.html" class="link-underline">Pints of Joy</a>
+        <a href="fittrack.html" class="link-underline">FitTrack</a>
+        <a href="rabina.html" class="link-underline">Rabina Beauty</a>
+        <a href="contact.html" class="link-underline">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

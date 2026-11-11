@@ -2,11 +2,16 @@
 (function () {
   "use strict";
   var BOOKS = [
-    { id: "pints", cover: "assets/cover-pints.jpg", tags: "ux", t: "Pints of Joy", ty: "Web app · Real business", s: "An inventory app, designed twice", c: "#4a45c8", dk: "#2c2990", epi: "The task isn’t hard; human error makes it hard.",
-      img: "assets/pints-new-dashboard.jpg", cap: "The redesigned Stock Flow dashboard, Part 2 of the study.", href: "pints-of-joy.html", by: "Web app · Google UX capstone, then a real business",
-      story: ["It began as my Google UX capstone: research, personas, wireframes, lo-fi and hi-fi prototypes, and two rounds of usability testing for a restaurant inventory app.", "Then it became real. I redesigned it for an actual business, with before-and-after screens, new navigation and a production sheet that plans by store."],
+    { id: "inventory", cover: "assets/cover-pints.jpg", tags: "ux", t: "Inventory App", ty: "Mobile app · Part 1", s: "My Google UX capstone", c: "#4a45c8", dk: "#2c2990", epi: "The task isn’t hard; human error makes it hard.",
+      img: "assets/pints-home.png", cap: "The home screen after two rounds of usability testing.", href: "inventory-app.html", by: "Mobile app · Google UX capstone · Part 1 of 2",
+      story: ["My first UX project, end to end: interviews with restaurant managers, personas, wireframes, and lo-fi and hi-fi prototypes.", "Two rounds of usability testing moved the home screen from navigation-only to live stock counts and a one-tap review of what needs ordering."],
       quote: "Testing asked for more on the home screen, so counts and alerts moved front and centre.",
-      facts: [["Type", "Web app, two parts"], ["Role", "Research, UX, UI"], ["Process", "Personas, wireframes, prototypes, usability studies"], ["Outcome", "A real build for a working business"]] },
+      facts: [["Type", "Mobile app"], ["Role", "Research, UX, UI"], ["Process", "Personas, wireframes, prototypes, usability studies"], ["Outcome", "A tested hi-fi prototype"]] },
+    { id: "pints", cover: "assets/cover-pints-joy.jpg", tags: "ux", t: "Pints of Joy", ty: "Web app · Real business", s: "From Excel to a live app", c: "#b4601c", dk: "#6e3509", epi: "A weekly spreadsheet became the tool the week runs on.",
+      img: "assets/pints-new-dashboard.jpg", cap: "The redesigned Stock Flow dashboard.", href: "pints-of-joy.html", by: "Web app · Real client · Part 2 of 2",
+      story: ["Pints of Joy is a small-batch Indian ice-cream maker. Every week, inventory, production and store transfers lived in a hand-typed Excel sheet.", "I mapped the real workflow with the owner and manager and designed the app that replaced it, iterating weekly with the person who uses it."],
+      quote: "The best decisions came from watching someone use the app in their actual week.",
+      facts: [["Type", "Web app"], ["Role", "UX and product design"], ["Team", "Me + Vijay (AI layer)"], ["Outcome", "Live in daily operations"]] },
     { id: "fittrack", cover: "assets/cover-fittrack.jpg", tags: "ux", t: "FitTrack", ty: "Mobile app · Personal", s: "A free AI fitness companion", c: "#0f5c55", dk: "#093b37", epi: "One app for training, protein and weight.",
       img: "assets/fittrack-userflow-hifi.png", cap: "High-fidelity screens: start page, body diagram, workout plan.", href: "fittrack.html", by: "Mobile app · Personal project · Solo",
       story: ["I started going to the gym and wanted one place to track it all. At the time there was no easy, free AI fitness tracker, so I designed one.", "It adds my own customisations: weight and protein tracking, a tap-a-muscle body diagram and AI suggestions, all in one app."],
@@ -33,7 +38,7 @@
       quote: "",
       facts: [["Type", "Website"], ["Client", "Beauty salon and training center, Kathmandu"], ["Focus", "Accessible, built from scratch"]] }
   ];
-  var ROM = ["01", "02", "03", "04", "05", "06"];
+  var ROM = ["01", "02", "03", "04", "05", "06", "07", "08"];
 
   /* ---------- shelf + index ---------- */
   var shelf = document.getElementById("shelf"), rows = document.getElementById("rows");
@@ -44,8 +49,8 @@
     s.style.cssText = "--w:" + (13 + (k * 7) % 14) + "px;--h:" + (0.78 + ((k * 5) % 7) / 30).toFixed(2) + ";--sc:" + SC[(k * 3) % SC.length];
     return s;
   }
-  var rowEls = [];
-  for (var q = 0; q < Math.ceil(BOOKS.length / 3); q++) {
+  var rowEls = [], PER = Math.ceil(BOOKS.length / 2);
+  for (var q = 0; q < 2; q++) {
     var re = document.createElement("div"); re.className = "shelf-row";
     shelf.appendChild(re); rowEls.push(re);
     var pl = document.createElement("div"); pl.className = "plank"; shelf.appendChild(pl);
@@ -58,9 +63,9 @@
     c.setAttribute("aria-label", "Open the book: " + b.t);
     c.innerHTML = '<img src="' + b.cover + '" alt="" loading="lazy" /><span class="no">No. ' + ROM[i] + '</span><span class="go" aria-hidden="true">↗</span><span class="cap"><span class="tt">' + b.t + '</span><span class="ty">' + b.ty + '</span></span>';
     c.addEventListener("click", function () { lastFocus = c; openBook(b); });
-    var re = rowEls[Math.floor(i / 3)];
+    var re = rowEls[Math.floor(i / PER)];
     re.appendChild(c);
-    if (i % 3 === 2 || i === BOOKS.length - 1) { re.appendChild(spine(i + 9)); re.appendChild(spine(i + 12)); }
+    if (i % PER === PER - 1 || i === BOOKS.length - 1) { re.appendChild(spine(i + 9)); re.appendChild(spine(i + 12)); }
 
     var r = document.createElement("div"); r.className = "row"; r.dataset.tags = b.tags;
     r.innerHTML = '<span class="row__no work-row__num">' + ROM[i] + '</span><button type="button" class="row__open">' + b.t + '</button><span class="row__type">' + b.ty + '</span><a class="row__cta" href="' + b.href + '">Case study <span aria-hidden="true">→</span></a>';

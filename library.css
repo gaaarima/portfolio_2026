@@ -47,7 +47,7 @@ body.lib-home { background: #fff; }
 .cover-card .cap { padding: .6rem .7rem .7rem; }
 .cover-card .tt { font-size: clamp(.85rem, 1.25vw, 1.15rem); }
 .cover-card .ty { font-size: .5rem; }
-@media (max-width: 760px) { .case { --cw: 27vw; padding: 8px 8px 0; } .shelf-row { gap: .5rem; padding-inline: .5rem; } .spine { display: none; } .cover-card .ty { display: none; } .cover-card .no { font-size: .5rem; top: .4rem; left: .4rem; } .cover-card .go { display: none; } }
+@media (max-width: 760px) { .case { --cw: 21vw; padding: 8px 8px 0; } .shelf-row { gap: .5rem; padding-inline: .5rem; } .spine { display: none; } .cover-card .ty { display: none; } .cover-card .no { font-size: .5rem; top: .4rem; left: .4rem; } .cover-card .go { display: none; } }
 
 /* ---------- Collection index ---------- */
 .collection { padding-block: clamp(4.5rem, 10vw, 8rem); }
