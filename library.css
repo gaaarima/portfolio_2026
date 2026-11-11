@@ -11,17 +11,23 @@ body.lib-home { background: #fff; }
   radial-gradient(55% 50% at 82% 6%, rgba(185,181,245,.65), transparent 65%),
   radial-gradient(45% 45% at 6% 28%, rgba(255,190,160,.45), transparent 70%),
   radial-gradient(70% 40% at 50% 112%, rgba(185,181,245,.55), transparent 70%); }
-.lib-hero__top { padding-top: clamp(3.5rem, 8vw, 6rem); text-align: center; }
-.chip { display: inline-flex; align-items: center; gap: .55rem; font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; padding: .5rem 1.1rem; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--ink-soft); }
-.chip i { width: 7px; height: 7px; border-radius: 50%; background: var(--peach); }
-.lib-hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(4.4rem, 19vw, 14.5rem); line-height: .9; letter-spacing: -.045em; margin: 2.2rem 0 0; color: var(--ink); }
+.lib-hero { min-height: calc(100vh - 0px); justify-content: flex-start; padding-bottom: clamp(1.5rem, 4vh, 3rem); }
+.lib-hero__top { padding-top: clamp(1.6rem, 4.5vh, 3.2rem); text-align: center; }
+.lib-hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(3.2rem, 8.5vw, 7rem); line-height: .95; letter-spacing: -.04em; margin: 0; color: var(--ink); }
 .lib-hero h1 em { font-style: italic; background: linear-gradient(100deg, var(--indigo) 10%, #8b86ec 55%, var(--peach)); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: .06em; }
-.lib-hero__sub { margin: 1.8rem auto 0; font-size: clamp(1rem, 1.6vw, 1.25rem); color: var(--ink-soft); max-width: none; letter-spacing: .02em; }
-.view { display: inline-flex; align-items: center; gap: .8rem; margin-top: 2rem; font-size: .8rem; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
-.view .path-switch { display: inline-flex; margin: 0; }
 
-/* shelf of covers */
-.lib-shelf { position: relative; display: flex; justify-content: center; align-items: flex-end; gap: clamp(.7rem, 1.8vw, 1.6rem); padding-top: clamp(2.5rem, 6vw, 4.5rem); perspective: 1400px; }
+/* the bookcase */
+.case { --cw: clamp(104px, min(13vw, 19vh), 178px); position: relative; width: min(1120px, calc(100% - 2.5rem)); margin: clamp(1.2rem, 3.5vh, 2.4rem) auto 0; padding: 14px 14px 0; border-radius: 10px 10px 4px 4px;
+  background: linear-gradient(#e7d9c2, #dcc9aa); box-shadow: 0 40px 60px -30px rgba(60,40,20,.45), 0 0 0 1px rgba(90,60,30,.18), inset 0 1px 0 rgba(255,255,255,.6); }
+.case::after { content: ""; position: absolute; left: 6%; right: 6%; bottom: -26px; height: 24px; background: radial-gradient(ellipse at center, rgba(40,30,60,.28), transparent 70%); z-index: -1; }
+.shelf-row { position: relative; display: flex; align-items: flex-end; justify-content: center; gap: clamp(.5rem, 1.4vw, 1.1rem); padding: clamp(.9rem, 2.4vh, 1.6rem) clamp(.6rem, 2vw, 1.6rem) 0; min-height: calc(var(--cw) * 1.4 + 1.6rem);
+  background: linear-gradient(#f4efe6, #ece4d4 70%, #e3d8c3); box-shadow: inset 0 14px 20px -12px rgba(80,55,25,.35), inset 12px 0 14px -12px rgba(80,55,25,.3), inset -12px 0 14px -12px rgba(80,55,25,.3); perspective: 1400px; }
+.shelf-row + .shelf-row { margin-top: 0; }
+.plank { height: 16px; background: linear-gradient(#f0e3cc, #d6c19b); box-shadow: 0 1px 0 rgba(255,255,255,.5) inset, 0 -1px 0 rgba(90,60,30,.25) inset, 0 6px 8px -4px rgba(60,40,20,.35); }
+.case__base { height: 18px; margin: 0 -6px; border-radius: 3px; background: linear-gradient(#d6c19b, #bfa77d); }
+.spine { flex: 0 0 auto; width: var(--w); height: calc(var(--cw) * var(--h)); border-radius: 2px 2px 0 0; background: linear-gradient(90deg, rgba(255,255,255,.22), rgba(0,0,0,.14) 12%, rgba(0,0,0,0) 40%, rgba(0,0,0,.18)), var(--sc); box-shadow: 0 0 0 1px rgba(0,0,0,.1); position: relative; }
+.spine::before { content: ""; position: absolute; left: 20%; right: 20%; top: 14%; height: 2px; background: rgba(255,255,255,.55); box-shadow: 0 5px 0 rgba(255,255,255,.35); }
+.spine.lean { transform: rotate(-4deg); transform-origin: bottom left; margin-left: .3rem; }
 .cover-card { position: relative; flex: 0 0 auto; width: clamp(122px, 14vw, 186px); aspect-ratio: 3 / 4.2; border: 0; padding: 0; border-radius: 6px 12px 12px 6px; cursor: pointer; text-align: left; color: #fff; overflow: hidden; background: var(--c);
   box-shadow: 0 28px 40px -20px rgba(30,30,90,.5), 0 0 0 1px rgba(0,0,0,.08);
   transform-origin: bottom center; transition: transform .5s cubic-bezier(.2,.9,.2,1), box-shadow .5s; animation: rise .9s cubic-bezier(.2,.9,.2,1) both; animation-delay: calc(var(--i) * 90ms + 250ms); }
@@ -36,9 +42,12 @@ body.lib-home { background: #fff; }
 .cover-card .ty { display: block; margin-top: .35rem; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; opacity: .8; }
 .cover-card .go { position: absolute; top: .6rem; right: .7rem; z-index: 2; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%; background: #fff; color: var(--ink); font-size: .85rem; opacity: 0; transform: translate(-4px, 4px); transition: .3s; }
 .cover-card:hover .go, .cover-card:focus-visible .go { opacity: 1; transform: none; }
-.shelf-line { height: 1px; margin-top: 0; background: linear-gradient(90deg, transparent, rgba(20,19,46,.35) 20%, rgba(20,19,46,.35) 80%, transparent); }
-.shelf-caption { max-width: none; text-align: center; padding: 1.1rem 0 1.6rem; font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
-@media (max-width: 760px) { .lib-shelf { justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; padding-inline: 1.25rem; scrollbar-width: none; } .cover-card { scroll-snap-align: center; } }
+.cover-card { width: var(--cw); box-shadow: 7px 0 0 -1px #f7f2e8, 8px 0 0 0 #c9c0ad, 0 0 0 1px rgba(0,0,0,.12), 14px 6px 18px -8px rgba(40,30,10,.4); }
+.cover-card:hover, .cover-card:focus-visible { box-shadow: 7px 0 0 -1px #f7f2e8, 8px 0 0 0 #c9c0ad, 0 0 0 1px rgba(0,0,0,.12), 22px 20px 30px -10px rgba(40,30,10,.45); }
+.cover-card .cap { padding: .6rem .7rem .7rem; }
+.cover-card .tt { font-size: clamp(.85rem, 1.25vw, 1.15rem); }
+.cover-card .ty { font-size: .5rem; }
+@media (max-width: 760px) { .case { --cw: 27vw; padding: 8px 8px 0; } .shelf-row { gap: .5rem; padding-inline: .5rem; } .spine { display: none; } .cover-card .ty { display: none; } .cover-card .no { font-size: .5rem; top: .4rem; left: .4rem; } .cover-card .go { display: none; } }
 
 /* ---------- Collection index ---------- */
 .collection { padding-block: clamp(4.5rem, 10vw, 8rem); }

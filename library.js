@@ -38,13 +38,29 @@
   /* ---------- shelf + index ---------- */
   var shelf = document.getElementById("shelf"), rows = document.getElementById("rows");
   var lastFocus = null;
+  var SC = ["#8f9bd8", "#e6b7a0", "#9fc3b4", "#c9a5d6", "#e9d28a", "#7d86b8", "#d98b8b", "#a7b8c9"];
+  function spine(k) {
+    var s = document.createElement("i"); s.className = "spine" + (k % 5 === 3 ? " lean" : "");
+    s.style.cssText = "--w:" + (13 + (k * 7) % 14) + "px;--h:" + (0.78 + ((k * 5) % 7) / 30).toFixed(2) + ";--sc:" + SC[(k * 3) % SC.length];
+    return s;
+  }
+  var rowEls = [];
+  for (var q = 0; q < Math.ceil(BOOKS.length / 3); q++) {
+    var re = document.createElement("div"); re.className = "shelf-row";
+    shelf.appendChild(re); rowEls.push(re);
+    var pl = document.createElement("div"); pl.className = "plank"; shelf.appendChild(pl);
+  }
+  var base = document.createElement("div"); base.className = "case__base"; shelf.appendChild(base);
+  rowEls.forEach(function (re, qi) { re.appendChild(spine(qi * 4 + 1)); re.appendChild(spine(qi * 4 + 2)); });
   BOOKS.forEach(function (b, i) {
     var c = document.createElement("button");
     c.type = "button"; c.className = "cover-card"; c.dataset.tags = b.tags; c.style.cssText = "--c:" + b.c + ";--i:" + i;
     c.setAttribute("aria-label", "Open the book: " + b.t);
     c.innerHTML = '<img src="' + b.cover + '" alt="" loading="lazy" /><span class="no">No. ' + ROM[i] + '</span><span class="go" aria-hidden="true">↗</span><span class="cap"><span class="tt">' + b.t + '</span><span class="ty">' + b.ty + '</span></span>';
     c.addEventListener("click", function () { lastFocus = c; openBook(b); });
-    shelf.appendChild(c);
+    var re = rowEls[Math.floor(i / 3)];
+    re.appendChild(c);
+    if (i % 3 === 2 || i === BOOKS.length - 1) { re.appendChild(spine(i + 9)); re.appendChild(spine(i + 12)); }
 
     var r = document.createElement("div"); r.className = "row"; r.dataset.tags = b.tags;
     r.innerHTML = '<span class="row__no work-row__num">' + ROM[i] + '</span><button type="button" class="row__open">' + b.t + '</button><span class="row__type">' + b.ty + '</span><a class="row__cta" href="' + b.href + '">Case study <span aria-hidden="true">→</span></a>';
