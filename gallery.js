@@ -7,7 +7,7 @@
   function show(i) {
     idx = (i + items.length) % items.length;
     var b = items[idx], im = b.querySelector("img");
-    img.src = im.src; img.alt = im.alt; cap.textContent = b.dataset.cap || "";
+    img.src = im.src; img.alt = im.alt; cap.textContent = b.dataset.cap || ""; document.getElementById("lb-desc").textContent = b.dataset.desc || "";
   }
   function open(b) {
     items = Array.prototype.slice.call(document.querySelectorAll('.g-item[data-group="' + b.dataset.group + '"]'));

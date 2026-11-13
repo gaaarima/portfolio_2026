@@ -74,7 +74,7 @@
   });
 
   /* creative work: art + photography rows in the same index (open the gallery viewer) */
-  [["art", "Art", "Mandalas and abstract · 6 pieces", "View"], ["photo", "Photography", "Architecture · 6 photos", "View"], ["design", "Digital design", "Illustrated map poster · 1 piece", "View"]].forEach(function (g, k) {
+  [["art", "Art", "Mandalas, abstract and charcoal · 8 pieces", "View"], ["photo", "Photography", "Architecture · 6 photos", "View"], ["design", "Digital design", "Illustrated map poster · 1 piece", "View"]].forEach(function (g, k) {
     var n = BOOKS.length + k;
     var r = document.createElement("div"); r.className = "row"; r.dataset.tags = "art";
     r.innerHTML = '<span class="row__no work-row__num">' + ROM[n] + '</span><button type="button" class="row__open">' + g[1] + '</button><span class="row__type">' + g[2] + '</span><a class="row__cta" href="#gallery">Gallery <span aria-hidden="true">↓</span></a>';
