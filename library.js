@@ -38,7 +38,7 @@
       quote: "",
       facts: [["Type", "Website"], ["Client", "Beauty salon and training center, Kathmandu"], ["Focus", "Accessible, built from scratch"]] }
   ];
-  var ROM = ["01", "02", "03", "04", "05", "06", "07", "08"];
+  var ROM = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"];
 
   /* ---------- shelf + index ---------- */
   var shelf = document.getElementById("shelf"), rows = document.getElementById("rows");
@@ -70,6 +70,17 @@
     var r = document.createElement("div"); r.className = "row"; r.dataset.tags = b.tags;
     r.innerHTML = '<span class="row__no work-row__num">' + ROM[i] + '</span><button type="button" class="row__open">' + b.t + '</button><span class="row__type">' + b.ty + '</span><a class="row__cta" href="' + b.href + '">Case study <span aria-hidden="true">→</span></a>';
     r.querySelector(".row__open").addEventListener("click", function (e) { lastFocus = e.currentTarget; openBook(b); });
+    rows.appendChild(r);
+  });
+
+  /* creative work: art + photography rows in the same index (open the gallery viewer) */
+  [["art", "Art", "Mandalas and abstract · 6 pieces", "View"], ["photo", "Photography", "Architecture · 6 photos", "View"]].forEach(function (g, k) {
+    var n = BOOKS.length + k;
+    var r = document.createElement("div"); r.className = "row"; r.dataset.tags = "art";
+    r.innerHTML = '<span class="row__no work-row__num">' + ROM[n] + '</span><button type="button" class="row__open">' + g[1] + '</button><span class="row__type">' + g[2] + '</span><a class="row__cta" href="#gallery">Gallery <span aria-hidden="true">↓</span></a>';
+    r.querySelector(".row__open").addEventListener("click", function () {
+      var first = document.querySelector('.g-item[data-group="' + g[0] + '"]'); if (first) first.click();
+    });
     rows.appendChild(r);
   });
 
