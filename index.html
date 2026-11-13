@@ -40,6 +40,32 @@
       <div class="case" id="shelf" aria-label="Bookcase of projects"></div>
     </section>
 
+    <!-- GALLERY: art + photography (Everything view only) -->
+    <section class="gallery wrap" id="gallery" data-tags="art">
+      <div class="gallery__block reveal">
+        <h2 class="gallery__h">Art</h2>
+        <div class="g-row" role="list">
+          <button type="button" style="--ar:1.000" class="g-item g-round" data-group="art" data-cap="Mandala" aria-label="View larger: Mandala"><img src="assets/gallery/mandala-disc.jpg" alt="Mandala, round panel" loading="lazy" /></button>
+          <button type="button" style="--ar:0.549" class="g-item" data-group="art" data-cap="Mandala canvas" aria-label="View larger: Mandala canvas"><img src="assets/gallery/mandala-canvas.jpg" alt="Mandalas on a colour-blocked canvas" loading="lazy" /></button>
+          <button type="button" style="--ar:1.344" class="g-item" data-group="art" data-cap="Abstract, blue and gold" aria-label="View larger: Abstract, blue and gold"><img src="assets/gallery/abstract-blue-gold.jpg" alt="Abstract painting in blue, grey and gold" loading="lazy" /></button>
+          <button type="button" style="--ar:0.790" class="g-item" data-group="art" data-cap="Vortex" aria-label="View larger: Vortex"><img src="assets/gallery/vortex.jpg" alt="Abstract blue vortex painting" loading="lazy" /></button>
+          <button type="button" style="--ar:1.348" class="g-item" data-group="art" data-cap="Abstract, red" aria-label="View larger: Abstract, red"><img src="assets/gallery/abstract-red.jpg" alt="Abstract painting in red with a blue eye" loading="lazy" /></button>
+          <button type="button" style="--ar:0.708" class="g-item" data-group="art" data-cap="Fire and brain" aria-label="View larger: Fire and brain"><img src="assets/gallery/fire-brain.jpg" alt="A brain burning in orange flames" loading="lazy" /></button>
+        </div>
+      </div>
+      <div class="gallery__block reveal">
+        <h2 class="gallery__h">Photography</h2>
+        <div class="g-row" role="list">
+          <button type="button" style="--ar:0.562" class="g-item" data-group="photo" data-cap="Golden Gate in fog" aria-label="View larger: Golden Gate in fog"><img src="assets/gallery/golden-gate-fog.jpg" alt="The Golden Gate Bridge disappearing into fog, with a sailboat below" loading="lazy" /></button>
+          <button type="button" style="--ar:0.859" class="g-item" data-group="photo" data-cap="Vessel" aria-label="View larger: Vessel"><img src="assets/gallery/vessel.jpg" alt="The Vessel structure at Hudson Yards against glass towers" loading="lazy" /></button>
+          <button type="button" style="--ar:0.562" class="g-item" data-group="photo" data-cap="Patterned facade" aria-label="View larger: Patterned facade"><img src="assets/gallery/facade.jpg" alt="A perforated metal facade with a wave pattern" loading="lazy" /></button>
+          <button type="button" style="--ar:0.562" class="g-item" data-group="photo" data-cap="Church doorway" aria-label="View larger: Church doorway"><img src="assets/gallery/church-door.jpg" alt="A brick church with a pointed arch door and stone steps" loading="lazy" /></button>
+          <button type="button" style="--ar:1.333" class="g-item" data-group="photo" data-cap="Oculus" aria-label="View larger: Oculus"><img src="assets/gallery/oculus.jpg" alt="White ribs of the Oculus in black and white" loading="lazy" /></button>
+          <button type="button" style="--ar:0.562" class="g-item" data-group="photo" data-cap="Through the padlocks" aria-label="View larger: Through the padlocks"><img src="assets/gallery/padlocks-bridge.jpg" alt="The Golden Gate Bridge seen through a fence of padlocks at dusk" loading="lazy" /></button>
+        </div>
+      </div>
+    </section>
+
     <!-- COLLECTION INDEX -->
     <section class="collection wrap" id="collection">
       <div class="collection__head reveal">
@@ -78,6 +104,14 @@
     <span id="where" class="sr-only" aria-live="polite">Cover</span>
   </div>
 
+  <!-- Gallery lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <button class="lightbox__close" id="lb-close" type="button" aria-label="Close">&times;</button>
+    <button class="arrow-btn arrow-btn--l" id="lb-prev" type="button" aria-label="Previous image"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button class="arrow-btn arrow-btn--r" id="lb-next" type="button" aria-label="Next image"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <figure class="lightbox__fig"><img id="lb-img" alt="" /><figcaption id="lb-cap"></figcaption></figure>
+  </div>
+
   <footer class="site-foot">
     <div class="wrap foot-grid">
       <div>
@@ -93,6 +127,7 @@
   </footer>
 
   <script src="library.js"></script>
+  <script src="gallery.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
