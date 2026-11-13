@@ -186,3 +186,5 @@ body.lib-home { background: #fff; }
 .lightbox__fig figcaption { margin-top: 1rem; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
 .lightbox__close { position: fixed; top: 14px; right: 18px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: #fff; font-size: 1.6rem; line-height: 1; cursor: pointer; color: var(--ink); }
 @media (max-width: 760px) { .g-row { flex-wrap: wrap; } .g-item { flex: 1 1 calc(var(--ar) * 30vw); padding: 4px; } .lightbox { padding: 4rem 1rem 3rem; } .lightbox .arrow-btn { display: none; } }
+
+.g-row--one .g-item { flex: 0 1 auto; width: min(100%, 340px); }
