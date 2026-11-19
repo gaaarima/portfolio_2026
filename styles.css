@@ -4,37 +4,34 @@
    ============================================================ */
 
 :root {
-  /* Color — warm base */
-  --ivory:      #ffffff;
-  --ivory-2:    #f4f3fc;
-  --paper:      #ffffff;
-  --ink:        #14132e;
-  --ink-soft:   #46456b;
-  --muted:      #8a89ab;
-  --line:       #e4e2f5;
+  /* Palette: blue #0C45B0 · text brown #7A3E26 · background tan #DFBFA0 */
+  --ivory:      #DFBFA0;   /* page background */
+  --ivory-2:    #D6B390;   /* slightly deeper tan for bands */
+  --paper:      #EBD5BE;   /* cards and panels, lighter tan */
+  --ink:        #7A3E26;   /* text */
+  --ink-soft:   #7A3E26;
+  --muted:      #7F4128;
+  --line:       #C9A27D;
 
-  /* Color — indigo + peach accents */
-  --claret:     #4a45c8;   /* primary indigo */
-  --claret-dk:  #1b1a4d;
-  --gold:       #ff9b71;   /* antique gold, brightened */
-  --gold-soft:  #ffd3c0;
-  --emerald:    #2aa59a;   /* teal, focus + success */
-  --emerald-dk: #17786f;
+  /* Blue is the one accent */
+  --claret:     #0C45B0;   /* primary blue */
+  --claret-dk:  #082F7C;
+  --gold:       #0C45B0;
+  --gold-soft:  #B9C8E6;
+  --emerald:    #0C45B0;   /* focus + success */
+  --emerald-dk: #082F7C;
 
-  /* Color — dark contrast section */
-  --obsidian:   #12113a;
-  --obsidian-2: #1b1a4d;
-  --obsidian-line: #2d2c6b;
+  /* Dark contrast section: deep blue */
+  --obsidian:   #082F7C;
+  --obsidian-2: #0C45B0;
+  --obsidian-line: #2D5DBE;
 
-  /* Gradients */
-  --grad-brand: linear-gradient(90deg, var(--claret) 0%, #8b86ec 55%, var(--gold) 100%);
-  --lav: #b9b5f5;
-  --lav-soft: #e9e8fb;
-  --grad-warm:  linear-gradient(135deg, var(--claret) 0%, var(--gold) 100%);
-  --grad-mesh:
-    radial-gradient(60% 55% at 85% 8%, color-mix(in srgb, var(--gold) 30%, transparent), transparent 60%),
-    radial-gradient(55% 60% at 8% 18%, color-mix(in srgb, var(--claret) 22%, transparent), transparent 62%),
-    radial-gradient(45% 50% at 60% 95%, color-mix(in srgb, var(--emerald) 18%, transparent), transparent 65%);
+  /* Gradients: kept as names, now flat */
+  --grad-brand: linear-gradient(90deg, var(--claret), var(--claret));
+  --lav: #B9C8E6;
+  --lav-soft: #D6B390;
+  --grad-warm:  linear-gradient(135deg, var(--claret) 0%, var(--claret-dk) 100%);
+  --grad-mesh: none;
 
   /* Type */
   --display: "Fraunces", Georgia, "Times New Roman", serif;
@@ -47,10 +44,10 @@
   --radius-sm: 12px;
 
   /* Shadow — tinted, not flat black */
-  --shadow-sm: 0 2px 10px -4px rgba(20, 19, 46, 0.14);
-  --shadow-md: 0 20px 44px -18px rgba(74, 69, 200, 0.32);
-  --shadow-gold: 0 16px 34px -14px rgba(255, 155, 113, 0.4);
-  --shadow-lg: 0 34px 70px -24px rgba(20, 19, 46, 0.4);
+  --shadow-sm: 0 2px 10px -4px rgba(90, 45, 25, 0.16);
+  --shadow-md: 0 20px 44px -18px rgba(12, 69, 176, 0.28);
+  --shadow-gold: 0 16px 34px -14px rgba(12, 69, 176, 0.3);
+  --shadow-lg: 0 34px 70px -24px rgba(90, 45, 25, 0.35);
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -708,9 +705,9 @@ h1, h2 { letter-spacing: -0.02em; }
 .hero-art {
   clip-path: none; border-radius: 28px; aspect-ratio: 5 / 6;
   background:
-    radial-gradient(90% 70% at 20% 0%, #5b57d6 0%, transparent 60%),
-    radial-gradient(80% 70% at 100% 100%, #ffb391 0%, transparent 55%),
-    linear-gradient(160deg, #6f6bdc, #3d39a3 70%, #2a2780);
+    radial-gradient(90% 70% at 20% 0%, #2A63CE 0%, transparent 60%),
+    radial-gradient(80% 70% at 100% 100%, #082F7C 0%, transparent 55%),
+    linear-gradient(160deg, #0C45B0, #0C45B0 70%, #082F7C);
   isolation: isolate;
 }
 .hero-art .lattice { display: none; }
@@ -724,25 +721,25 @@ h1, h2 { letter-spacing: -0.02em; }
 .hero-art .hero-tag { position: absolute; left: 1.1rem; bottom: 1rem; z-index: 2; color: #fff; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; opacity: .85; }
 
 /* Device frame: use around any screenshot */
-.device { position: relative; border-radius: 34px; padding: 7px; background: #0f0e2a; box-shadow: 0 30px 60px -24px rgba(10,10,40,.7), inset 0 0 0 1.5px #3a3970; }
-.device::before { content: ""; position: absolute; top: 13px; left: 50%; width: 30%; height: 14px; transform: translateX(-50%); border-radius: 10px; background: #0f0e2a; z-index: 2; }
+.device { position: relative; border-radius: 34px; padding: 7px; background: #2a160d; box-shadow: 0 30px 60px -24px rgba(40,20,10,.6), inset 0 0 0 1.5px #5a3322; }
+.device::before { content: ""; position: absolute; top: 13px; left: 50%; width: 30%; height: 14px; transform: translateX(-50%); border-radius: 10px; background: #2a160d; z-index: 2; }
 .device img { width: 100%; height: auto; border-radius: 27px; box-shadow: none; display: block; }
 /* Optional hand: drop a transparent PNG at assets/hand-phone.png and add class device--hand */
 .device--hand { padding-bottom: 7px; }
 .device--hand::after { content: ""; position: absolute; left: -22%; right: -22%; bottom: -26%; height: 46%; background: url("assets/hand-phone.png") center top / contain no-repeat; pointer-events: none; z-index: 3; }
 
 /* Phone rails get the device frame */
-.phone img { padding: 6px; background: #0f0e2a; border-radius: 30px; box-shadow: 0 22px 44px -22px rgba(20,19,46,.6), inset 0 0 0 1.5px #3a3970; }
+.phone img { padding: 6px; background: #2a160d; border-radius: 30px; box-shadow: 0 22px 44px -22px rgba(60,30,15,.55), inset 0 0 0 1.5px #5a3322; }
 .phone-rail { padding-top: 1.2rem; }
 
 /* Numbered section pills (like "04 · Typography & Colors") */
 .sec-pill { display: inline-flex; align-items: center; gap: .6rem; margin-bottom: 1.2rem; }
-.sec-pill i { font-style: normal; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--lav-soft); color: #8d8bb5; font-size: .78rem; font-weight: 600; }
+.sec-pill i { font-style: normal; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--lav-soft); color: #7F4128; font-size: .78rem; font-weight: 600; }
 .sec-pill b { font-weight: 600; font-size: .92rem; color: #fff; background: var(--obsidian); padding: .5rem 1.1rem; border-radius: 999px; }
 
 /* Case-study sections: subtle lavender wash on alternating blocks, dots progress */
 .cs-band { background: var(--lav-soft); border-radius: 28px; padding: clamp(1.5rem, 4vw, 3rem); }
-.cs-band--navy { background: var(--obsidian); color: #e9e8fb; }
+.cs-band--navy { background: var(--obsidian); color: #EBD5BE; }
 .cs-band--navy h3, .cs-band--navy h2 { color: #fff; }
 .dots-nav { position: fixed; right: 18px; top: 50%; transform: translateY(-50%); z-index: 50; display: flex; flex-direction: column; gap: 12px; }
 .dots-nav a { width: 10px; height: 10px; border-radius: 50%; background: var(--lav); opacity: .55; transition: transform .25s var(--ease), background .25s, opacity .25s; position: relative; }
@@ -762,7 +759,7 @@ h1, h2 { letter-spacing: -0.02em; }
 .stage-wrap { padding-top: clamp(1.2rem, 3vw, 2.4rem); }
 .stage { position: relative; overflow: hidden; isolation: isolate; border-radius: 32px; text-align: center; color: #fff;
   padding: clamp(2.4rem, 6vw, 4.5rem) 1.2rem 0; min-height: clamp(640px, 88vh, 820px);
-  background: radial-gradient(70% 60% at 15% 0%, #6b66e6 0%, transparent 60%), radial-gradient(70% 70% at 100% 100%, #ff9b71 0%, transparent 55%), linear-gradient(165deg, #5b57d6, #35319b 70%, #25226f); }
+  background: radial-gradient(70% 60% at 15% 0%, #2A63CE 0%, transparent 60%), radial-gradient(70% 70% at 100% 100%, #082F7C 0%, transparent 55%), linear-gradient(165deg, #0C45B0, #35319b 70%, #25226f); }
 .stage__mark { position: absolute; left: 0; right: 0; top: 30%; z-index: 0; font-family: var(--display); font-style: italic; font-size: clamp(6rem, 22vw, 18rem); line-height: 1; color: rgba(255,255,255,.12); pointer-events: none; white-space: nowrap; }
 .stage__top { position: relative; z-index: 2; }
 .stage__pill { display: inline-block; font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; padding: .5rem 1.1rem; border-radius: 999px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.28); }
@@ -782,7 +779,7 @@ h1, h2 { letter-spacing: -0.02em; }
 
 /* ============ Chirp, the portfolio bird ============ */
 .chirp { position: absolute; left: 0; top: 0; z-index: 70; width: 64px; height: 64px; padding: 0; border: 0; background: none; cursor: pointer; will-change: transform; }
-.chirp svg { display: block; overflow: visible; transform: scaleX(var(--face, 1)); filter: drop-shadow(0 6px 8px rgba(20,19,46,.28)); transition: transform .25s var(--ease); }
+.chirp svg { display: block; overflow: visible; transform: scaleX(var(--face, 1)); filter: drop-shadow(0 6px 8px rgba(60,30,15,.28)); transition: transform .25s var(--ease); }
 .chirp:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; border-radius: 50%; }
 .chirp__eye { transform-origin: 40px 29px; animation: chirp-blink 4.5s infinite; }
 .chirp__wing { transform-origin: 26px 38px; }
@@ -798,10 +795,10 @@ h1, h2 { letter-spacing: -0.02em; }
 @keyframes chirp-flap { from { transform: rotate(-22deg); } to { transform: rotate(26deg); } }
 @keyframes chirp-hop { 0% { translate: 0 0; } 40% { translate: 0 -16px; } 100% { translate: 0 0; } }
 
-.chirp-panel { position: fixed; right: 20px; bottom: 20px; z-index: 80; width: min(360px, calc(100vw - 32px)); max-height: min(560px, 78vh); display: flex; flex-direction: column; background: #fff; border-radius: 22px; box-shadow: 0 30px 70px -20px rgba(20,19,46,.5), 0 0 0 1px var(--line); overflow: hidden; animation: chirp-in .35s var(--ease); }
+.chirp-panel { position: fixed; right: 20px; bottom: 20px; z-index: 80; width: min(360px, calc(100vw - 32px)); max-height: min(560px, 78vh); display: flex; flex-direction: column; background: #fff; border-radius: 22px; box-shadow: 0 30px 70px -20px rgba(60,30,15,.5), 0 0 0 1px var(--line); overflow: hidden; animation: chirp-in .35s var(--ease); }
 .chirp-panel[hidden] { display: none; }
 @keyframes chirp-in { from { opacity: 0; transform: translateY(16px) scale(.97); } }
-.chirp-panel header { display: flex; align-items: center; gap: .7rem; padding: .8rem 1rem; color: #fff; background: linear-gradient(135deg, #5b57d6, #35319b); }
+.chirp-panel header { display: flex; align-items: center; gap: .7rem; padding: .8rem 1rem; color: #fff; background: linear-gradient(135deg, #0C45B0, #082F7C); }
 .chirp-panel header b { display: block; font-size: 1rem; }
 .chirp-panel header span { font-size: .76rem; opacity: .85; }
 .chirp-panel__av { width: 40px; height: 40px; border-radius: 50%; background: #fff; overflow: hidden; flex: none; }
@@ -810,7 +807,7 @@ h1, h2 { letter-spacing: -0.02em; }
 .chirp-panel__x:hover { background: rgba(255,255,255,.3); }
 .chirp-panel__log { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: .6rem; min-height: 150px; background: var(--ivory-2); }
 .chirp-msg { max-width: 86%; padding: .6rem .85rem; border-radius: 16px; font-size: .9rem; line-height: 1.5; animation: chirp-in .3s var(--ease); }
-.chirp-msg--bot { align-self: flex-start; background: #fff; border-bottom-left-radius: 4px; box-shadow: 0 1px 3px rgba(20,19,46,.1); color: var(--ink); }
+.chirp-msg--bot { align-self: flex-start; background: #fff; border-bottom-left-radius: 4px; box-shadow: 0 1px 3px rgba(60,30,15,.12); color: var(--ink); }
 .chirp-msg--me { align-self: flex-end; background: var(--claret); color: #fff; border-bottom-right-radius: 4px; }
 .chirp-msg__go { display: inline-block; margin-top: .5rem; font-weight: 600; color: var(--claret); }
 .chirp-dots i { display: inline-block; width: 6px; height: 6px; margin: 0 2px; border-radius: 50%; background: var(--muted); animation: chirp-dot 1s infinite; }
@@ -840,7 +837,7 @@ body::before, .hero::before { display: none; }                 /* no grain, no b
 body::after { height: 2px; background: var(--claret); }        /* single clean hairline */
 html { scrollbar-color: var(--lav) transparent; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--lav); border: 3px solid #fff; }
+::-webkit-scrollbar-thumb { background: var(--lav); border: 3px solid var(--ivory); }
 .section { padding-block: clamp(4.5rem, 9vw, 7.5rem); }
 .section--tight { padding-block: clamp(2.5rem, 5vw, 4rem); }
 h1, h2, h3 { letter-spacing: -.025em; font-weight: 500; }
@@ -851,8 +848,8 @@ img { image-rendering: auto; -ms-interpolation-mode: bicubic; }
 .phone img, .device img, .tile__img img, .fig img { image-rendering: -webkit-optimize-contrast; }
 
 /* flat, hairline cards instead of heavy shadows */
-.tile, .persona, .path-card, .cs-band { box-shadow: none; border: 1px solid var(--line); background: #fff; }
-.tile:hover, .path-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(20,19,46,.28); border-color: var(--lav); }
+.tile, .persona, .path-card, .cs-band { box-shadow: none; border: 1px solid var(--line); background: var(--paper); }
+.tile:hover, .path-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(60,30,15,.28); border-color: var(--lav); }
 .tile__img::after { display: none; }
 .tile__img img { transition: transform .8s var(--ease); }
 .tile:hover .tile__img img { transform: scale(1.03); }
@@ -861,18 +858,18 @@ img { image-rendering: auto; -ms-interpolation-mode: bicubic; }
 .tile__kicker { color: var(--claret); }
 
 /* quieter header */
-.site-head { background: rgba(255,255,255,.88); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); border-bottom: 1px solid var(--line); box-shadow: none; }
+.site-head { background: rgba(223,191,160,.92); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); border-bottom: 1px solid var(--line); box-shadow: none; }
 
 /* buttons: solid, no glow */
 .btn { box-shadow: none; }
-.btn:hover { box-shadow: 0 10px 24px -12px rgba(74,69,200,.6); }
+.btn:hover { box-shadow: 0 10px 24px -12px rgba(12,69,176,.6); }
 
 /* stage hero: calmer gradient, no orange blob */
-.stage { background: linear-gradient(160deg, #5b57d6 0%, #3d39a3 60%, #2a2780 100%); }
+.stage { background: linear-gradient(160deg, #0C45B0 0%, #0C45B0 60%, #082F7C 100%); }
 .stage h1 { font-weight: 400; }
 
 /* quieter dividers, tidier proof strip, rounder device frames */
 .proof { gap: 0; }
-.device, .phone img { box-shadow: 0 24px 48px -26px rgba(20,19,46,.55), inset 0 0 0 1.5px #3a3970; }
+.device, .phone img { box-shadow: 0 24px 48px -26px rgba(60,30,15,.5), inset 0 0 0 1.5px #5a3322; }
 .fig img, .browser { border-radius: 14px; }
 ::selection { background: var(--lav); color: var(--obsidian); }
