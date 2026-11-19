@@ -1,10 +1,16 @@
 /* Home: hero, project cards, gallery, numbers, closing. Palette comes from styles.css tokens. */
 
-/* ---------- Hero ---------- */
-.home-hero { padding-top: clamp(3.5rem, 9vw, 7rem); padding-bottom: clamp(2rem, 5vw, 4rem); }
-.home-hero .display { font-size: clamp(3rem, 9vw, 7rem); line-height: .98; letter-spacing: -.035em; color: var(--ink); }
-.home-hero .display em, .home-cta h2 em { font-style: italic; color: var(--claret); }
+/* ---------- Hero: deep blue band, sand text, same as the footer ---------- */
+.home-hero { background: var(--obsidian); color: var(--ivory); padding-block: clamp(4rem, 10vw, 8rem) clamp(3.5rem, 8vw, 6.5rem); }
+.home-hero .eyebrow { color: var(--ivory); }
+.home-hero .eyebrow::before { background: var(--ivory); }
+.home-hero .display { font-size: clamp(3rem, 9vw, 7rem); line-height: .98; letter-spacing: -.035em; color: var(--paper); }
+.home-hero .display em, .home-hero h1 em { font-style: italic; color: var(--ivory) !important; background: none; -webkit-text-fill-color: var(--ivory); }
+.home-hero .lead { color: var(--ivory); }
 .home-hero__cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+.home-hero .btn--light { background: var(--paper); color: var(--obsidian); }
+.home-hero .btn--glass { background: transparent; color: var(--paper); border-color: rgba(235,213,190,.55); }
+.home-cta h2 em { font-style: italic; color: var(--claret); }
 
 /* ---------- Selected work ---------- */
 .home-work { padding-block: clamp(2rem, 5vw, 4rem) clamp(3rem, 7vw, 6rem); }
@@ -28,7 +34,7 @@
 /* ---------- Closing ---------- */
 .home-cta { padding-block: clamp(4.5rem, 10vw, 8rem); text-align: center; }
 .home-cta h2 { font-family: var(--display); font-weight: 400; font-size: clamp(2.4rem, 7vw, 5.4rem); line-height: 1; letter-spacing: -.035em; color: var(--ink); }
-.home-hero .display em, .home-cta h2 em { font-style: italic; color: var(--claret); }
+.home-cta h2 em { font-style: italic; color: var(--claret); }
 .home-cta .btn { margin-top: 2.2rem; }
 
 /* ---------- Gallery: art, photography, digital design ---------- */
