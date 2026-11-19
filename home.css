@@ -25,7 +25,7 @@
 @media (max-width: 560px) { .home-work .tiles { grid-template-columns: 1fr; } }
 
 /* ---------- Numbers band ---------- */
-.band { background: var(--ivory-2); color: var(--ink); padding-block: clamp(3.5rem, 7vw, 5.5rem); }
+.band { background: var(--ivory); color: var(--ink); padding-block: clamp(3.5rem, 7vw, 5.5rem); }
 .band ul { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
 .band strong { display: block; font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 4.6vw, 3.6rem); letter-spacing: -.03em; line-height: 1; color: var(--claret); }
 .band span { display: block; margin-top: .7rem; font-size: .85rem; max-width: 22ch; }
