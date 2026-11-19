@@ -777,52 +777,34 @@ h1, h2 { letter-spacing: -0.02em; }
 @media (max-width: 640px) { .stage { min-height: 640px; } .stage__phones { height: 42%; } .stage__phones .device:not(.device--main) { width: 30%; } .stage__phones .device--main { width: 38%; } }
 .path-card__t { margin-bottom: .4rem; }
 
-/* ============ Chirp, the portfolio bird ============ */
-.chirp { position: absolute; left: 0; top: 0; z-index: 70; width: 64px; height: 64px; padding: 0; border: 0; background: none; cursor: pointer; will-change: transform; }
-.chirp svg { display: block; overflow: visible; transform: scaleX(var(--face, 1)); filter: drop-shadow(0 6px 8px rgba(60,30,15,.28)); transition: transform .25s var(--ease); }
-.chirp:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; border-radius: 50%; }
-.chirp__eye { transform-origin: 40px 29px; animation: chirp-blink 4.5s infinite; }
-.chirp__wing { transform-origin: 26px 38px; }
-.chirp:not(.chirp--fly) svg { animation: chirp-bob 2.8s ease-in-out infinite; }
-.chirp:hover svg { transform: scaleX(var(--face, 1)) rotate(-6deg); }
-.chirp--fly .chirp__wing { animation: chirp-flap .13s ease-in-out infinite alternate; }
-.chirp--hop svg { animation: chirp-hop .55s var(--ease) !important; }
-.chirp__tip { position: absolute; left: 50%; bottom: 100%; transform: translate(-50%, 4px); margin-bottom: 2px; white-space: nowrap; font: 600 .72rem var(--body); color: #fff; background: var(--obsidian); padding: .3rem .7rem; border-radius: 999px; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; }
-.chirp:hover .chirp__tip, .chirp:focus-visible .chirp__tip { opacity: 1; transform: translate(-50%, 0); }
-.chirp--fly .chirp__tip { display: none; }
-@keyframes chirp-blink { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(.1); } }
-@keyframes chirp-bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -3px; } }
-@keyframes chirp-flap { from { transform: rotate(-22deg); } to { transform: rotate(26deg); } }
-@keyframes chirp-hop { 0% { translate: 0 0; } 40% { translate: 0 -16px; } 100% { translate: 0 0; } }
-
-.chirp-panel { position: fixed; right: 20px; bottom: 20px; z-index: 80; width: min(360px, calc(100vw - 32px)); max-height: min(560px, 78vh); display: flex; flex-direction: column; background: #fff; border-radius: 22px; box-shadow: 0 30px 70px -20px rgba(60,30,15,.5), 0 0 0 1px var(--line); overflow: hidden; animation: chirp-in .35s var(--ease); }
-.chirp-panel[hidden] { display: none; }
-@keyframes chirp-in { from { opacity: 0; transform: translateY(16px) scale(.97); } }
-.chirp-panel header { display: flex; align-items: center; gap: .7rem; padding: .8rem 1rem; color: #fff; background: linear-gradient(135deg, #0C45B0, #082F7C); }
-.chirp-panel header b { display: block; font-size: 1rem; }
-.chirp-panel header span { font-size: .76rem; opacity: .85; }
-.chirp-panel__av { width: 40px; height: 40px; border-radius: 50%; background: #fff; overflow: hidden; flex: none; }
-.chirp-panel__av svg { width: 100%; height: 100%; transform: scale(1.25) translateY(6%); }
-.chirp-panel__x { margin-left: auto; width: 32px; height: 32px; border: 0; border-radius: 50%; background: rgba(255,255,255,.18); color: #fff; font-size: 1.3rem; line-height: 1; cursor: pointer; }
-.chirp-panel__x:hover { background: rgba(255,255,255,.3); }
-.chirp-panel__log { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: .6rem; min-height: 150px; background: var(--ivory-2); }
-.chirp-msg { max-width: 86%; padding: .6rem .85rem; border-radius: 16px; font-size: .9rem; line-height: 1.5; animation: chirp-in .3s var(--ease); }
-.chirp-msg--bot { align-self: flex-start; background: #fff; border-bottom-left-radius: 4px; box-shadow: 0 1px 3px rgba(60,30,15,.12); color: var(--ink); }
-.chirp-msg--me { align-self: flex-end; background: var(--claret); color: #fff; border-bottom-right-radius: 4px; }
-.chirp-msg__go { display: inline-block; margin-top: .5rem; font-weight: 600; color: var(--claret); }
-.chirp-dots i { display: inline-block; width: 6px; height: 6px; margin: 0 2px; border-radius: 50%; background: var(--muted); animation: chirp-dot 1s infinite; }
-.chirp-dots i:nth-child(2) { animation-delay: .15s; } .chirp-dots i:nth-child(3) { animation-delay: .3s; }
-@keyframes chirp-dot { 0%, 80%, 100% { opacity: .3; } 40% { opacity: 1; } }
-.chirp-panel__chips { display: flex; flex-wrap: wrap; gap: .4rem; padding: .6rem 1rem 0; background: #fff; }
-.chirp-panel__chips button { font: 500 .76rem var(--body); padding: .35rem .7rem; border-radius: 999px; border: 1px solid var(--line); background: var(--lav-soft); color: var(--obsidian); cursor: pointer; }
-.chirp-panel__chips button:hover { background: var(--claret); color: #fff; border-color: var(--claret); }
-.chirp-panel__form { display: flex; gap: .5rem; padding: .7rem 1rem .3rem; }
-.chirp-panel__form input { flex: 1; min-width: 0; font: inherit; font-size: .9rem; padding: .6rem .9rem; border-radius: 999px; border: 1px solid var(--line); background: var(--ivory-2); }
-.chirp-panel__form input:focus { outline: 2px solid var(--claret); outline-offset: 1px; background: #fff; }
-.chirp-panel__form button { width: 40px; height: 40px; border: 0; border-radius: 50%; background: var(--claret); color: #fff; cursor: pointer; font-size: .95rem; }
-.chirp-panel__note { padding: 0 1rem .7rem; font-size: .68rem; color: var(--muted); }
-@media (prefers-reduced-motion: reduce) { .chirp svg, .chirp__eye, .chirp__wing { animation: none !important; } }
-@media print { .chirp, .chirp-panel { display: none; } }
+/* ============ Portfolio assistant: small bird with a ? ============ */
+.ask { position: fixed; left: 16px; bottom: 16px; z-index: 80; width: 46px; height: 46px; padding: 0; border: 0; border-radius: 50%; background: var(--paper); box-shadow: 0 6px 18px -6px rgba(60,30,15,.5), 0 0 0 1px var(--line); cursor: pointer; display: grid; place-items: center; transition: transform .25s var(--ease); }
+.ask svg { width: 36px; height: 36px; display: block; }
+.ask:hover { transform: translateY(-3px) rotate(-6deg); }
+.ask:focus-visible { outline: 2px solid var(--claret); outline-offset: 3px; }
+.ask__q { position: absolute; top: -5px; right: -5px; width: 19px; height: 19px; border-radius: 50%; background: var(--claret); color: #fff; font: 700 .72rem/19px var(--body); text-align: center; box-shadow: 0 0 0 2px var(--ivory); }
+.ask-panel { position: fixed; left: 16px; bottom: 74px; z-index: 80; width: min(360px, calc(100vw - 32px)); max-height: min(540px, 76vh); display: flex; flex-direction: column; background: var(--paper); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: 0 30px 60px -24px rgba(60,30,15,.5); animation: ask-in .3s var(--ease); }
+.ask-panel[hidden] { display: none; }
+@keyframes ask-in { from { opacity: 0; transform: translateY(14px) scale(.97); } }
+.ask-panel header { display: flex; align-items: center; gap: .7rem; padding: .8rem 1rem; color: #fff; background: var(--claret); }
+.ask-panel header b { display: block; font-size: .98rem; } .ask-panel header span { font-size: .74rem; opacity: .88; }
+.ask-panel__av { width: 38px; height: 38px; border-radius: 50%; background: var(--paper); flex: none; display: grid; place-items: center; } .ask-panel__av svg { width: 30px; height: 30px; }
+.ask-panel__x { margin-left: auto; width: 32px; height: 32px; border: 0; border-radius: 50%; background: rgba(255,255,255,.18); color: #fff; font-size: 1.3rem; line-height: 1; cursor: pointer; }
+.ask-panel__log { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: .6rem; min-height: 120px; }
+.ask-msg { max-width: 88%; padding: .6rem .85rem; border-radius: 16px; font-size: .9rem; line-height: 1.5; }
+.ask-msg--bot { align-self: flex-start; background: var(--ivory); color: var(--ink); border-bottom-left-radius: 4px; }
+.ask-msg--me { align-self: flex-end; background: var(--claret); color: #fff; border-bottom-right-radius: 4px; }
+.ask-msg__go { display: block; margin-top: .45rem; font-weight: 600; color: var(--claret); text-decoration: underline; }
+.ask-dots i { display: inline-block; width: 6px; height: 6px; margin-right: 3px; border-radius: 50%; background: var(--muted); animation: ask-dot 1s infinite; } .ask-dots i:nth-child(2) { animation-delay: .15s; } .ask-dots i:nth-child(3) { animation-delay: .3s; }
+@keyframes ask-dot { 50% { transform: translateY(-4px); opacity: .5; } }
+.ask-panel__chips { display: flex; flex-wrap: wrap; gap: .4rem; padding: .2rem 1rem .6rem; }
+.ask-panel__chips button { font: inherit; font-size: .76rem; padding: .35rem .7rem; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; } .ask-panel__chips button:hover { background: var(--claret); color: #fff; border-color: var(--claret); }
+.ask-panel__form { display: flex; gap: .5rem; padding: .6rem 1rem; border-top: 1px solid var(--line); }
+.ask-panel__form input { flex: 1; min-width: 0; font: inherit; font-size: .9rem; padding: .55rem .9rem; border-radius: 999px; border: 1px solid var(--line); background: var(--ivory); color: var(--ink); } .ask-panel__form input:focus { outline: 2px solid var(--claret); outline-offset: 1px; }
+.ask-panel__form button { width: 38px; height: 38px; border: 0; border-radius: 50%; background: var(--claret); color: #fff; cursor: pointer; }
+.ask-panel__note { padding: 0 1rem .7rem; font-size: .68rem; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .ask, .ask-panel, .ask-dots i { animation: none; transition: none; } }
+@media print { .ask, .ask-panel { display: none; } }
 
 /* Home hero: just "Portfolio" */
 .stage { min-height: clamp(420px, 66vh, 620px); display: grid; place-content: center; padding-bottom: clamp(2.4rem, 6vw, 4rem); }
