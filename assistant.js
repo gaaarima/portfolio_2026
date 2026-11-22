@@ -49,8 +49,8 @@
     '<ellipse cx="34" cy="43" rx="13" ry="10" fill="#EBD5BE"/>' +
     '<path d="M18 36 q-4 14 12 14 q-4-8 -4-16 z" fill="#082F7C"/>' +
     '<circle cx="40" cy="29" r="4.6" fill="#fff"/><circle cx="41.2" cy="29.4" r="2.5" fill="#2a160d"/><circle cx="42" cy="28.4" r=".9" fill="#fff"/>' +
-    '<path d="M50 31 L60 35 L50 39 Z" fill="#7A3E26"/>' +
-    '<path d="M28 56 v5 M36 56 v5" stroke="#7A3E26" stroke-width="2.6" stroke-linecap="round"/></svg>';
+    '<path d="M50 31 L60 35 L50 39 Z" fill="#891229"/>' +
+    '<path d="M28 56 v5 M36 56 v5" stroke="#891229" stroke-width="2.6" stroke-linecap="round"/></svg>';
 
   var btn = document.createElement("button");
   btn.type = "button"; btn.className = "ask";
