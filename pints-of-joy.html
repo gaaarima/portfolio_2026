@@ -50,13 +50,7 @@
     </section>
 
     <section class="section--tight wrap">
-      <figure class="fig reveal">
-        <div class="browser">
-          <div class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span>Pints of Joy Inventory</span></div>
-          <img src="assets/pints-new-dashboard.jpg" width="1400" height="857" alt="The redesigned Pints of Joy Inventory dashboard, Stock Flow: a top navigation of icon pills, four weekly stat cards, and weekly report cards for the production schedule and drinks log." />
-        </div>
-        <figcaption>The real Pints of Joy app: the redesigned Stock Flow dashboard.</figcaption>
-      </figure>
+      <div class="img-pair"><figure class="pfig reveal"><div class="pfig__frame"><img loading="lazy" src="assets/pints-new-dashboard.jpg" alt="The redesigned Pints of Joy Inventory dashboard, Stock Flow: a top navigation of icon pills, four weekly stat cards, and weekly report cards for the production schedule and drinks log." /></div><figcaption>The real Pints of Joy app: the redesigned Stock Flow dashboard.</figcaption></figure><figure class="pfig reveal" data-delay="1"><div class="pfig__frame"><img src="assets/pints-signin.png" alt="Pints of Joy Inventory sign-in screen: the Pints of Joy logo and the title Inventory over a warm yellow-to-peach gradient, a username and password card, a gold Sign in button and a grey Request access button." loading="lazy" /></div><figcaption>The live inventory app's sign-in: one clear path in for each store (Sunnyvale, Fremont, Palo Alto).</figcaption></figure></div>
     </section>
 
     <!-- ===== SECTION 02 — PINTS OF JOY (REAL-WORLD BUILD) =====
@@ -69,10 +63,6 @@
         <p class="reveal">Pints of Joy is a small-batch Indian ice-cream maker with a Mountain View factory and three Bay Area stores. Every week, inventory, production planning, and store transfers lived in a hand-typed Excel sheet. I researched the real workflow and designed the app that replaced it.</p>
 
 
-        <figure class="fig reveal">
-          <img src="assets/pints-signin.png" alt="Pints of Joy Inventory sign-in screen: the Pints of Joy logo and the title Inventory over a warm yellow-to-peach gradient, a username and password card, a gold Sign in button and a grey Request access button." loading="lazy" />
-          <figcaption>The live inventory app's sign-in: one clear path in for each store (Sunnyvale, Fremont, Palo Alto).</figcaption>
-        </figure>
 
         <h3 class="reveal">The short version</h3>
         <p class="reveal"><strong>Problem.</strong> Each week the manager counted stock and typed every number into Excel by hand. Even with formulas, the counting, calculations, and production plan took hours, and there was no way to see trends.</p>
@@ -124,10 +114,7 @@
         </ol>
 
         <h3 class="reveal">Design decisions</h3>
-        <figure class="fig reveal">
-          <img src="assets/pints-product.webp" alt="Saffron and pistachio Indian ice cream served in copper bowls, the Pints of Joy product the app is built around." loading="lazy" />
-          <figcaption>The product the app keeps in stock. Real brand photography runs through the brand.</figcaption>
-        </figure>
+        <div class="img-pair img-pair--one"><figure class="pfig reveal"><div class="pfig__frame"><img src="assets/pints-product.webp" alt="Saffron and pistachio Indian ice cream served in copper bowls, the Pints of Joy product the app is built around." loading="lazy" /></div><figcaption>The product the app keeps in stock. Real brand photography runs through the brand.</figcaption></figure></div>
         <ol class="reveal">
           <li><strong>Keep the human in the loop.</strong> The app drafts the weekly production plan; the manager reviews and edits before anything is final.</li>
           <li><strong>Match the paper, then improve it.</strong> Sheet-style entry for Transfers, Production, Reserved, and Closing mirrors the Excel muscle memory, so day one feels familiar.</li>
@@ -170,10 +157,7 @@
 
         <h3 class="reveal">Wireframes</h3>
         <p class="reveal">The structure of the redesigned app in grayscale: sign-in, the dashboard, the production grid and transfers. Everything is a sheet you can fill in, matching how the team worked in Excel.</p>
-        <figure class="fig reveal">
-          <img src="assets/pints-wireframes-v2.svg" width="1040" height="700" loading="lazy" alt="Low-fidelity wireframes of four screens: sign-in, the Stock Flow dashboard with stat cards and report cards, the production requirements grid, and the transfers sheet." />
-          <figcaption>Low-fidelity wireframes of the redesigned structure.</figcaption>
-        </figure>
+        <div class="img-pair img-pair--one"><figure class="pfig reveal"><div class="pfig__frame"><img src="assets/pints-wireframes-v2.svg" loading="lazy" alt="Low-fidelity wireframes of four screens: sign-in, the Stock Flow dashboard with stat cards and report cards, the production requirements grid, and the transfers sheet." /></div><figcaption>Low-fidelity wireframes of the redesigned structure.</figcaption></figure></div>
 
         <h3 class="reveal">Lo-fi prototype</h3>
         <p class="reveal">A clickable grayscale version of the flow. Try it: sign in, open Production, save, then start a transfer.</p>
@@ -249,6 +233,7 @@
 
   <script src="main.js"></script>
   <script src="proto.js"></script>
+  <script src="zoom.js" defer></script>
   <script src="assistant.js" defer></script>
 </body>
 </html>
