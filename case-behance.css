@@ -88,3 +88,10 @@
   .bp-evolve { grid-template-columns: 1fr; } .bp-evolve__arrow { transform: rotate(90deg); justify-self: center; }
   .bp-evolve .bp-phone__frame { max-height: 70vh; width: 62%; }
 }
+.bp-grid--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.bp-ba { display: grid; gap: clamp(1.4rem, 3vw, 2.2rem); margin-top: clamp(1.8rem, 4vw, 2.6rem); }
+.bp-ba__tag { display: inline-block; margin-bottom: .7rem; padding: .35rem .85rem; border-radius: 999px; font-size: .8rem; font-weight: 600; letter-spacing: .04em; }
+.bp-ba__tag--before { background: #FFF6D9; color: #6b4f00; }
+.bp-ba__tag--after { background: #EDE9F9; color: #4b37a0; }
+@media (max-width: 900px) { .bp-grid--5 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .bp-grid--5 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
