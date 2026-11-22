@@ -25,7 +25,6 @@
     { k: ["jewelry", "jewellery", "teesa", "newari", "nepali", "heritage", "before design", "career"], a: "Before design, Garima spent years in fine jewelry and restaurant management, which shapes how products get designed around real users. Garima is also developing a luxury jewelry brand, Teesa, drawing on Nepali heritage and Newari craftsmanship." },
     { k: ["accessib", "wcag", "contrast", "a11y"], a: "Accessibility runs through the work: strong colour contrast, icons plus labels, back buttons, alt text and reduced-motion support." },
     { k: ["color", "colour", "palette", "theme", "font", "typeface"], a: "This site uses cobalt blue #0C45B0, terracotta brown #7A3E26 text and a sand #DFBFA0 background, with a serif for headings." },
-    { k: ["ux only", "everything", "switch", "view", "toggle"], a: "The UX / Everything switch at the top changes what you see. UX shows only the UX case studies; Everything adds websites, art, photography and design." },
     { k: ["where", "location", "live", "bay area", "california"], a: "Garima is based in the Bay Area, California." }
   ];
   var CHIPS = ["What's the best project to start with?", "What tools do you use?", "Is Garima open to work?", "How do I get in touch?"];

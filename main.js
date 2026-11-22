@@ -40,15 +40,12 @@
 
   // ---- Audience paths: "ux" (recruiters) or "all" (everyone else) ----
   var PATH_KEY = "gs-path";
+  // No switch any more: everything shows, unless a link explicitly asks for ?path=ux
   function readPath() {
     var fromUrl = new URLSearchParams(location.search).get("path");
-    if (fromUrl === "ux" || fromUrl === "all") {
-      try { localStorage.setItem(PATH_KEY, fromUrl); } catch (e) {}
-      return fromUrl;
-    }
-    try { var v = localStorage.getItem(PATH_KEY); if (v === "ux" || v === "all") return v; } catch (e) {}
-    return null;
+    return fromUrl === "ux" ? "ux" : "all";
   }
+  try { localStorage.removeItem(PATH_KEY); } catch (e) {}
   var path = readPath();
 
   function applyPath() {
@@ -86,21 +83,6 @@
       history.replaceState(null, "", u.pathname + u.search + u.hash);
     }
     applyPath();
-  }
-
-  // header switch, injected on every page
-  var navBar = document.querySelector(".site-head .nav");
-  if (navBar) {
-    var sw = document.createElement("div");
-    sw.className = "path-switch";
-    sw.setAttribute("role", "group");
-    sw.setAttribute("aria-label", "Choose what to show");
-    sw.innerHTML = '<button type="button" data-path="ux">UX</button><button type="button" data-path="all">Everything</button>';
-    navBar.insertBefore(sw, navBar.querySelector(".nav-toggle"));
-    sw.addEventListener("click", function (e) {
-      var b = e.target.closest("button[data-path]");
-      if (b) setPath(b.getAttribute("data-path"));
-    });
   }
 
   // path chooser cards on the home page
