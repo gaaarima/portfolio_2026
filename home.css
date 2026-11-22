@@ -71,7 +71,7 @@ body.home::before { content: ""; display: block; position: fixed; inset: 0; z-in
 @media (max-width: 760px) { .g-row { display: grid; grid-template-columns: repeat(2, 1fr); align-items: end; } .g-item { flex: none; padding: 3px; } .g-row--one { display: flex; } }
 
 /* ---------- Lightbox ---------- */
-.lightbox { position: fixed; inset: 0; z-index: 400; display: grid; place-items: center; background: rgba(249,236,229,.98); padding: 1.2rem 4.5rem; }
+.lightbox { position: fixed; inset: 0; z-index: 400; display: grid; place-items: center; background: rgba(255,255,255,.98); padding: 1.2rem 4.5rem; }
 .lightbox[hidden] { display: none; }
 .lightbox__fig { margin: 0; text-align: center; max-width: 100%; }
 .lightbox__fig img { max-width: 100%; max-height: calc(100vh - 6.5rem); width: auto; height: auto; box-shadow: 10px 10px 0 var(--ink); background: var(--paper); padding: 5px; border: 3px solid var(--ink); border-radius: 0; }
