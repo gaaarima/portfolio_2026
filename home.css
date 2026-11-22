@@ -1,16 +1,11 @@
 /* Home: hero, project cards, gallery, numbers, closing. Palette comes from styles.css tokens. */
 
-/* ---------- Hero: deep blue band, sand text, same as the footer ---------- */
-.home-hero { background: var(--obsidian); color: var(--ivory); min-height: calc(100vh - 73px); min-height: calc(100svh - 73px); display: flex; align-items: center; padding-block: clamp(3rem, 8vw, 6rem); }
+/* ---------- Hero: full-screen sand, brown title with a blue accent ---------- */
+.home-hero { background: var(--ivory); color: var(--ink); min-height: calc(100vh - 73px); min-height: calc(100svh - 73px); display: flex; align-items: center; padding-block: clamp(3rem, 8vw, 6rem); }
 .home-hero > .wrap { width: 100%; }
-.home-hero .eyebrow { color: var(--ivory); }
-.home-hero .eyebrow::before { background: var(--ivory); }
-.home-hero .display { font-size: clamp(3.6rem, 12vw, 10rem); line-height: .98; letter-spacing: -.035em; color: var(--paper); }
-.home-hero .display em, .home-hero h1 em { font-style: italic; color: var(--ivory) !important; background: none; -webkit-text-fill-color: var(--ivory); }
-.home-hero .lead { color: var(--ivory); }
+.home-hero .display { font-size: clamp(3.6rem, 12vw, 10rem); line-height: .98; letter-spacing: -.035em; color: var(--ink); }
+.home-hero .display em, .home-hero h1 em { font-style: italic; color: var(--claret) !important; -webkit-text-fill-color: var(--claret); background: none; }
 .home-hero__cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
-.home-hero .btn--light { background: var(--paper); color: var(--obsidian); }
-.home-hero .btn--glass { background: transparent; color: var(--paper); border-color: rgba(235,213,190,.55); }
 .home-cta h2 em { font-style: italic; color: var(--claret); }
 
 /* ---------- Selected work ---------- */
