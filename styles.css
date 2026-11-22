@@ -884,3 +884,4 @@ h1, h2, .display, .cs-title { color: var(--claret); }
 .zbox[hidden] { display: none; }
 .zbox img { max-width: 100%; max-height: calc(100vh - 5rem); object-fit: contain; box-shadow: 0 30px 60px -30px rgba(0,0,0,.35); background: #fff; }
 .zbox button { position: fixed; top: 14px; right: 18px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--paper); font-size: 1.6rem; line-height: 1; cursor: pointer; color: var(--ink); }
+.portrait { display: block; width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
