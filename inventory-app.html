@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case-behance.css" />
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
@@ -34,79 +35,151 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" class="bp">
 
-    <section class="hero wrap cs-hero">
-      <h1 class="cs-title reveal" data-delay="1" style="margin-top:1.2rem;">Inventory App</h1>
-      <p class="cs-tagline reveal" data-delay="2">My first UX project: an inventory app for restaurant managers, designed end to end for the Google UX Design Professional Certificate.</p>
-      <div class="snapshot reveal" data-delay="2">
-        <div class="snapshot__cell"><div class="snapshot__k">Role</div><div class="snapshot__v">Lead UX Designer &amp; Researcher</div></div>
-        <div class="snapshot__cell"><div class="snapshot__k">Timeline</div><div class="snapshot__v">Sep 2024 – Mar 2025</div></div>
-        <div class="snapshot__cell"><div class="snapshot__k">Tools</div><div class="snapshot__v">Figma, Illustrator</div></div>
-        <div class="snapshot__cell"><div class="snapshot__k">Deliverables</div><div class="snapshot__v">Wireframes, prototypes, usability studies</div></div>
+    <!-- COVER -->
+    <section class="bp-cover wrap">
+      <div class="bp-cover__text">
+        <h1 class="cs-title reveal">Inventory App</h1>
+        <p class="cs-tagline reveal" data-delay="1">My first UX project: a mobile app that helps restaurant managers count and reorder stock, designed end to end for the Google UX Design Certificate.</p>
+        <div class="snapshot reveal" data-delay="2">
+          <div class="snapshot__cell"><div class="snapshot__k">Role</div><div class="snapshot__v">UX Designer &amp; Researcher</div></div>
+          <div class="snapshot__cell"><div class="snapshot__k">Timeline</div><div class="snapshot__v">Sep 2024 – Mar 2025</div></div>
+          <div class="snapshot__cell"><div class="snapshot__k">Tools</div><div class="snapshot__v">Figma, Illustrator</div></div>
+          <div class="snapshot__cell"><div class="snapshot__k">Deliverables</div><div class="snapshot__v">Wireframes, prototypes, 2 usability studies</div></div>
+        </div>
+      </div>
+      <div class="bp-cover__phones reveal" data-delay="1" aria-hidden="true">
+        <figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-hifi-scanner.png" alt="" loading="lazy" /></div></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/pints-home.png" alt="" loading="lazy" /></div></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-hifi-dashboard.png" alt="" loading="lazy" /></div></figure>
       </div>
     </section>
 
-    <section class="section--tight wrap">
-      <div class="phone-rail reveal" tabindex="0" aria-label="The home screen across three stages, scroll horizontally">
-        <figure class="phone"><img src="assets/v1-lofi-dashboard.png" alt="Low-fidelity home screen" loading="lazy"><figcaption><b>1 · Low-fi</b>Layout and flow only.</figcaption></figure>
-        <figure class="phone"><img src="assets/v1-hifi-dashboard.png" alt="First high-fidelity home screen" loading="lazy"><figcaption><b>2 · First hi-fi</b>Colour, vendor tiles, summary table.</figcaption></figure>
-        <figure class="phone"><img src="assets/pints-home.png" alt="Final high-fidelity home screen" loading="lazy"><figcaption><b>3 · After testing</b>Live stock counts, a low-stock alert and icon navigation.</figcaption></figure>
+    <!-- DESIGN THINKING -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Design thinking</h2>
+      <ol class="bp-steps reveal">
+        <li><span class="bp-steps__n">1</span><b>Empathize</b><p>Interviewed restaurant managers and owners about their daily counts and orders.</p></li>
+        <li><span class="bp-steps__n">2</span><b>Define</b><p>Three pain points: counting takes time, people forget, and most apps are built for warehouses.</p></li>
+        <li><span class="bp-steps__n">3</span><b>Ideate</b><p>Paper sketches of one core flow: open the app, scan an item, add or subtract stock.</p></li>
+        <li><span class="bp-steps__n">4</span><b>Prototype</b><p>Digital wireframes, a lo-fi prototype, then a hi-fi prototype in Figma.</p></li>
+        <li><span class="bp-steps__n">5</span><b>Test</b><p>Two rounds of in-person usability testing, one on each prototype.</p></li>
+      </ol>
+      <div class="bp-persona reveal">
+        <div><div class="persona__name">Sugam Pokhrel</div><div class="persona__role">Restaurant manager · persona</div></div>
+        <p>“Even with a thorough list, we're human — we forget sometimes.”</p>
+        <p class="bp-persona__goal"><b>Goal:</b> keep stock flowing with no shortages and no scramble, in an app quick enough to use mid-shift.</p>
       </div>
     </section>
 
-    <section class="section--tight wrap">
-      <div class="cs-body">
-        <h2 class="reveal">The problem</h2>
-        <p class="reveal">Restaurant managers keep running out of small essentials because counts get forgotten and orders get missed. Most inventory apps are built for warehouses, not small restaurants.</p>
-        <p class="reveal"><strong>The goal.</strong> Keep stock flowing with no shortages and no scramble, using an app that is quick to use mid-shift.</p>
+    <!-- FLOW CHART -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Flow chart</h2>
+      <div class="bp-flow reveal" tabindex="0" aria-label="User flow chart, scroll horizontally on small screens">
+        <svg viewBox="0 0 1000 330" role="img" aria-labelledby="flowT">
+          <title id="flowT">User flow: open the app, see live counts on the home screen, choose add or subtract, scan the item, confirm, and the stock updates. From home you can also open the menu for items, alerts and profile. A low-stock alert asks whether to add the item to the order list.</title>
+          <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#15110F"/></marker></defs>
+          <g font-family="Plus Jakarta Sans, sans-serif" font-size="14" text-anchor="middle">
+            <g class="n"><rect x="10" y="40" width="120" height="48" rx="24"/><text x="70" y="69">Open app</text></g>
+            <g class="n n--b"><rect x="170" y="40" width="140" height="48" rx="10"/><text x="240" y="62">Home</text><text x="240" y="79" font-size="11">live stock counts</text></g>
+            <g class="n"><rect x="350" y="40" width="140" height="48" rx="10"/><text x="420" y="69">Add / Subtract</text></g>
+            <g class="n"><rect x="530" y="40" width="120" height="48" rx="10"/><text x="590" y="69">Scan item</text></g>
+            <g class="d"><path d="M745 22 L800 64 L745 106 L690 64 Z"/><text x="745" y="69" font-size="12">Confirm?</text></g>
+            <g class="n n--g"><rect x="840" y="40" width="150" height="48" rx="24"/><text x="915" y="69">Stock updated</text></g>
+            <g fill="none" stroke="#15110F" stroke-width="1.6" marker-end="url(#ar)">
+              <path d="M130 64H168"/><path d="M310 64H348"/><path d="M490 64H528"/><path d="M650 64H688"/><path d="M800 64H838"/>
+              <path d="M745 106V140H590V90"/>
+              <path d="M240 88V190"/><path d="M240 214H330"/><path d="M240 214V290H330"/>
+              <path d="M450 214H530"/><path d="M450 290H530"/>
+              <path d="M660 290H738"/>
+            </g>
+            <text x="815" y="56" font-size="11">yes</text><text x="668" y="134" font-size="11">no, rescan</text>
+            <g class="n"><rect x="180" y="190" width="120" height="48" rx="10"/><text x="240" y="219">Menu</text></g>
+            <g class="n"><rect x="332" y="190" width="118" height="48" rx="10"/><text x="391" y="219">Items</text></g>
+            <g class="n"><rect x="532" y="190" width="130" height="48" rx="10"/><text x="597" y="219">Item profile</text></g>
+            <g class="n"><rect x="332" y="266" width="118" height="48" rx="10"/><text x="391" y="295">Alerts</text></g>
+            <g class="n n--r"><rect x="532" y="266" width="128" height="48" rx="10"/><text x="596" y="288">Low stock</text><text x="596" y="305" font-size="11">add to order list?</text></g>
+            <g class="n n--g"><rect x="740" y="266" width="130" height="48" rx="24"/><text x="805" y="295">Order list</text></g>
+          </g>
+        </svg>
+      </div>
+    </section>
 
-        <h3 class="reveal">Understanding the user</h3>
-        <p class="reveal">I interviewed restaurant managers and owners about their daily inventory work. Three pain points came up again and again:</p>
-        <ol class="reveal">
-          <li><strong>Time.</strong> Counting and ordering is slow, tedious work.</li>
-          <li><strong>Human error.</strong> People forget to count or order items.</li>
-          <li><strong>Not inclusive.</strong> Most apps target warehouses and big numbers.</li>
-        </ol>
-        <div class="persona reveal">
-          <div class="persona__name">Sugam Pokhrel</div>
-          <div class="persona__role">Restaurant Manager</div>
-          <p class="persona__need">Needs to manage inventory efficiently so the restaurant runs smoothly.</p>
-          <div class="persona-quotes">
-            <p>"Even with a thorough list, we're human — we forget sometimes."</p>
-          </div>
+    <!-- WIREFRAME -->
+    <section class="bp-sec wrap">
+      <div class="bp-split">
+        <div class="bp-split__text reveal">
+          <h2 class="bp-h">Wireframe</h2>
+          <p>Paper sketches became digital wireframes, then a clickable lo-fi prototype. The layout kept the scan button and add or subtract one tap from home.</p>
         </div>
+        <div class="bp-canvas reveal" data-delay="1"><div class="bp-grid"><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-lofi-dashboard.png" alt="Low-fidelity home screen" loading="lazy" /></div><figcaption>Home</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-lofi-menu.png" alt="Low-fidelity menu" loading="lazy" /></div><figcaption>Menu</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-lofi-scanner.png" alt="Low-fidelity scanner" loading="lazy" /></div><figcaption>Scanner</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-lofi-scanned.png" alt="Low-fidelity scan confirmation" loading="lazy" /></div><figcaption>Confirm</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-lofi-added.png" alt="Low-fidelity items added message" loading="lazy" /></div><figcaption>Added</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-lofi-item.png" alt="Low-fidelity item profile" loading="lazy" /></div><figcaption>Item profile</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-lofi-profile.png" alt="Low-fidelity profile" loading="lazy" /></div><figcaption>Profile</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-wire-notification.png" alt="Low-fidelity notifications" loading="lazy" /></div><figcaption>Alerts</figcaption></figure></div></div>
+      </div>
+    </section>
 
-        <h3 class="reveal">Designing it</h3>
-        <p class="reveal">Paper sketches, then digital wireframes, then a low-fidelity prototype. The core flow: land on the home screen, scan an item, add it to or subtract it from stock.</p>
-        <div class="phone-rail reveal" tabindex="0" aria-label="Low-fidelity screens, scroll horizontally">
-          <figure class="phone"><img src="assets/v1-lofi-dashboard.png" alt="Low-fidelity home screen" loading="lazy"><figcaption><b>Home</b>Add or subtract stock, vendors, and a summary table.</figcaption></figure>
-          <figure class="phone"><img src="assets/v1-lofi-scanner.png" alt="Low-fidelity scanner screen" loading="lazy"><figcaption><b>Scanner</b>Point at the barcode; the flashlight sits in reach.</figcaption></figure>
-          <figure class="phone"><img src="assets/v1-lofi-scanned.png" alt="Low-fidelity scan confirmation" loading="lazy"><figcaption><b>Confirm</b>Confirm the add, or cancel.</figcaption></figure>
-          <figure class="phone"><img src="assets/v1-lofi-item.png" alt="Low-fidelity item profile" loading="lazy"><figcaption><b>Item profile</b>Photo, description, barcode and price.</figcaption></figure>
+    <!-- USER INTERFACE -->
+    <section class="bp-sec wrap">
+      <div class="bp-split">
+        <div class="bp-split__text reveal">
+          <h2 class="bp-h">User interface</h2>
+          <p>The first hi-fi used bold amber with black type for high contrast in a busy kitchen. After testing, the home screen moved to calm colour-coded tiles with live counts.</p>
+          <p><a href="https://www.figma.com/design/SWznY3ZKtLvxzbPuDaISL3/Inventory-app?t=EHQgOgSxjLslM8pS-1" class="link-underline" target="_blank" rel="noopener">View the prototype in Figma →</a></p>
         </div>
+        <div class="bp-canvas reveal" data-delay="1"><div class="bp-grid"><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-hifi-dashboard.png" alt="High-fidelity home screen" loading="lazy" /></div><figcaption>Home</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-hifi-scanner.png" alt="High-fidelity scanner" loading="lazy" /></div><figcaption>Scanner</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-hifi-scanned.png" alt="High-fidelity item scanned" loading="lazy" /></div><figcaption>Scanned</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-hifi-subtract.png" alt="High-fidelity subtract confirmation" loading="lazy" /></div><figcaption>Subtract</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-hifi-item.png" alt="High-fidelity item profile" loading="lazy" /></div><figcaption>Item profile</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-hifi-notifications.png" alt="High-fidelity notifications" loading="lazy" /></div><figcaption>Alerts</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-hifi-profile.png" alt="High-fidelity profile" loading="lazy" /></div><figcaption>Profile</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/pints-home.png" alt="Final home screen after testing" loading="lazy" /></div><figcaption>Final home</figcaption></figure></div></div>
+      </div>
+    </section>
 
-        <h3 class="reveal">Testing and refining</h3>
-        <p class="reveal">I ran two rounds of in-person usability testing, one on the low-fi prototype and one on the hi-fi.</p>
-        <ul class="reveal">
-          <li><strong>Round 1:</strong> users wanted a clearer flow with a back button, easier scanning, and an organised item list.</li>
-          <li><strong>Round 2:</strong> users wanted a tabulated item list, icons for quick access, and more information on the home screen.</li>
-        </ul>
-        <p class="reveal">The home screen moved from navigation-only to live counts (in stock, low, out, vendors) with a one-tap review of what needs ordering. I also added icons, back buttons, high-contrast colour and item photos for accessibility.</p>
-        <p class="reveal">View the <a href="https://www.figma.com/design/SWznY3ZKtLvxzbPuDaISL3/Inventory-app?t=EHQgOgSxjLslM8pS-1" class="link-underline" target="_blank" rel="noopener">prototype in Figma →</a></p>
+    <!-- TESTING -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Usability testing</h2>
+      <div class="bp-rounds reveal">
+        <div class="bp-round"><b>Round 1 · lo-fi</b><p>Users wanted a clearer flow with a back button, easier scanning and an organised item list.</p></div>
+        <div class="bp-round"><b>Round 2 · hi-fi</b><p>Users wanted a tabulated item list, icons for quick access and more information on the home screen.</p></div>
+      </div>
+      <div class="bp-evolve reveal">
+        <figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-lofi-dashboard.png" alt="Low-fidelity home screen" loading="lazy" /></div><figcaption><b>1 · Lo-fi</b> Layout and flow only.</figcaption></figure>
+        <span class="bp-evolve__arrow" aria-hidden="true">→</span>
+        <figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/v1-hifi-dashboard.png" alt="First high-fidelity home screen" loading="lazy" /></div><figcaption><b>2 · First hi-fi</b> Colour, vendor tiles, summary table.</figcaption></figure>
+        <span class="bp-evolve__arrow" aria-hidden="true">→</span>
+        <figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/pints-home.png" alt="Final home screen after testing" loading="lazy" /></div><figcaption><b>3 · After testing</b> Live counts, a low-stock alert, icon navigation.</figcaption></figure>
+      </div>
+    </section>
 
-        <h3 class="reveal">Takeaway</h3>
-        <p class="reveal">As my first UX project, it taught me to design for the way people actually work, not the way a process looks on paper.</p>
-
-        <div class="reveal" style="margin-top:2.4rem;">
-          <a href="pints-of-joy.html" class="btn">Part 2: Pints of Joy, the real build <span class="arrow">→</span></a>
+    <!-- DESIGN SYSTEM -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Design system</h2>
+      <div class="bp-ds reveal">
+        <div class="bp-ds__block">
+          <h3>Colour</h3>
+          <ul class="bp-swatches">
+            <li><i style="background:#876AD6"></i><b>Primary</b><span>#876AD6</span></li>
+            <li><i style="background:#E0FCE6"></i><b>In stock</b><span>#E0FCE6</span></li>
+            <li><i style="background:#FFF6D9"></i><b>Low stock</b><span>#FFF6D9</span></li>
+            <li><i style="background:#F9DCDC"></i><b>Out of stock</b><span>#F9DCDC</span></li>
+            <li><i style="background:#EDE9F9"></i><b>Vendors</b><span>#EDE9F9</span></li>
+            <li><i style="background:#100101"></i><b>Text</b><span>#100101</span></li>
+          </ul>
         </div>
+        <div class="bp-ds__block">
+          <h3>Accessibility choices</h3>
+          <ul class="bp-chips">
+            <li>Icons plus labels</li><li>Back button on every screen</li><li>High-contrast text</li><li>Item photos</li><li>Colour-coded stock states</li><li>One-tap scan</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTCOME -->
+    <section class="bp-sec wrap">
+      <div class="bp-outcome reveal">
+        <h2 class="bp-h">Outcome</h2>
+        <p>A tested hi-fi prototype whose home screen answers the manager's first question, “what do I need to order?”, in one glance. As my first UX project, it taught me to design for how people actually work, not how a process looks on paper.</p>
+        <a href="pints-of-joy.html" class="btn">Part 2: Pints of Joy, the real build <span class="arrow">→</span></a>
       </div>
     </section>
 
     <section class="section--tight wrap reveal">
       <a href="work.html" class="link-underline">← Back to all work</a>
     </section>
+  </main>
 
   <footer class="site-foot">
     <div class="wrap foot-grid">
