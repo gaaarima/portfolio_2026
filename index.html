@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=3" />
-  <link rel="stylesheet" href="home.css?v=3" />
+  <link rel="stylesheet" href="home.css?v=4" />
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png" media="(prefers-color-scheme: light)" />
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64-white.png" media="(prefers-color-scheme: dark)" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
@@ -46,6 +46,22 @@
         <a href="#work" class="btn btn--light">See my work <span class="arrow">↓</span></a>
         <a href="contact.html" class="btn btn--glass">Let’s talk</a>
       </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="wrap home-about" id="about">
+      <div class="about-grid">
+        <div class="cs-body reveal">
+          <h2>About</h2>
+          <p class="home-about__lead">I design clear, usable products and build them.</p>
+          <p>My path started outside design. Years in fine jewelry and restaurant management taught me to watch how people really work, and that is where every project still begins.</p>
+          <p>Today I turn messy everyday tasks into clear flows, then build the front end myself so the design ships as intended. I'm finishing a Bachelor's in Web &amp; Digital Design (4.0 GPA) and hold the Google UX Design Certificate.</p>
+          <a href="about.html" class="link-underline home-about__more">More about me →</a>
+        </div>
+        <div class="reveal" data-delay="1">
+          <img class="portrait home-about__img" src="assets/garima.jpg" width="1100" height="1429" alt="Portrait of Garima Shrestha in a white shirt with arms crossed, smiling." loading="lazy" />
+        </div>
       </div>
     </section>
 
@@ -83,67 +99,15 @@
       </div>
     </section>
 
-    <!-- GALLERY: art + photography (Everything view only) -->
-    <section class="gallery wrap" id="gallery" data-tags="art">
-      <div class="gallery__block reveal">
-        <h2 class="gallery__h">Art</h2>
-        <p class="gallery__intro">Through my paintings, I weave dreams into reality and transform emotions into art, expressing what words cannot. Charcoal, acrylic, watercolor and gouache; colour as a language, and mandalas as meditation.</p>
-        <div class="g-row" role="list">
-          <button type="button" style="--ar:1.000" class="g-item g-round" data-group="art" data-cap="Mandala" data-desc="Mandalas are my form of meditation: a symbol of unity and the circle of life." aria-label="View larger: Mandala"><img src="assets/gallery/mandala-disc.jpg" alt="Mandala on a round panel" loading="lazy" /></button>
-          <button type="button" style="--ar:0.496" class="g-item" data-group="art" data-cap="Mandalas, colour-blocked" data-desc="Contrasting patterns stand for the countless paths we take, which together make one emotional journey." aria-label="View larger: Mandalas, colour-blocked"><img src="assets/gallery/mandala-canvas.jpg" alt="Mandalas on a colour-blocked canvas" loading="lazy" /></button>
-          <button type="button" style="--ar:1.344" class="g-item" data-group="art" data-cap="Abstract in blue and gold" data-desc="Colour as a language for emotion. Blue stands for tranquility." aria-label="View larger: Abstract in blue and gold"><img src="assets/gallery/abstract-blue-gold.jpg" alt="Abstract painting in blue, grey and gold" loading="lazy" /></button>
-        </div>
-        <div class="g-row" role="list">
-          <button type="button" style="--ar:0.790" class="g-item" data-group="art" data-cap="Vortex" data-desc="Tranquility in blue, pulled into a spiral." aria-label="View larger: Vortex"><img src="assets/gallery/vortex.jpg" alt="Abstract blue vortex painting" loading="lazy" /></button>
-          <button type="button" style="--ar:0.742" class="g-item" data-group="art" data-cap="Tapasya" data-desc="Charcoal. A happy girl drawn in black and white, to show the contrast between outward appearance and inner emotion." aria-label="View larger: Tapasya"><img src="assets/gallery/tapasya.jpg" alt="Charcoal portrait of a girl squinting and smiling" loading="lazy" /></button>
-          <button type="button" style="--ar:0.744" class="g-item" data-group="art" data-cap="Wall of Faces" data-desc="Inspired by Ruth Asawa’s Wall of Faces at the Cantor Arts Center: a series on how differently each of us experiences emotion." aria-label="View larger: Wall of Faces"><img src="assets/gallery/wall-of-faces.jpg" alt="A wall of faces in charcoal" loading="lazy" /></button>
-        </div>
-      </div>
-      <div class="gallery__block reveal">
-        <h2 class="gallery__h">Photography</h2>
-        <div class="g-row" role="list">
-          <button type="button" style="--ar:0.562" class="g-item" data-group="photo" data-cap="Golden Gate in fog" aria-label="View larger: Golden Gate in fog"><img src="assets/gallery/golden-gate-fog.jpg" alt="The Golden Gate Bridge disappearing into fog, with a sailboat below" loading="lazy" /></button>
-          <button type="button" style="--ar:0.859" class="g-item" data-group="photo" data-cap="Vessel" aria-label="View larger: Vessel"><img src="assets/gallery/vessel.jpg" alt="The Vessel structure at Hudson Yards against glass towers" loading="lazy" /></button>
-          <button type="button" style="--ar:0.562" class="g-item" data-group="photo" data-cap="Patterned facade" aria-label="View larger: Patterned facade"><img src="assets/gallery/facade.jpg" alt="A perforated metal facade with a wave pattern" loading="lazy" /></button>
-          <button type="button" style="--ar:0.562" class="g-item" data-group="photo" data-cap="Church doorway" aria-label="View larger: Church doorway"><img src="assets/gallery/church-door.jpg" alt="A brick church with a pointed arch door and stone steps" loading="lazy" /></button>
-          <button type="button" style="--ar:1.333" class="g-item" data-group="photo" data-cap="Oculus" aria-label="View larger: Oculus"><img src="assets/gallery/oculus.jpg" alt="White ribs of the Oculus in black and white" loading="lazy" /></button>
-          <button type="button" style="--ar:0.562" class="g-item" data-group="photo" data-cap="Through the padlocks" aria-label="View larger: Through the padlocks"><img src="assets/gallery/padlocks-bridge.jpg" alt="The Golden Gate Bridge seen through a fence of padlocks at dusk" loading="lazy" /></button>
-        </div>
-      </div>
-      <div class="gallery__block reveal">
-        <h2 class="gallery__h">Digital design</h2>
-        <div class="g-row g-row--one" role="list">
-          <button type="button" style="--ar:0.648" class="g-item" data-group="design" data-cap="Zion National Park" data-desc="An illustrated map poster with trails, river, landmarks and a map key, made in Illustrator." aria-label="View larger: Zion National Park, illustrated map poster"><img src="assets/gallery/zion-poster.jpg" alt="Illustrated poster map of Zion National Park in red and brown, with trails, the Virgin River, landmarks and a map key." loading="lazy" /></button>
-        </div>
-      </div>
-    </section>
 
-    <!-- NUMBERS -->
-    <section class="band">
-      <div class="wrap">
-        <ul class="reveal">
-          <li><strong>4.0</strong><span>GPA, B.S. Web &amp; Digital Design</span></li>
-          <li><strong>Google</strong><span>UX Design Professional Certificate</span></li>
-          <li><strong>Real clients</strong><span>Inventory, photography, non-profit and beauty</span></li>
-          <li><strong>Design + code</strong><span>Figma to shipped front end</span></li>
-        </ul>
-      </div>
-    </section>
 
     <!-- CLOSING -->
     <section class="home-cta wrap">
-      <h2 class="reveal" data-delay="1" style="margin-top:1.2rem;">Let’s make the next one <em>together.</em></h2>
+      <h2 class="reveal" data-delay="1" style="margin-top:1.2rem;">Let’s work <em>together.</em></h2>
       <a href="contact.html" class="btn reveal" data-delay="2">Let’s talk <span class="arrow">↗</span></a>
     </section>
   </main>
 
-  <!-- Gallery lightbox -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
-    <button class="lightbox__close" id="lb-close" type="button" aria-label="Close">&times;</button>
-    <button class="arrow-btn arrow-btn--l" id="lb-prev" type="button" aria-label="Previous image"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-    <button class="arrow-btn arrow-btn--r" id="lb-next" type="button" aria-label="Next image"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-    <figure class="lightbox__fig"><img id="lb-img" alt="" /><figcaption><b id="lb-cap"></b><span id="lb-desc"></span></figcaption></figure>
-  </div>
 
   <footer class="site-foot">
     <div class="wrap foot-grid">
@@ -159,7 +123,6 @@
     </div>
   </footer>
 
-  <script src="gallery.js"></script>
   <script src="main.js"></script>
   <script src="assistant.js?v=2" defer></script>
 </body>
