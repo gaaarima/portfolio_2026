@@ -98,7 +98,7 @@
 
 /* Phone frames wrap each screen exactly: ratio on the screen (content box), no letterboxing */
 .bp-phone__frame { box-sizing: content-box; --r: .46; aspect-ratio: 402 / 874; max-height: none; }
-.bp-phone__frame:has(img[src*="v1-"]) { --r: .5625; aspect-ratio: 9 / 16; }
+.bp-phone__frame:has(img[src*="v1-"]), .bp-phone__frame:has(img[src*="inv-wire-"]) { --r: .5625; aspect-ratio: 9 / 16; }
 .bp-phone__frame img { object-fit: cover; object-position: top; border-radius: 16px; }
 .bp-canvas .bp-phone__frame { max-height: none; max-width: calc(38vh * var(--r)); }
 .bp-evolve .bp-phone__frame { max-height: none; max-width: calc(56vh * var(--r)); }
