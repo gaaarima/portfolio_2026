@@ -75,3 +75,7 @@ body.home::before { content: ""; display: block; position: fixed; inset: 0; z-in
 .arrow-btn:disabled { opacity: .25; cursor: default; }
 @media (max-width: 760px) { .lightbox { padding: 3.6rem .6rem 1.5rem; } .lightbox .arrow-btn { display: none; } }
 .home-hero__diamond--br { left: auto; top: auto; right: calc(var(--d) / -2); bottom: calc(var(--d) / -2); }
+/* Featured works: whole images, never cropped, text below */
+.home-work .tile__img { aspect-ratio: 4 / 3; background: #EEF1F7; padding: clamp(.9rem, 2vw, 1.4rem); }
+.home-work .tile__img img { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+.home-work .tile:hover .tile__img img { transform: scale(1.02); }
