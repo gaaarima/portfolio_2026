@@ -9,12 +9,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Garima Shrestha" />
   <meta property="og:title" content="Bishal Imagery — Photographer Website · Garima Shrestha" />
-  <meta property="og:description" content="Designing and building a bookings-ready website for a Bay Area photographer — UX, UI and front-end." />
+  <meta property="og:description" content="Case study: designing and building a bookings-ready website for a Bay Area photographer — brand-led design, a gallery that lets the work breathe, and an inquiry form that turns visitors into leads." />
   <meta name="twitter:card" content="summary" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case-behance.css?v=5" />
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
@@ -34,180 +35,80 @@
     </div>
   </header>
 
-  <main id="main">
-    <!-- HERO / SUMMARY -->
-    <section class="hero wrap cs-hero">
-      <h1 class="cs-title reveal" data-delay="1" style="margin-top:1.2rem;">Bishal Imagery —<br />Photographer Website</h1>
-      <p class="cs-tagline reveal" data-delay="2">A bookings-ready website for a Bay Area photographer: brand-led design, a gallery that lets the work breathe, and an inquiry form that turns visitors into leads.</p>
+  <main id="main" class="bp">
 
-      <div class="snapshot reveal" data-delay="2">
-        <div class="snapshot__cell"><div class="snapshot__k">Role</div><div class="snapshot__v">UX &amp; UI Design · Front-End (solo)</div></div>
-        <div class="snapshot__cell"><div class="snapshot__k">Timeline</div><div class="snapshot__v"><span class="todo">3 weeks — confirm</span></div></div>
-        <div class="snapshot__cell"><div class="snapshot__k">Tools</div><div class="snapshot__v">HTML, CSS, JavaScript, Schema.org</div></div>
-        <div class="snapshot__cell"><div class="snapshot__k">Live site</div><div class="snapshot__v"><a href="https://bishalphotography.com" class="link-underline" target="_blank" rel="noopener">bishalphotography.com ↗</a></div></div>
+    <!-- COVER -->
+    <section class="bp-cover wrap">
+      <div class="bp-cover__text">
+        <h1 class="cs-title reveal">Bishal Imagery</h1>
+        <p class="cs-tagline reveal" data-delay="1">A bookings-ready website for a Bay Area photographer: a gallery that lets the work breathe, and an inquiry form that turns visitors into leads.</p>
+        <div class="snapshot reveal" data-delay="2"><div class="snapshot__cell"><div class="snapshot__k">Role</div><div class="snapshot__v">UX &amp; UI Design · Front-End (solo)</div></div><div class="snapshot__cell"><div class="snapshot__k">Client</div><div class="snapshot__v">Wedding &amp; portrait photographer</div></div><div class="snapshot__cell"><div class="snapshot__k">Tools</div><div class="snapshot__v">HTML, CSS, JavaScript, Schema.org</div></div><div class="snapshot__cell"><div class="snapshot__k">Live site</div><div class="snapshot__v"><a href="https://bishalphotography.com" class="link-underline" target="_blank" rel="noopener">bishalphotography.com ↗</a></div></div></div>
+      </div>
+      <div class="bp-cover__screens bp-cover__screens--solo reveal" data-delay="1"><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/bishal-hero-desktop.jpg" alt="The live Bishal Imagery homepage hero: Framing Your Story over a dark photograph" loading="lazy" /></div></figure></div>
+    </section>
+
+    <!-- DESIGN THINKING -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Design thinking</h2>
+      <ol class="bp-steps reveal"><li><span class="bp-steps__n">1</span><b>Empathize</b><p>Bishal shoots weddings and portraits across the Bay Area, but had no professional site and no way to be found or booked.</p></li><li><span class="bp-steps__n">2</span><b>Define</b><p>Three jobs: show the work, be discoverable for “Bay Area photographer”, and capture bookings.</p></li><li><span class="bp-steps__n">3</span><b>Ideate</b><p>One scroll mapped to how a client decides, in a calm, gallery-like style so the photos stay the hero.</p></li><li><span class="bp-steps__n">4</span><b>Prototype</b><p>Desktop and mobile wireframes locked structure and spacing before a single photo went in, then the build.</p></li><li><span class="bp-steps__n">5</span><b>Test</b><p>Tested form delivery end to end, then launched on a custom domain with HTTPS and structured data.</p></li></ol>
+      <div class="bp-persona reveal">
+        <div><div class="persona__name">Bishal Imagery</div><div class="persona__role">Client · wedding &amp; portrait photographer</div></div>
+        <p>A working photographer with no way to be found, or booked.</p>
+        <p class="bp-persona__goal"><b>Goal:</b> turn a curious visitor into a booking inquiry with zero friction.</p>
       </div>
     </section>
 
-    <section class="section--tight wrap">
-      <div class="img-pair img-pair--one"><figure class="pfig reveal"><div class="pfig__frame"><img loading="lazy" src="assets/bishal-hero-desktop.jpg" alt="Bishal Imagery homepage hero: a full-screen photograph with the headline Framing Your Story." /></div><figcaption>The live homepage hero — the photograph does the talking.</figcaption></figure></div>
+    <!-- FLOW -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Flow chart</h2>
+      <div class="bp-flow reveal" role="img" aria-label="Flow: hero, portfolio, services, testimonials, about, booking form, inquiry delivered to the owner."><div class="bp-flow__row"><span class="bp-flow__label">One scroll, in the order a client decides</span><ol class="bp-path"><li><span class="bp-node bp-node--b">Hero</span></li><li><span class="bp-node ">Portfolio</span></li><li><span class="bp-node ">Services</span></li><li><span class="bp-node ">Testimonials</span></li><li><span class="bp-node ">About</span></li><li><span class="bp-node bp-node--y">Booking form</span></li><li><span class="bp-node bp-node--g bp-node--pill">Inquiry delivered</span></li></ol></div></div>
     </section>
 
-    <!-- PROBLEM -->
-    <section class="section--tight wrap">
-      <div class="cs-body">
-        <h2 class="reveal">The problem</h2>
-        <p class="reveal">Bishal shoots weddings and portraits across the Bay Area, but had no professional site and no online path from "interested" to "inquiry." A working photographer with no way to be found, or booked. The brief came down to three jobs:</p>
-      </div>
-      <div class="cards3">
-        <div class="mini reveal"><span class="mini__n">01</span><h3>Show the work</h3><p>Present the photography like a gallery would: large, uncluttered, immersive.</p></div>
-        <div class="mini reveal" data-delay="1"><span class="mini__n">02</span><h3>Be discoverable</h3><p>Rank for "Bay Area photographer" with a credible, locally optimized presence.</p></div>
-        <div class="mini reveal" data-delay="2"><span class="mini__n">03</span><h3>Capture bookings</h3><p>Turn a curious visitor into a booking inquiry with zero friction.</p></div>
-      </div>
-    </section>
-
-    <!-- DIRECTION -->
-    <section class="section--tight wrap">
-      <div class="cs-body">
-        <span class="phase-tag reveal">01 · Direction</span>
-        <h2 class="reveal" style="margin-top:0.4rem;">Timeless, not trendy, so the photos stay the hero.</h2>
-        <p class="reveal">A warm, earthy palette and an editorial serif and sans pairing set a calm, gallery-like tone. Restraint was the point: the interface recedes so the imagery carries the emotion.</p>
-      </div>
-      <div class="dir reveal">
-        <div class="swatches" role="img" aria-label="Palette: paper, sand, light tan, accent brown, ink black">
-          <div style="background:#FBFAF7;color:#8a847c">Paper</div>
-          <div style="background:#F5EFE6;color:#8a847c">Sand</div>
-          <div style="background:#C4A882;color:#4a3d28">Light</div>
-          <div style="background:#8B7355;color:#fff">Accent</div>
-          <div style="background:#1a1a1a;color:#fff">Ink</div>
+    <!-- WIREFRAME -->
+    <section class="bp-sec wrap">
+      <div class="bp-split">
+        <div class="bp-split__text reveal">
+          <h2 class="bp-h">Wireframe</h2>
+          <p>Low-fidelity desktop and mobile wireframes set the section order and the generous spacing before any photography.</p>
         </div>
-        <div class="typedemo">
-          <div class="typedemo__big">Framing <em>Your</em> Story</div>
-          <div class="typedemo__small">Timeless and natural photography across the Bay Area</div>
-          <div class="typedemo__lab">Cormorant Garamond · Jost</div>
+        <div class="bp-canvas reveal" data-delay="1"><div class="bp-grid bp-grid--web"><figure class="bp-fig"><img class="bp-sheet" src="assets/bishal-wireframe-desktop.svg" alt="Desktop wireframe of the one-page site" loading="lazy" /><figcaption>Desktop</figcaption></figure><figure class="bp-fig"><img class="bp-sheet" src="assets/bishal-wireframe-mobile.svg" alt="Mobile wireframe of the one-page site" loading="lazy" /><figcaption>Mobile</figcaption></figure></div></div>
+      </div>
+    </section>
+
+    <!-- USER INTERFACE -->
+    <section class="bp-sec wrap">
+      <div class="bp-split">
+        <div class="bp-split__text reveal">
+          <h2 class="bp-h">User interface</h2>
+          <p>A warm, earthy palette and an editorial serif and sans pairing. The interface recedes so the imagery carries the emotion.</p><p>Six services on an airy grid, each with a soft icon and one honest line, and a validated “Book a Session” form.</p>
         </div>
+        <div class="bp-canvas reveal" data-delay="1"><div class="bp-grid bp-grid--web"><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/bishal-hero-desktop.jpg" alt="Homepage hero" loading="lazy" /></div><figcaption>Hero</figcaption></figure><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/bishal-services.jpg" alt="Six services on a calm grid" loading="lazy" /></div><figcaption>Services</figcaption></figure><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/bishal-about.jpg" alt="About section with a portrait of Bishal" loading="lazy" /></div><figcaption>About</figcaption></figure><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/bishal-contact-form.jpg" alt="Booking section with contact details and form" loading="lazy" /></div><figcaption>Booking</figcaption></figure></div></div>
       </div>
     </section>
 
-    <!-- ARCHITECTURE -->
-    <section class="section--tight wrap">
-      <div class="cs-body">
-        <span class="phase-tag reveal">02 · Architecture</span>
-        <h2 class="reveal" style="margin-top:0.4rem;">One scroll, mapped to how a client decides.</h2>
-        <p class="reveal">Hero → Portfolio → Services → Testimonials → About → Booking. Low-fidelity wireframes locked the structure and spacing before a single photo went in. Toggle the views:</p>
-      </div>
-      <div class="seg reveal" role="group" aria-label="Wireframe view">
-        <button type="button" class="seg__btn on" data-wf="desk" aria-pressed="true">Desktop</button>
-        <button type="button" class="seg__btn" data-wf="mob" aria-pressed="false">Mobile</button>
-      </div>
-      <div class="wf-stage reveal">
-        <img id="wf-desk" src="assets/bishal-wireframe-desktop.svg" width="900" height="1760" alt="Desktop wireframe of the home page: navigation, full-bleed hero, masonry portfolio gallery, six service cards, about section with photo carousel, and a booking form footer." />
-        <img id="wf-mob" class="mob" src="assets/bishal-wireframe-mobile.svg" width="420" height="1500" alt="Mobile wireframe of the home page: hamburger navigation, hero, single-column gallery, stacked services, about, and booking form." hidden />
-      </div>
+    <!-- TESTING -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Testing: before and after</h2>
+      <div class="bp-rounds reveal"><div class="bp-round"><b>Booking form</b><p>Before: a “thank you” showed, but every inquiry was silently discarded. After: delivered to the owner's inbox, with email and phone required and real success and error states.</p></div><div class="bp-round"><b>About carousel and launch</b><p>Before: arrow buttons overlapped the photo, and the domain showed “Site not found”. After: clean dots and swipe, live on a custom domain with HTTPS.</p></div></div>
+      
     </section>
 
-    <!-- SERVICES -->
-    <section class="section--tight wrap">
-      <div class="cs-body">
-        <span class="phase-tag reveal">03 · Letting it breathe</span>
-        <h2 class="reveal" style="margin-top:0.4rem;">Clear services, generous space.</h2>
-        <p class="reveal">Six offerings on an airy grid, easy to scan and never crowded: each a soft icon and one honest line of copy.</p>
+    <!-- DESIGN SYSTEM -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Design system</h2>
+      <div class="bp-ds reveal">
+        <div class="bp-ds__stack"><div class="bp-ds__block"><h3>Colour</h3><ul class="bp-swatches"><li><i style="background:#FBFAF7"></i><b>Paper</b><span>#FBFAF7</span></li><li><i style="background:#F5EFE6"></i><b>Sand</b><span>#F5EFE6</span></li><li><i style="background:#C4A882"></i><b>Light</b><span>#C4A882</span></li><li><i style="background:#8B7355"></i><b>Accent</b><span>#8B7355</span></li><li><i style="background:#1A1A1A"></i><b>Ink</b><span>#1A1A1A</span></li></ul></div></div>
+        <div class="bp-ds__stack"><div class="bp-ds__block"><h3>Type</h3><div class="bp-type"><div><b>Display</b><span>Cormorant Garamond</span></div><div><b>Body</b><span>Jost</span></div></div></div><div class="bp-ds__block"><h3>Quality</h3><ul class="bp-chips"><li>Required email and phone</li><li>Success and error states</li><li>Schema.org local business</li><li>HTTPS</li><li>Large uncluttered images</li></ul></div></div>
       </div>
-      <div class="img-pair img-pair--one"><figure class="pfig reveal"><div class="pfig__frame"><img src="assets/bishal-services.jpg" loading="lazy" alt="Services grid showing six photography offerings: wedding, engagement, family, portrait, event, and baby shower." /></div><figcaption>Services: six offerings on a calm, scannable grid.</figcaption></figure></div>
-    </section>
-
-    <!-- CONVERSION -->
-    <section class="section--tight wrap">
-      <div class="cs-body">
-        <span class="phase-tag reveal">04 · Conversion</span>
-        <h2 class="reveal" style="margin-top:0.4rem;">The form had one job: don't lose the lead.</h2>
-        <p class="reveal">On a static site there's no server to catch a submission, so a form can <em>look</em> like it works while silently dropping every message. I wired delivery to a form service, made email and phone required, and added real success and error states. Then I tested delivery end to end.</p>
-      </div>
-      <div class="img-pair img-pair--one"><figure class="pfig reveal"><div class="pfig__frame"><img src="assets/bishal-contact-form.jpg" loading="lazy" alt="Contact and booking section with contact details beside a Book a Session form." /></div><figcaption>The booking section: contact details plus a validated "Book a Session" form.</figcaption></figure></div>
-    </section>
-
-    <!-- BEFORE / AFTER -->
-    <section class="section--tight wrap">
-      <div class="cs-body">
-        <span class="phase-tag reveal">Before / after</span>
-        <h2 class="reveal" style="margin-top:0.4rem;">Drag to see what changed.</h2>
-        <p class="reveal">The most meaningful improvements weren't cosmetic. Pick a change and drag the handle (or focus it and use the arrow keys).</p>
-      </div>
-      <div class="seg reveal" role="group" aria-label="Before and after example">
-        <button type="button" class="seg__btn on" data-ba="form" aria-pressed="true">Booking form</button>
-        <button type="button" class="seg__btn" data-ba="car" aria-pressed="false">About carousel</button>
-      </div>
-
-      <div class="ba reveal" id="ba">
-        <!-- Scene: form -->
-        <div class="ba__scene on" data-scene="form">
-          <div class="ba__side ba__before">
-            <span class="ba__badge">Before</span>
-            <div class="mock">
-              <div class="mock__ttl">Book a Session</div><div class="mock__sub">Fill in the details below</div>
-              <div class="mock__bar"></div><div class="mock__bar"></div><div class="mock__bar"></div>
-              <div class="mock__btn" style="background:#c9a9a4">Send Message</div>
-              <div class="mock__note bad">✗ "Thank you" shown, but every inquiry silently discarded. Phone optional, no validation.</div>
-            </div>
-          </div>
-          <div class="ba__side ba__after" data-after>
-            <span class="ba__badge">After</span>
-            <div class="mock">
-              <div class="mock__ttl">Book a Session</div><div class="mock__sub">Fill in the details below</div>
-              <div class="mock__bar"></div><div class="mock__bar"></div><div class="mock__bar"></div>
-              <div class="mock__btn" style="background:var(--claret)">Send Message</div>
-              <div class="mock__note good">✓ Delivered to the owner's inbox. Email and phone required, with success and error states.</div>
-            </div>
-          </div>
-        </div>
-        <!-- Scene: carousel -->
-        <div class="ba__scene" data-scene="car">
-          <div class="ba__side ba__before ba__photo" style="background-image:url('assets/bishal-about.jpg')">
-            <span class="ba__badge">Before</span>
-            <span class="ba__arrow" style="left:14px" aria-hidden="true">←</span>
-            <span class="ba__arrow" style="right:14px" aria-hidden="true">→</span>
-            <span class="ba__tag">Arrow buttons overlap the photo</span>
-          </div>
-          <div class="ba__side ba__after ba__photo" data-after style="background-image:url('assets/bishal-about.jpg')">
-            <span class="ba__badge">After</span>
-            <span class="ba__dots" aria-hidden="true"><i class="a"></i><i></i></span>
-            <span class="ba__tag">Clean: dots and swipe</span>
-          </div>
-        </div>
-
-        <div class="ba__handle" id="baHandle" role="slider" tabindex="0" aria-label="Before and after divider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span class="ba__grip" aria-hidden="true">⇔</span></div>
-      </div>
-      <p class="fig-note">Also launched from a "Site not found" 404 to live on a custom domain with HTTPS and structured data.</p>
     </section>
 
     <!-- OUTCOME -->
-    <section class="section--tight wrap">
-      <div class="cs-body">
-        <h2 class="reveal">Outcome</h2>
-        <p class="reveal">A real business, online and taking inquiries.</p>
-      </div>
-      <div class="cards3">
-        <div class="stat reveal"><b>Live</b><span>Production site on a custom domain, HTTPS</span></div>
-        <div class="stat reveal" data-delay="1"><b>1st</b><span>Online booking channel for the client</span></div>
-        <div class="stat reveal" data-delay="2"><b>100%</b><span>Inquiries now delivered <span class="todo">add a metric</span></span></div>
-      </div>
-      <div class="cs-body">
-        <blockquote class="pullquote reveal">
-          "<span class="todo">Add a one-line client testimonial here</span>"
-          <cite>— Bishal, Bishal Imagery</cite>
-        </blockquote>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section--tight wrap">
-      <div class="cta-band reveal">
-        <div>
-          <h2 style="margin-top:0.8rem;">See it live, or let's talk.</h2>
-        </div>
-        <div class="hero-cta" style="margin-top:0;">
-          <a href="https://bishalphotography.com" class="btn" target="_blank" rel="noopener">View the live site <span class="arrow">↗</span></a>
-          <a href="mailto:gaaarima11@gmail.com" class="btn btn--ghost">Let's talk</a>
-        </div>
+    <section class="bp-sec wrap">
+      <div class="bp-outcome reveal">
+        <h2 class="bp-h">Outcome</h2>
+        <div class="bp-stats"><div class="bp-stat"><b>Live</b><span>production site on a custom domain</span></div><div class="bp-stat"><b>1st</b><span>online booking channel for the client</span></div><div class="bp-stat"><b>6</b><span>services on one scannable grid</span></div></div>
+        <p>A real business, online and taking inquiries. The most meaningful fix wasn't cosmetic: making sure no lead gets lost.</p>
+        <div class="bp-outcome__ctas"><a href="https://bishalphotography.com" class="btn" target="_blank" rel="noopener">View the live site <span class="arrow">↗</span></a><a href="contact.html" class="btn btn--ghost">Let's talk <span class="arrow">→</span></a></div>
       </div>
     </section>
 
@@ -219,78 +120,19 @@
   <footer class="site-foot">
     <div class="wrap foot-grid">
       <div>
-        <a class="foot-big foot-next" href="nwgnca.html">Next: NWGN-CA <span aria-hidden="true">→</span></a>
+        <a class="foot-big foot-next" href="nyc-lifestyle.html">Next: NYC Nepali Lifestyle <span aria-hidden="true">→</span></a>
         <div class="foot-meta" style="margin-top:1.5rem;">© 2026 Garima Shrestha. All rights reserved.</div>
       </div>
       <div class="foot-links">
+        <a href="inventory-app.html" class="link-underline">Inventory App</a>
         <a href="pints-of-joy.html" class="link-underline">Pints of Joy</a>
-        <a href="rabina.html" class="link-underline">Rabina Beauty</a>
+        <a href="fittrack.html" class="link-underline">FitTrack</a>
         <a href="contact.html" class="link-underline">Contact</a>
       </div>
     </div>
   </footer>
 
   <script src="main.js"></script>
-  <script>
-    (function () {
-      // Wireframe toggle
-      var wfBtns = document.querySelectorAll("[data-wf]");
-      wfBtns.forEach(function (b) {
-        b.addEventListener("click", function () {
-          var k = b.dataset.wf;
-          wfBtns.forEach(function (x) {
-            var on = x === b;
-            x.classList.toggle("on", on);
-            x.setAttribute("aria-pressed", on ? "true" : "false");
-          });
-          document.getElementById("wf-desk").hidden = k !== "desk";
-          document.getElementById("wf-mob").hidden = k !== "mob";
-        });
-      });
-
-      // Before / after slider
-      var ba = document.getElementById("ba");
-      var handle = document.getElementById("baHandle");
-      var baBtns = document.querySelectorAll("[data-ba]");
-      var pct = 50, dragging = false;
-
-      function setSplit(p) {
-        pct = Math.max(2, Math.min(98, p));
-        handle.style.left = pct + "%";
-        handle.setAttribute("aria-valuenow", Math.round(pct));
-        ba.querySelectorAll(".ba__scene.on [data-after]").forEach(function (a) {
-          a.style.clipPath = "inset(0 0 0 " + pct + "%)";
-        });
-      }
-      function fromEvent(e) {
-        var r = ba.getBoundingClientRect();
-        var x = (e.touches ? e.touches[0].clientX : e.clientX) - r.left;
-        setSplit(x / r.width * 100);
-      }
-      baBtns.forEach(function (b) {
-        b.addEventListener("click", function () {
-          baBtns.forEach(function (x) {
-            var on = x === b;
-            x.classList.toggle("on", on);
-            x.setAttribute("aria-pressed", on ? "true" : "false");
-          });
-          ba.querySelectorAll(".ba__scene").forEach(function (s) {
-            s.classList.toggle("on", s.dataset.scene === b.dataset.ba);
-          });
-          setSplit(50);
-        });
-      });
-      ba.addEventListener("pointerdown", function (e) { dragging = true; ba.setPointerCapture(e.pointerId); fromEvent(e); });
-      ba.addEventListener("pointermove", function (e) { if (dragging) fromEvent(e); });
-      ba.addEventListener("pointerup", function () { dragging = false; });
-      ba.addEventListener("pointercancel", function () { dragging = false; });
-      handle.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowLeft") { setSplit(pct - 4); e.preventDefault(); }
-        if (e.key === "ArrowRight") { setSplit(pct + 4); e.preventDefault(); }
-      });
-      setSplit(50);
-    })();
-  </script>
   <script src="zoom.js" defer></script>
   <script src="assistant.js" defer></script>
 </body>

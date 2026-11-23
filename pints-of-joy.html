@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case-behance.css?v=5" />
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
@@ -34,180 +35,80 @@
     </div>
   </header>
 
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero wrap cs-hero">
-      <h1 class="cs-title reveal" data-delay="1" style="margin-top:1.2rem;">Pints of Joy</h1>
-      <p class="cs-tagline reveal" data-delay="2">An app for a real ice-cream business, designed from their weekly Excel routine and now running their operations.</p>
+  <main id="main" class="bp">
 
-      <div class="snapshot reveal" data-delay="2">
-        <div class="snapshot__cell"><div class="snapshot__k">Role</div><div class="snapshot__v">UX &amp; Product Design</div></div>
-        <div class="snapshot__cell"><div class="snapshot__k">Timeline</div><div class="snapshot__v">2025</div></div>
-        <div class="snapshot__cell"><div class="snapshot__k">Team</div><div class="snapshot__v">Me + Vijay (he built the AI layer)</div></div>
-        <div class="snapshot__cell"><div class="snapshot__k">Outcome</div><div class="snapshot__v">Live: runs Pints of Joy's real weekly operations</div></div>
+    <!-- COVER -->
+    <section class="bp-cover wrap">
+      <div class="bp-cover__text">
+        <h1 class="cs-title reveal">Pints of Joy</h1>
+        <p class="cs-tagline reveal" data-delay="1">Part 2 of the <a href="inventory-app.html" class="link-underline">Inventory App</a>: an operations app for a real ice-cream business, designed from their weekly Excel routine and now running their week.</p>
+        <div class="snapshot reveal" data-delay="2"><div class="snapshot__cell"><div class="snapshot__k">Role</div><div class="snapshot__v">UX &amp; Product Design</div></div><div class="snapshot__cell"><div class="snapshot__k">Timeline</div><div class="snapshot__v">2025</div></div><div class="snapshot__cell"><div class="snapshot__k">Team</div><div class="snapshot__v">Me + Vijay (AI layer)</div></div><div class="snapshot__cell"><div class="snapshot__k">Outcome</div><div class="snapshot__v">Live in weekly operations</div></div></div>
+      </div>
+      <div class="bp-cover__screens bp-cover__screens--solo reveal" data-delay="1"><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/pints-hf-signin.jpg" alt="The Pints of Joy inventory sign-in for the Sunnyvale, Fremont and Palo Alto stores" loading="lazy" /></div></figure></div>
+    </section>
+
+    <!-- DESIGN THINKING -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Design thinking</h2>
+      <ol class="bp-steps reveal"><li><span class="bp-steps__n">1</span><b>Empathize</b><p>Sat with the owner and manager to see their real week: count stock, type every number into Excel, run the maths.</p></li><li><span class="bp-steps__n">2</span><b>Define</b><p>A manual weekly ritual that ate hours, even with formulas, and could never show a trend.</p></li><li><span class="bp-steps__n">3</span><b>Ideate</b><p>Count once, let the app analyse stock and draft the weekly production plan, and keep the manager in charge of the final call.</p></li><li><span class="bp-steps__n">4</span><b>Prototype</b><p>I owned UX and design, Vijay built the AI layer. A first working version went to the manager early.</p></li><li><span class="bp-steps__n">5</span><b>Test</b><p>Every week I walked the manager through the latest build in his real workflow and folded his feedback into the next.</p></li></ol>
+      <div class="bp-persona reveal">
+        <div><div class="persona__name">The manager</div><div class="persona__role">Pints of Joy · real user</div></div>
+        <p>One factory and three stores, all planned from a hand-typed spreadsheet every week.</p>
+        <p class="bp-persona__goal"><b>Goal:</b> cut the hours of counting and planning, without taking the manager out of the loop.</p>
       </div>
     </section>
 
-    <section class="section--tight wrap">
-      <div class="img-pair"><figure class="pfig reveal"><div class="pfig__frame"><img loading="lazy" src="assets/pints-new-dashboard.jpg" alt="The redesigned Pints of Joy Inventory dashboard, Stock Flow: a top navigation of icon pills, four weekly stat cards, and weekly report cards for the production schedule and drinks log." /></div><figcaption>The real Pints of Joy app: the redesigned Stock Flow dashboard.</figcaption></figure><figure class="pfig reveal" data-delay="1"><div class="pfig__frame"><img src="assets/pints-signin.png" alt="Pints of Joy Inventory sign-in screen: the Pints of Joy logo and the title Inventory over a warm yellow-to-peach gradient, a username and password card, a gold Sign in button and a grey Request access button." loading="lazy" /></div><figcaption>The live inventory app's sign-in: one clear path in for each store (Sunnyvale, Fremont, Palo Alto).</figcaption></figure></div>
+    <!-- FLOW -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Flow chart</h2>
+      <div class="bp-flow reveal" role="img" aria-label="Flow: sign in per store, open the Stock Flow dashboard, count stock, the app drafts the plan, the manager reviews it and saves requirements. The dashboard also leads to production, transfers, reserved, closing, products, insights and people and tasks."><div class="bp-flow__row"><span class="bp-flow__label">Weekly plan</span><ol class="bp-path"><li><span class="bp-node bp-node--pill">Sign in<small>per store</small></span></li><li><span class="bp-node bp-node--b">Stock Flow<small>dashboard</small></span></li><li><span class="bp-node ">Count stock</span></li><li><span class="bp-node bp-node--y">App drafts plan</span></li><li><span class="bp-node ">Manager reviews</span></li><li><span class="bp-node bp-node--g bp-node--pill">Requirements saved</span></li></ol></div><div class="bp-flow__row"><span class="bp-flow__label">From the dashboard</span><div class="bp-tree"><span class="bp-node bp-node--b">Dashboard</span><ul class="bp-tree__kids"><li><span class="bp-node ">Production</span><small>per store, per day</small></li><li><span class="bp-node ">Transfers</span><small>send and receive sign-off</small></li><li><span class="bp-node ">Reserved</span></li><li><span class="bp-node ">Closing</span><small>and consumption</small></li><li><span class="bp-node ">Products</span></li><li><span class="bp-node ">Insights</span></li><li><span class="bp-node bp-node--g">People &amp; tasks</span><small>logging and assignment</small></li></ul></div></div></div>
     </section>
 
-    <!-- ===== SECTION 02 — PINTS OF JOY (REAL-WORLD BUILD) =====
-         NOTE: three image slots below need files saved into /assets (see comments). -->
-    <section class="section--tight wrap" id="pints-of-joy" style="border-top:1px solid var(--line); padding-top:clamp(3rem,6vw,5rem);">
-      <div class="cs-body">
-        <span class="phase-tag reveal">Part 2 · Turning it into a real project</span>
-        <h2 class="reveal" style="margin-top:0.4rem;">From a weekly spreadsheet to an app the business runs on</h2>
-        <p class="reveal">This builds on <a href="inventory-app.html" class="link-underline">Part 1, the Inventory App from my Google UX capstone →</a></p>
-        <p class="reveal">Pints of Joy is a small-batch Indian ice-cream maker with a Mountain View factory and three Bay Area stores. Every week, inventory, production planning, and store transfers lived in a hand-typed Excel sheet. I researched the real workflow and designed the app that replaced it.</p>
-
-
-
-        <h3 class="reveal">The short version</h3>
-        <p class="reveal"><strong>Problem.</strong> Each week the manager counted stock and typed every number into Excel by hand. Even with formulas, the counting, calculations, and production plan took hours, and there was no way to see trends.</p>
-        <p class="reveal"><strong>What I did.</strong> I sat with the owner and manager, mapped the real weekly ritual, and designed the system around it. Then I iterated screen by screen with the person who uses it every week.</p>
-        <p class="reveal"><strong>Outcome.</strong> The app now runs the business's real weekly operations and has grown from an inventory tracker into an operations tool: planning, transfers, employee logging, and task assignment.</p>
-
-        <h3 class="reveal">How it started</h3>
-        <p class="reveal">It began with one honest question: could I take a messy, manual, real-world process and design something that removes the work? Not a mockup, but a tool someone would choose to open on a Monday.</p>
-        <p class="reveal">The manager's week was the brief: count the stock, type every number into Excel, run the calculations, build a production plan, all by hand. The spreadsheet worked and the formulas were real, but it was a weekly time sink that couldn't surface a single trend. So before designing anything, I sat down with the owner and the manager to understand the process as it actually happened. The data model came straight from their sheet: pints, 3G, boxes, 4oz cups, popsicles, sandwiches, flavors like Rasmalai, Kulfi and Falooda, verification columns, and weekly production tabs.</p>
-
-        <h3 class="reveal">The process, mapped from real conversations</h3>
-        <ol class="reveal">
-          <li><strong>Empathize.</strong>
-            <ul>
-              <li>Sat down with the owner and manager to understand their real process before designing anything.</li>
-              <li>Learned they were running everything through Microsoft Excel — functional, with formulas, but not built to track trends or reduce their manual workload.</li>
-              <li>Discovered the weekly grind: count stock, input every number by hand, run the calculations — even with formulas, still a significant time sink for the manager.</li>
-            </ul>
-          </li>
-          <li><strong>Define.</strong>
-            <ul>
-              <li>Identified the challenge: a time-consuming, manual weekly ritual that ate into the manager's schedule despite already having Excel formulas in place.</li>
-              <li>The goal: reduce that time and friction, and move toward a system that could eventually generate reports and plans on its own, powered by AI.</li>
-              <li>Scope grew beyond production planning alone — toward a holistic operations tool, not just an inventory tracker.</li>
-            </ul>
-          </li>
-          <li><strong>Ideate.</strong>
-            <ul>
-              <li>Mapped the current process: count stock → calculate requirements → build a production plan, entirely by hand.</li>
-              <li>Reimagined it as: count existing inventory → app analyzes stock levels, requirements, and trends → app auto-generates a weekly production report.</li>
-              <li>Designed the manager's review and edit step to stay in the loop before anything becomes final — automation that speeds things up without taking the manager out of the loop.</li>
-            </ul>
-          </li>
-          <li><strong>Prototype.</strong>
-            <ul>
-              <li>Built an initial version of the app and brought it to the manager for a first look.</li>
-              <li>I owned the UX and design; Vijay built the AI layer — working together to bring the concept to life.</li>
-              <li>Iterated weekly: each week I'd walk the manager through the latest version and fold his feedback directly into the next round.</li>
-              <li>Expanded the prototype over time to include employee logging and task assignment, turning it into a broader operations tool.</li>
-            </ul>
-          </li>
-          <li><strong>Test.</strong>
-            <ul>
-              <li>Every iteration was tested directly with the manager's real weekly workflow, not a simulated one.</li>
-              <li>Feedback from each round shaped the next — many iterations before landing on the final build.</li>
-              <li>The app is now used as part of the business's actual weekly operations, replacing the manual Excel process it grew out of.</li>
-            </ul>
-          </li>
-        </ol>
-
-        <h3 class="reveal">Design decisions</h3>
-        <div class="img-pair img-pair--one"><figure class="pfig reveal"><div class="pfig__frame"><img src="assets/pints-product.webp" alt="Saffron and pistachio Indian ice cream served in copper bowls, the Pints of Joy product the app is built around." loading="lazy" /></div><figcaption>The product the app keeps in stock. Real brand photography runs through the brand.</figcaption></figure></div>
-        <ol class="reveal">
-          <li><strong>Keep the human in the loop.</strong> The app drafts the weekly production plan; the manager reviews and edits before anything is final.</li>
-          <li><strong>Match the paper, then improve it.</strong> Sheet-style entry for Transfers, Production, Reserved, and Closing mirrors the Excel muscle memory, so day one feels familiar.</li>
-          <li><strong>Speak the kitchen's language.</strong> Real flavors, package types, stores, and auto-generated invoice numbers (TRF-YY-NNNNN) instead of generic fields.</li>
-          <li><strong>Each store sees only its own.</strong> Roles and row-level security keep every location's sheet separate and safe.</li>
-        </ol>
-
-        <h3 class="reveal">How it evolved</h3>
-        <p class="reveal">What started as an inventory tracker is now the tool the week runs on. A personal build became software a real business depends on, and it kept growing toward everything the operation needed.</p>
-        <ol class="reveal">
-          <li><strong>Production planning.</strong> Per-store, per-day line entry with required batch numbers, rolled up across the factory and three stores.</li>
-          <li><strong>Store transfers.</strong> Sheet-style routes with send/receive sign-off, discrepancy capture, and auto-numbered invoices.</li>
-          <li><strong>Reserved &amp; closing.</strong> Reserved stock plus per-store, per-area closing and consumption counts.</li>
-          <li><strong>People &amp; tasks.</strong> Employee session logging and task assignment, the step that turned it into an operations tool.</li>
-        </ol>
-
-        <h3 class="reveal">Before and after: version 1 to the redesign</h3>
-        <p class="reveal">The first working version of the app proved the idea, then the manager's weekly use showed what to change. Drag the slider to compare the first version (left) with the redesign (right).</p>
-        <div class="proto-tabs reveal" role="group" aria-label="Choose a screen to compare">
-          <button type="button" class="on" data-ba-tab="dashboard" aria-pressed="true" data-ba-note="Dashboard: the side menu and marketing headline became a top icon menu, a plain 'Stock Flow' title and weekly report cards.">Dashboard</button>
-          <button type="button" data-ba-tab="production" aria-pressed="false" data-ba-note="Production: one package grid per day became a weekly requirements grid per store, with a batch number and a two-step plan.">Production</button>
-          <button type="button" data-ba-tab="transfers" aria-pressed="false" data-ba-note="Transfers: a sheet-style entry screen for store-to-store movement.">Transfers</button>
-          <button type="button" data-ba-tab="reserved" aria-pressed="false" data-ba-note="Reserved: the reserved-stock sheet in the new layout.">Reserved</button>
-          <button type="button" data-ba-tab="products" aria-pressed="false" data-ba-note="Products: the product list in the new layout.">Products</button>
+    <!-- WIREFRAME -->
+    <section class="bp-sec wrap">
+      <div class="bp-split">
+        <div class="bp-split__text reveal">
+          <h2 class="bp-h">Wireframe</h2>
+          <p>The redesigned structure in grayscale: sign-in, the dashboard, the production grid and transfers.</p><p>Everything is a sheet you can fill in, matching how the team already worked in Excel.</p>
         </div>
-        <div class="ba2 reveal" data-ba>
-          <span class="ba2__tag ba2__tag--l">Before</span><span class="ba2__tag ba2__tag--r">After</span>
-          <img src="assets/pints-new-dashboard.jpg" alt="After: redesigned dashboard screen" />
-          <div class="ba2__before"><img src="assets/pints-old-dashboard.jpg" alt="Before: first version of the dashboard screen" /></div>
-          <div class="ba2__line"></div><div class="ba2__knob" aria-hidden="true">⇔</div>
-          <input type="range" min="0" max="100" value="50" aria-label="Reveal amount: before versus after" />
-        </div>
-        <p class="proto-note" data-ba-cap>Dashboard: the side menu and marketing headline became a top icon menu, a plain "Stock Flow" title and weekly report cards.</p>
-        <ul class="reveal">
-          <li><strong>Navigation:</strong> the left sidebar became a top row of icon pills, and new areas appeared: Closing, Consumption, Dry Inventory, Insights, Profile and notifications.</li>
-          <li><strong>Less talk, more work:</strong> the marketing headline ("Joyful stock flow, minus the spreadsheet juggling") became a plain "Stock Flow" title, with weekly reports on the dashboard.</li>
-          <li><strong>Per-store planning:</strong> production now plans by store (Sunnyvale, Fremont, Palo Alto) with consumed, operations and required columns, and a batch number.</li>
-          <li><strong>One clear action:</strong> a floating "Save Requirements" button stays in reach while you edit the grid.</li>
-        </ul>
+        <div class="bp-canvas reveal" data-delay="1"><div class="bp-grid bp-grid--web-1"><figure class="bp-fig"><img class="bp-sheet" src="assets/pints-wireframes-v2.svg" alt="Low-fidelity wireframes of sign-in, dashboard, production and transfers" loading="lazy" /></figure></div></div>
+      </div>
+    </section>
 
-        <h3 class="reveal">Wireframes</h3>
-        <p class="reveal">The structure of the redesigned app in grayscale: sign-in, the dashboard, the production grid and transfers. Everything is a sheet you can fill in, matching how the team worked in Excel.</p>
-        <div class="img-pair img-pair--one"><figure class="pfig reveal"><div class="pfig__frame"><img src="assets/pints-wireframes-v2.svg" loading="lazy" alt="Low-fidelity wireframes of four screens: sign-in, the Stock Flow dashboard with stat cards and report cards, the production requirements grid, and the transfers sheet." /></div><figcaption>Low-fidelity wireframes of the redesigned structure.</figcaption></figure></div>
-
-        <h3 class="reveal">Lo-fi prototype</h3>
-        <p class="reveal">A clickable grayscale version of the flow. Try it: sign in, open Production, save, then start a transfer.</p>
-        <div class="lofi reveal" data-lofi>
-          <div class="lf-nav" role="group" aria-label="Lo-fi screens">
-            <button type="button" data-lf-tab="signin" aria-pressed="true">Sign in</button>
-            <button type="button" data-lf-tab="dash" aria-pressed="false">Dashboard</button>
-            <button type="button" data-lf-tab="prod" aria-pressed="false">Production</button>
-            <button type="button" data-lf-tab="trans" aria-pressed="false">Transfers</button>
-          </div>
-          <div class="lf-screen" id="lf-signin"><div class="lf-mid">
-            <h4>Inventory</h4><p>Sunnyvale · Fremont · Palo Alto</p><br />
-            <div class="lf-card"><span>Username</span><div class="lf-in"></div><span>Password</span><div class="lf-in"></div>
-            <button type="button" class="lf-btn" data-lf-go="dash" style="width:100%">Sign in</button><br /><br /><button type="button" class="lf-btn lf-btn--ghost" style="width:100%">Request access</button></div></div></div>
-          <div class="lf-screen" id="lf-dash" hidden>
-            <h4>Stock Flow</h4>
-            <div class="lf-stats"><div class="lf-stat">Transfers<b>0</b></div><div class="lf-stat">Production units<b>0</b></div><div class="lf-stat">Reserved units<b>0</b></div><div class="lf-stat">Needs verify<b>0</b></div></div>
-            <div class="lf-card"><b>Weekly reports</b><br /><br /><button type="button" class="lf-btn lf-btn--ghost" data-lf-go="prod">Production schedule</button> <button type="button" class="lf-btn lf-btn--ghost">Drinks log</button></div>
-            <button type="button" class="lf-btn" data-lf-go="trans">New transfer</button></div>
-          <div class="lf-screen" id="lf-prod" hidden>
-            <h4>Requirements for the week</h4>
-            <div class="lf-row"><span>Batch number *</span><div class="lf-in" style="margin:0 0 .5rem"></div></div>
-            <div class="lf-grid"><i class="h"></i><i class="h"></i><i class="h"></i><i class="h"></i><i class="h"></i><i class="h"></i><i class="h"></i>
-              <i class="n"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="n"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="n"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="n"></i><i></i><i></i><i></i><i></i><i></i><i></i></div><br />
-            <button type="button" class="lf-btn" data-lf-save>Save Requirements</button></div>
-          <div class="lf-screen" id="lf-trans" hidden>
-            <h4>Transfers</h4>
-            <div class="lf-row" style="grid-template-columns:1fr 1fr 1fr"><div>Route<div class="lf-in"></div></div><div>Date<div class="lf-in"></div></div><div>Invoice # (auto)<div class="lf-in"></div></div></div>
-            <div class="lf-grid" style="grid-template-columns:1.4fr 1fr 1fr 1fr"><i class="h"></i><i class="h"></i><i class="h"></i><i class="h"></i><i class="n"></i><i></i><i></i><i></i><i class="n"></i><i></i><i></i><i></i></div><br />
-            <button type="button" class="lf-btn lf-btn--ghost" data-lf-save>Send sign-off</button> <button type="button" class="lf-btn" data-lf-save>Receive sign-off</button></div>
+    <!-- USER INTERFACE -->
+    <section class="bp-sec wrap">
+      <div class="bp-split">
+        <div class="bp-split__text reveal">
+          <h2 class="bp-h">User interface</h2>
+          <p>Sheet-style entry for production, transfers, reserved and closing keeps the Excel muscle memory, so day one feels familiar.</p><p>Real flavours, package types, stores and auto-numbered invoices (TRF-YY-NNNNN) replace generic fields, and each store sees only its own data.</p>
         </div>
+        <div class="bp-canvas reveal" data-delay="1"><div class="bp-grid bp-grid--web"><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/pints-hf-signin.jpg" alt="Sign-in with one path in for each store" loading="lazy" /></div><figcaption>Sign in</figcaption></figure><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/pints-hf-dashboard.jpg" alt="Stock Flow dashboard" loading="lazy" /></div><figcaption>Dashboard</figcaption></figure><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/pints-hf-production.jpg" alt="Production grid planned per store" loading="lazy" /></div><figcaption>Production</figcaption></figure><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/pints-hf-transfers.jpg" alt="Transfers with send and receive sign-off" loading="lazy" /></div><figcaption>Transfers</figcaption></figure><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/pints-hf-closing.jpg" alt="Closing counts per store and area" loading="lazy" /></div><figcaption>Closing</figcaption></figure><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/pints-hf-insights.jpg" alt="Insights" loading="lazy" /></div><figcaption>Insights</figcaption></figure></div></div>
+      </div>
+    </section>
 
-        <h3 class="reveal">Hi-fi prototype</h3>
-        <p class="reveal">The finished screens, as a click-through. Click a screen name, the arrows, or the screen itself to move on.</p>
-        <div class="hf reveal" data-hifi tabindex="0" aria-label="High-fidelity screen walkthrough">
-          <div class="hf__bar" aria-hidden="true"><i></i><i></i><i></i><span class="hf__url">inventory / sign in</span></div>
-          <div class="hf__view"><img class="hf__img" src="assets/pints-hf-signin.jpg" alt="Final sign-in screen" /><button type="button" class="hf__ctl hf__ctl--p" data-hf-prev aria-label="Previous screen">←</button><button type="button" class="hf__ctl hf__ctl--n" data-hf-next aria-label="Next screen">→</button></div>
-        </div>
-        <div class="proto-tabs reveal" role="group" aria-label="Choose a screen" data-hifi-tabs>
-          <button type="button" data-hf="signin" class="on" aria-pressed="true">Sign in</button><button type="button" data-hf="dashboard" aria-pressed="false">Dashboard</button><button type="button" data-hf="closing" aria-pressed="false">Closing</button><button type="button" data-hf="consumption" aria-pressed="false">Consumption</button><button type="button" data-hf="production" aria-pressed="false">Production</button><button type="button" data-hf="transfers" aria-pressed="false">Transfers</button><button type="button" data-hf="reserved" aria-pressed="false">Reserved</button><button type="button" data-hf="products" aria-pressed="false">Products</button><button type="button" data-hf="dry" aria-pressed="false">Dry inventory</button><button type="button" data-hf="drinks" aria-pressed="false">Drinks</button><button type="button" data-hf="insights" aria-pressed="false">Insights</button><button type="button" data-hf="profile" aria-pressed="false">Profile</button>
-        </div>
+    <!-- TESTING -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Testing: before and after</h2>
+      <div class="bp-rounds reveal"><div class="bp-round"><b>Weekly reviews · v1</b><p>The first version proved the idea. Using it every week, the manager found the sidebar and marketing headline got in the way of the work.</p></div><div class="bp-round"><b>Redesign</b><p>A top row of icon pills, a plain “Stock Flow” title with weekly report cards, per-store planning, and a floating Save Requirements button.</p></div></div>
+      <div class="bp-ba reveal"><div class="bp-ba__row"><span class="bp-ba__tag bp-ba__tag--before">Before · version 1</span><div class="bp-canvas"><div class="bp-grid bp-grid--web"><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/pints-old-dashboard.jpg" alt="Version 1 dashboard with a side menu and marketing headline" loading="lazy" /></div><figcaption>Dashboard</figcaption></figure><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/pints-old-production.jpg" alt="Version 1 production screen" loading="lazy" /></div><figcaption>Production</figcaption></figure></div></div></div><div class="bp-ba__row"><span class="bp-ba__tag bp-ba__tag--after">After testing · redesign</span><div class="bp-canvas"><div class="bp-grid bp-grid--web"><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/pints-new-dashboard.jpg" alt="Redesigned dashboard with icon menu and report cards" loading="lazy" /></div><figcaption>Dashboard</figcaption></figure><figure class="bp-fig"><div class="bp-browser"><div class="bp-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/pints-new-production.jpg" alt="Redesigned per-store production grid" loading="lazy" /></div><figcaption>Production</figcaption></figure></div></div></div></div>
+    </section>
 
-        <h3 class="reveal">Where it landed</h3>
-        <div class="cards3">
-          <div class="stat reveal"><b>Live</b><span>In the business's real weekly operations</span></div>
-          <div class="stat reveal" data-delay="1"><b>1 + 3</b><span>One factory and three Bay Area stores, each with its own access</span></div>
-          <div class="stat reveal" data-delay="2"><b>7+</b><span>Connected workflows, from planning to task assignment</span></div>
-        </div>
+    <!-- DESIGN SYSTEM -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Design system</h2>
+      <div class="bp-ds reveal">
+        <div class="bp-ds__stack"></div>
+        <div class="bp-ds__stack"><div class="bp-ds__block"><h3>Type</h3><div class="bp-type"><div><b>Keep the human in the loop</b><span>The app drafts, the manager decides.</span></div><div><b>Match the paper, then improve it</b><span>Sheet-style grids that mirror Excel.</span></div><div><b>Speak the kitchen's language</b><span>Real flavours, packages and stores.</span></div></div></div><div class="bp-ds__block"><h3>Components</h3><ul class="bp-chips"><li>Sheet-style grids</li><li>Icon pill navigation</li><li>Weekly report cards</li><li>Floating save button</li><li>Send and receive sign-off</li><li>Auto-numbered invoices</li><li>Role-based access per store</li></ul></div></div>
+      </div>
+    </section>
 
-        <h3 class="reveal">What I learned</h3>
-        <p class="reveal">The best decisions came from watching someone use the app in their actual week, not from my own assumptions. Designing alongside an engineer taught me where clean design meets real constraints, and that a split team needs a shared spec. What started as a case study for my Google UX Design Professional Certificate is the project I'm proudest of, because it didn't stay in Figma: a real business took a chance on the concept and now runs on it.</p>
+    <!-- OUTCOME -->
+    <section class="bp-sec wrap">
+      <div class="bp-outcome reveal">
+        <h2 class="bp-h">Outcome</h2>
+        <div class="bp-stats"><div class="bp-stat"><b>Live</b><span>in the business's real weekly operations</span></div><div class="bp-stat"><b>1 + 3</b><span>one factory and three Bay Area stores</span></div><div class="bp-stat"><b>7+</b><span>connected workflows, planning to tasks</span></div></div>
+        <p>The best decisions came from watching someone use the app in their actual week. It grew from an inventory tracker into the tool the week runs on, and it is the project I'm proudest of because it didn't stay in Figma.</p>
+        <div class="bp-outcome__ctas"><a href="fittrack.html" class="btn">Next: FitTrack <span class="arrow">→</span></a><a href="inventory-app.html" class="btn btn--ghost">Part 1: Inventory App <span class="arrow">→</span></a></div>
       </div>
     </section>
 
@@ -223,15 +124,15 @@
         <div class="foot-meta" style="margin-top:1.5rem;">© 2026 Garima Shrestha. All rights reserved.</div>
       </div>
       <div class="foot-links">
+        <a href="inventory-app.html" class="link-underline">Inventory App</a>
         <a href="fittrack.html" class="link-underline">FitTrack</a>
-        <a href="rabina.html" class="link-underline">Rabina Beauty</a>
+        <a href="bishal.html" class="link-underline">Bishal Imagery</a>
         <a href="contact.html" class="link-underline">Contact</a>
       </div>
     </div>
   </footer>
 
   <script src="main.js"></script>
-  <script src="proto.js"></script>
   <script src="zoom.js" defer></script>
   <script src="assistant.js" defer></script>
 </body>

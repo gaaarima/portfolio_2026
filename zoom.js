@@ -8,7 +8,7 @@
   var big = box.querySelector("img"), x = box.querySelector("button"), last = null;
   function open(img) { last = img; big.src = img.currentSrc || img.src; big.alt = img.alt; box.hidden = false; document.body.style.overflow = "hidden"; x.focus(); }
   function close() { box.hidden = true; document.body.style.overflow = ""; if (last) last.focus(); }
-  document.querySelectorAll(".pfig__frame img").forEach(function (img) {
+  document.querySelectorAll(".pfig__frame img, .bp-sec .bp-phone__frame img, .bp-sec .bp-browser img, .bp-sec .bp-sheet").forEach(function (img) {
     img.tabIndex = 0; img.setAttribute("role", "button");
     img.addEventListener("click", function () { open(img); });
     img.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(img); } });

@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case-behance.css?v=5" />
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
@@ -34,114 +35,80 @@
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero wrap cs-hero">
-      <h1 class="cs-title reveal" data-delay="1" style="margin-top:1.2rem;">FitTrack —<br />AI-Powered Fitness App</h1>
-      <p class="cs-tagline reveal" data-delay="2">A free, all-in-one fitness app I designed for myself: workouts, protein and weight tracking in one place, with AI coaching on top.</p>
+  <main id="main" class="bp">
 
-      <div class="snapshot reveal" data-delay="2">
-        <div class="snapshot__cell"><div class="snapshot__k">Type</div><div class="snapshot__v">Personal project · mobile app</div></div>
-        <div class="snapshot__cell"><div class="snapshot__k">Duration</div><div class="snapshot__v">Oct 2025 – Dec 2025</div></div>
-        <div class="snapshot__cell"><div class="snapshot__k">Role</div><div class="snapshot__v">Solo: research, UX &amp; UI design</div></div>
-        <div class="snapshot__cell"><div class="snapshot__k">Tools</div><div class="snapshot__v"><a href="https://www.figma.com/design/kMqW5z7j9OkalgnjDbmcYg/Fit.Track?node-id=0-1&amp;t=EHQgOgSxjLslM8pS-1" class="link-underline" target="_blank" rel="noopener">Figma ↗</a></div></div>
+    <!-- COVER -->
+    <section class="bp-cover wrap">
+      <div class="bp-cover__text">
+        <h1 class="cs-title reveal">FitTrack</h1>
+        <p class="cs-tagline reveal" data-delay="1">A free, all-in-one fitness app I designed for myself: workouts, protein and weight tracking in one place, with AI suggestions on top.</p>
+        <div class="snapshot reveal" data-delay="2"><div class="snapshot__cell"><div class="snapshot__k">Type</div><div class="snapshot__v">Personal project · mobile app</div></div><div class="snapshot__cell"><div class="snapshot__k">Timeline</div><div class="snapshot__v">Oct – Dec 2025</div></div><div class="snapshot__cell"><div class="snapshot__k">Role</div><div class="snapshot__v">Solo: research, UX &amp; UI</div></div><div class="snapshot__cell"><div class="snapshot__k">Tools</div><div class="snapshot__v"><a href="https://www.figma.com/design/kMqW5z7j9OkalgnjDbmcYg/Fit.Track?node-id=0-1&amp;t=EHQgOgSxjLslM8pS-1" class="link-underline" target="_blank" rel="noopener">Figma ↗</a></div></div></div>
+      </div>
+      <div class="bp-cover__phones reveal" data-delay="1" aria-hidden="true"><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/fittrack-screen-body.png" alt="" loading="lazy" /></div></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/fittrack-screen-start.png" alt="" loading="lazy" /></div></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/fittrack-screen-stats.png" alt="" loading="lazy" /></div></figure></div>
+    </section>
+
+    <!-- DESIGN THINKING -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Design thinking</h2>
+      <ol class="bp-steps reveal"><li><span class="bp-steps__n">1</span><b>Empathize</b><p>Research showed people are motivated by visible results, but juggle separate apps and tedious manual entry.</p></li><li><span class="bp-steps__n">2</span><b>Define</b><p>Three pain points: low motivation, fragmentation across apps, and generic plans with unclear metrics.</p></li><li><span class="bp-steps__n">3</span><b>Ideate</b><p>One free app for workouts, protein and weight, with gentle AI suggestions the user can ignore.</p></li><li><span class="bp-steps__n">4</span><b>Prototype</b><p>Gray-box wireframes, then digital wireframes and a mapped user flow, then high-fidelity screens in Figma.</p></li><li><span class="bp-steps__n">5</span><b>Test</b><p>Next: usability testing of the AI suggestion flow and a full accessibility pass.</p></li></ol>
+      <div class="bp-persona reveal">
+        <div><div class="persona__name">Me, the first user</div><div class="persona__role">Gym beginner · the brief</div></div>
+        <p>I wanted one app to track my training, free, without switching between three.</p>
+        <p class="bp-persona__goal"><b>Goal:</b> track the whole fitness journey, including daily protein and weight, with suggestions that feel earned.</p>
       </div>
     </section>
 
-    <section class="section--tight wrap">
-      <div class="img-pair img-pair--one"><figure class="pfig reveal"><div class="pfig__frame"><img loading="lazy" src="assets/fittrack-userflow-hifi.png" alt="High-fidelity FitTrack screens — start page, body diagram, workout plan, workout log, stats, protein intake, streak, and profile — connected by a user-flow map"></div><figcaption>High-fidelity screens &amp; user flow — created in Figma.</figcaption></figure></div>
+    <!-- FLOW -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Flow chart</h2>
+      <div class="bp-flow reveal" role="img" aria-label="Flow: start page, tap a muscle on the body diagram, choose from the workout list, log sets and reps, land on stats. The start page also leads to weekly plan, protein intake, weight log, streak and profile."><div class="bp-flow__row"><span class="bp-flow__label">Workout session</span><ol class="bp-path"><li><span class="bp-node bp-node--b">Start page<small>streak + daily stats</small></span></li><li><span class="bp-node ">Body diagram<small>tap a muscle</small></span></li><li><span class="bp-node ">Workout list</span></li><li><span class="bp-node bp-node--y">Workout log<small>sets and reps</small></span></li><li><span class="bp-node bp-node--g bp-node--pill">Stats</span></li></ol></div><div class="bp-flow__row"><span class="bp-flow__label">From the start page</span><div class="bp-tree"><span class="bp-node bp-node--b">Start page</span><ul class="bp-tree__kids"><li><span class="bp-node ">Weekly plan</span></li><li><span class="bp-node ">Protein intake</span><small>AI suggestions</small></li><li><span class="bp-node ">Weight log</span><small>my own addition</small></li><li><span class="bp-node ">Streak</span></li><li><span class="bp-node ">Profile</span></li></ul></div></div></div>
     </section>
 
-    <section class="section--tight wrap">
-      <div class="cs-body">
-        <h2 class="reveal">Why I built it</h2>
-        <p class="reveal">I started going to the gym and wanted one app to track my training. At the time there was no AI fitness tracker that was easy to get and free to use, and the apps that existed made me juggle one for workouts, another for food and another for weight. So I decided to design the one I wanted, and add my own customizations: <strong>weight tracking and protein tracking built right in</strong>, next to the workouts.</p>
-        <p class="reveal">This was a personal project. I did all of it on my own, from the first sketch to the final screens.</p>
-        <p class="reveal"><a href="https://www.figma.com/design/kMqW5z7j9OkalgnjDbmcYg/Fit.Track?node-id=0-1&amp;t=EHQgOgSxjLslM8pS-1" class="link-underline" target="_blank" rel="noopener">Open the Figma file →</a></p>
-
-        <h2 class="reveal">Overview</h2>
-        <p class="reveal">FitTrack is an all-in-one mobile solution for tracking workouts, protein intake, and weight progress — enhanced with artificial intelligence. Designed for fitness enthusiasts and beginners alike, it uses AI to deliver personalized coaching, smarter nutrition tracking, and adaptive progress monitoring, making healthy living simpler, more motivating, and more effective.</p>
-        <p class="reveal"><strong>Problem.</strong> Generic, one-size-fits-all fitness plans with low motivation, plus the hassle of stitching together separate apps for fitness, nutrition, and health data.</p>
-        <p class="reveal"><strong>Goal.</strong> One free app that tracks the whole fitness journey, including daily protein intake and weight progress, and gives gentle AI suggestions along the way.</p>
-
-        <h2 class="reveal">My role &amp; deliverables</h2>
-        <p class="reveal">Sole designer on a personal project: research · low- to high-fidelity wireframing · interactive prototyping &amp; user-flow mapping · UI design system · final high-fidelity screens.</p>
-
-        <h2 class="reveal">User research</h2>
-        <p class="reveal">Research showed that enthusiasts and beginners alike are motivated by visible results and mental-health benefits, but struggle with fragmented experiences across multiple apps, tedious manual entry, and generic plans. Many find it hard to interpret their metrics and know what to do next, which — combined with low motivation and time constraints — leads to inconsistent logging and disengagement. The takeaway: people need an integrated, AI-powered tool that automates tracking, delivers personalized insight, and keeps them accountable.</p>
-        <h4 class="reveal">Key pain points</h4>
-        <ul class="reveal">
-          <li><strong>Low motivation</strong> — users lose consistency without personalized encouragement and visible progress.</li>
-          <li><strong>Fragmentation</strong> — tracking workouts, nutrition, and weight in separate apps is inconvenient and demotivating.</li>
-          <li><strong>Lack of personalization</strong> — generic plans and unclear metrics leave users unsure what to do next.</li>
-        </ul>
-
-        <h2 class="reveal">Design process</h2>
-
-        <h4 class="reveal">Wireframes</h4>
-        <p class="reveal">I started low-fidelity — gray boxes for every core screen: the body-diagram workout picker, weekly plan, workout log, stats, protein intake, streaks, and profile. Once the layout logic held up, I moved into digital wireframes and gave the app its name and nav bar, still in grayscale so the structure stayed the focus.</p>
-        <div class="img-pair"><figure class="pfig reveal"><div class="pfig__frame"><img loading="lazy" src="assets/fittrack-wireframes-lofi.png" alt="Low-fidelity paper-style wireframes for FitTrack: start page, front and back body diagrams, workout list, weekly plan, workout log, stats, inspiration, set list, protein intake, streak page, and profile"></div><figcaption>Low-fidelity wireframes — every core screen blocked out first.</figcaption></figure><figure class="pfig reveal"><div class="pfig__frame"><img loading="lazy" src="assets/fittrack-wireframes-midfi.png" alt="Digital mid-fidelity wireframes with the FIT.TRACK nav bar, still in grayscale, covering the same core screens plus settings and search"></div><figcaption>Digital wireframes — grayscale, with the FIT.TRACK nav bar in place.</figcaption></figure></div>
-
-        <h4 class="reveal">Prototype &amp; user flow</h4>
-        <p class="reveal">Next I mapped how a session actually connects screen to screen — tapping into the body diagram to start a workout, logging sets, and landing back on stats or streaks — before carrying that same flow into the high-fidelity visual design shown above.</p>
-        <div class="img-pair"><figure class="pfig reveal"><div class="pfig__frame"><img loading="lazy" src="assets/fittrack-userflow-midfi.png" alt="Mid-fidelity FitTrack screens connected by blue user-flow lines showing how a workout session moves between screens"></div><figcaption>Mapping the user flow — grayscale, before visual design.</figcaption></figure><figure class="pfig reveal" data-delay="1"><div class="pfig__frame"><img loading="lazy" src="assets/fittrack-design-system.png" alt="FitTrack design system: navigation bar, buttons, color palette, numeric keypad, streak and stat components, and a motivational card reading 'Sore today, stronger tomorrow'"></div><figcaption>Design system — color, type, and reusable components.</figcaption></figure></div>
-
-        <h4 class="reveal">Design system</h4>
-        <p class="reveal">FitTrack's visual language leans into gym energy: a black-and-maroon palette, high-contrast type, and a bottom nav built for one-handed use mid-workout. I built a small component library — buttons, tags, the numeric keypad, streak and stat cards — so every screen stayed consistent as the screen count grew.</p>
-
-        <h4 class="reveal">Final screens</h4>
-        <p class="reveal">The finished high-fidelity design, screen by screen. Scroll sideways to browse.</p>
-        <div class="phone-rail reveal" tabindex="0" aria-label="FitTrack final screens, scroll horizontally">
-          <figure class="phone">
-            <img src="assets/fittrack-screen-start.png" width="393" height="852" loading="lazy" alt="FitTrack start page screen: The home screen: streak, daily stats, and three AI suggestions for protein, today's workout and streak milestones" />
-            <figcaption><b>Start page</b>The home screen: streak, daily stats, and three AI suggestions for protein, today's workout and streak milestones.</figcaption>
-          </figure>
-          <figure class="phone">
-            <img src="assets/fittrack-screen-body.png" width="393" height="852" loading="lazy" alt="FitTrack body diagram screen: Tap a muscle group to start a workout; flip to see the back" />
-            <figcaption><b>Body diagram</b>Tap a muscle group to start a workout; flip to see the back.</figcaption>
-          </figure>
-          <figure class="phone">
-            <img src="assets/fittrack-screen-list.png" width="393" height="852" loading="lazy" alt="FitTrack workout list screen: Exercises for the chosen muscle, each with a picture" />
-            <figcaption><b>Workout list</b>Exercises for the chosen muscle, each with a picture.</figcaption>
-          </figure>
-          <figure class="phone">
-            <img src="assets/fittrack-screen-log.png" width="393" height="852" loading="lazy" alt="FitTrack workout log screen: Log sets and reps during a session" />
-            <figcaption><b>Workout log</b>Log sets and reps during a session.</figcaption>
-          </figure>
-          <figure class="phone">
-            <img src="assets/fittrack-screen-plan.png" width="393" height="852" loading="lazy" alt="FitTrack weekly plan screen: The week laid out day by day" />
-            <figcaption><b>Weekly plan</b>The week laid out day by day.</figcaption>
-          </figure>
-          <figure class="phone">
-            <img src="assets/fittrack-screen-protein.png" width="393" height="852" loading="lazy" alt="FitTrack protein intake screen: Quick numeric entry for daily protein" />
-            <figcaption><b>Protein intake</b>Quick numeric entry for daily protein.</figcaption>
-          </figure>
-          <figure class="phone">
-            <img src="assets/fittrack-screen-weight.png" width="393" height="852" loading="lazy" alt="FitTrack weight log screen: My own addition: log weight against a goal" />
-            <figcaption><b>Weight log</b>My own addition: log weight against a goal.</figcaption>
-          </figure>
-          <figure class="phone">
-            <img src="assets/fittrack-screen-stats.png" width="393" height="852" loading="lazy" alt="FitTrack stats screen: Weekly and monthly progress at a glance" />
-            <figcaption><b>Stats</b>Weekly and monthly progress at a glance.</figcaption>
-          </figure>
-          <figure class="phone">
-            <img src="assets/fittrack-screen-streak.png" width="393" height="852" loading="lazy" alt="FitTrack streak screen: A simple flame and a day count, not a loud game" />
-            <figcaption><b>Streak</b>A simple flame and a day count, not a loud game.</figcaption>
-          </figure>
-          <figure class="phone">
-            <img src="assets/fittrack-screen-profile.png" width="393" height="852" loading="lazy" alt="FitTrack profile screen: Name, age, height, weight and bio" />
-            <figcaption><b>Profile</b>Name, age, height, weight and bio.</figcaption>
-          </figure>
+    <!-- WIREFRAME -->
+    <section class="bp-sec wrap">
+      <div class="bp-split">
+        <div class="bp-split__text reveal">
+          <h2 class="bp-h">Wireframe</h2>
+          <p>Gray boxes first for every core screen: body-diagram picker, weekly plan, workout log, stats, protein, streaks and profile.</p><p>Once the layout held up, digital wireframes added the FIT.TRACK name and nav bar, still in grayscale so structure stayed the focus.</p>
         </div>
+        <div class="bp-canvas reveal" data-delay="1"><div class="bp-grid bp-grid--web-1"><figure class="bp-fig"><img class="bp-sheet" src="assets/fittrack-wireframes-lofi.png" alt="Low-fidelity wireframes of every core screen" loading="lazy" /><figcaption>Low fidelity</figcaption></figure><figure class="bp-fig"><img class="bp-sheet" src="assets/fittrack-wireframes-midfi.png" alt="Grayscale digital wireframes with the nav bar" loading="lazy" /><figcaption>Digital wireframes</figcaption></figure></div></div>
+      </div>
+    </section>
 
-        <h2 class="reveal">Next steps</h2>
-        <ul class="reveal">
-          <li>Usability testing on the AI suggestion flow — check that recommendations feel earned, not intrusive.</li>
-          <li>A full accessibility pass — contrast ratios, labels, and alt text across every screen.</li>
-        </ul>
+    <!-- USER INTERFACE -->
+    <section class="bp-sec wrap">
+      <div class="bp-split">
+        <div class="bp-split__text reveal">
+          <h2 class="bp-h">User interface</h2>
+          <p>Gym energy: a black and maroon palette, high-contrast type and a bottom nav built for one hand mid-workout.</p><p>AI touches are labelled as suggestions, and the streak is a quiet flame and a day count, not a loud game.</p><p><a href="https://www.figma.com/design/kMqW5z7j9OkalgnjDbmcYg/Fit.Track?node-id=0-1&amp;t=EHQgOgSxjLslM8pS-1" class="link-underline" target="_blank" rel="noopener">View the design in Figma →</a></p>
+        </div>
+        <div class="bp-canvas reveal" data-delay="1"><div class="bp-grid bp-grid--5"><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/fittrack-screen-start.png" alt="Start page with streak, stats and three AI suggestions" loading="lazy" /></div><figcaption>Start</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/fittrack-screen-body.png" alt="Body diagram to pick a muscle group" loading="lazy" /></div><figcaption>Body diagram</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/fittrack-screen-list.png" alt="Exercises for the chosen muscle" loading="lazy" /></div><figcaption>Workout list</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/fittrack-screen-log.png" alt="Logging sets and reps" loading="lazy" /></div><figcaption>Workout log</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/fittrack-screen-plan.png" alt="The week laid out day by day" loading="lazy" /></div><figcaption>Weekly plan</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/fittrack-screen-protein.png" alt="Numeric entry for daily protein" loading="lazy" /></div><figcaption>Protein</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/fittrack-screen-weight.png" alt="Weight logged against a goal" loading="lazy" /></div><figcaption>Weight</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/fittrack-screen-stats.png" alt="Weekly and monthly progress" loading="lazy" /></div><figcaption>Stats</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/fittrack-screen-streak.png" alt="Streak flame and day count" loading="lazy" /></div><figcaption>Streak</figcaption></figure><figure class="bp-phone"><div class="bp-phone__frame"><img src="assets/fittrack-screen-profile.png" alt="Profile with name, age, height, weight and bio" loading="lazy" /></div><figcaption>Profile</figcaption></figure></div></div>
+      </div>
+    </section>
 
-        <h2 class="reveal">Takeaways</h2>
-        <p class="reveal">Designing for myself was the best brief I could have had: I knew exactly when the tools I used let me down, and that made it easy to cut anything that didn't help someone mid-workout.</p>
-        <p class="reveal">Designing the AI touches — "Protein Intake AI Suggestions," "AI Workout Suggestions" — taught me to label them clearly as suggestions the user can ignore, not automated decisions made for them. And building the streak flame and weekly/monthly stat charts showed me how a small, honest progress marker does more for motivation than a louder gamified system would.</p>
+    <!-- TESTING -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Iteration: before and after</h2>
+      <div class="bp-rounds reveal"><div class="bp-round"><b>Grayscale flow</b><p>I mapped how a session connects screen to screen: body diagram, logging sets, then back to stats or streaks.</p></div><div class="bp-round"><b>Next round</b><p>Usability testing on the AI suggestions, to check they feel earned and not intrusive, and a contrast and labelling pass.</p></div></div>
+      <div class="bp-ba reveal"><div class="bp-ba__row"><span class="bp-ba__tag bp-ba__tag--before">Before · grayscale user flow</span><div class="bp-canvas"><div class="bp-grid bp-grid--web-1"><figure class="bp-fig"><img class="bp-sheet" src="assets/fittrack-userflow-midfi.png" alt="Grayscale user flow before visual design" loading="lazy" /></figure></div></div></div><div class="bp-ba__row"><span class="bp-ba__tag bp-ba__tag--after">After · high-fidelity flow</span><div class="bp-canvas"><div class="bp-grid bp-grid--web-1"><figure class="bp-fig"><img class="bp-sheet" src="assets/fittrack-userflow-hifi.png" alt="High-fidelity screens and user flow" loading="lazy" /></figure></div></div></div></div>
+    </section>
+
+    <!-- DESIGN SYSTEM -->
+    <section class="bp-sec wrap">
+      <h2 class="bp-h reveal">Design system</h2>
+      <div class="bp-ds reveal">
+        <div class="bp-ds__stack"><div class="bp-ds__block"><h3>Components</h3><figure class="bp-fig"><img class="bp-sheet" src="assets/fittrack-design-system.png" alt="FitTrack component library: buttons, tags, keypad, streak and stat cards" loading="lazy" /></figure></div></div>
+        <div class="bp-ds__stack"><div class="bp-ds__block"><h3>Built for the gym floor</h3><ul class="bp-chips"><li>One-handed bottom nav</li><li>High-contrast type</li><li>Numeric keypad</li><li>Streak and stat cards</li><li>AI clearly labelled</li><li>Reusable components</li></ul></div></div>
+      </div>
+    </section>
+
+    <!-- OUTCOME -->
+    <section class="bp-sec wrap">
+      <div class="bp-outcome reveal">
+        <h2 class="bp-h">Outcome</h2>
+        <div class="bp-stats"><div class="bp-stat"><b>10</b><span>final high-fidelity screens</span></div><div class="bp-stat"><b>3 in 1</b><span>workouts, protein and weight together</span></div><div class="bp-stat"><b>Solo</b><span>from first sketch to final screens</span></div></div>
+        <p>Designing for myself was the best brief: I knew exactly where other apps let me down, so it was easy to cut anything that didn't help someone mid-workout.</p>
+        <div class="bp-outcome__ctas"><a href="bishal.html" class="btn">Next: Bishal Imagery <span class="arrow">→</span></a><a href="https://www.figma.com/design/kMqW5z7j9OkalgnjDbmcYg/Fit.Track?node-id=0-1&amp;t=EHQgOgSxjLslM8pS-1" class="btn btn--ghost" target="_blank" rel="noopener">Open in Figma <span class="arrow">↗</span></a></div>
       </div>
     </section>
 
@@ -157,8 +124,9 @@
         <div class="foot-meta" style="margin-top:1.5rem;">© 2026 Garima Shrestha. All rights reserved.</div>
       </div>
       <div class="foot-links">
-        <a href="rabina.html" class="link-underline">Rabina Beauty</a>
+        <a href="inventory-app.html" class="link-underline">Inventory App</a>
         <a href="pints-of-joy.html" class="link-underline">Pints of Joy</a>
+        <a href="bishal.html" class="link-underline">Bishal Imagery</a>
         <a href="contact.html" class="link-underline">Contact</a>
       </div>
     </div>
