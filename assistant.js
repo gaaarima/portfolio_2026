@@ -41,15 +41,7 @@
     return best;
   }
 
-  var BIRD = '<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">' +
-    '<path d="M14 40 L3 34 L5 46 Z" fill="#082F7C"/>' +
-    '<path d="M27 15 q-2-8 3-9 M32 14 q0-8 5-8 M37 16 q3-6 7-4" stroke="#082F7C" stroke-width="2.4" stroke-linecap="round" fill="none"/>' +
-    '<circle cx="32" cy="36" r="21" fill="#0C45B0"/>' +
-    '<ellipse cx="34" cy="43" rx="13" ry="10" fill="#EBD5BE"/>' +
-    '<path d="M18 36 q-4 14 12 14 q-4-8 -4-16 z" fill="#082F7C"/>' +
-    '<circle cx="40" cy="29" r="4.6" fill="#fff"/><circle cx="41.2" cy="29.4" r="2.5" fill="#2a160d"/><circle cx="42" cy="28.4" r=".9" fill="#fff"/>' +
-    '<path d="M50 31 L60 35 L50 39 Z" fill="#7A3E26"/>' +
-    '<path d="M28 56 v5 M36 56 v5" stroke="#7A3E26" stroke-width="2.6" stroke-linecap="round"/></svg>';
+  var BIRD = '<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="#082F7C"><circle cx="53" cy="41" r="4.6"/><circle cx="56.5" cy="36.5" r="3.8"/><circle cx="55.5" cy="45.5" r="3.6"/></g><path d="M30 19 q-3-8 2-10 M33 19 q1-7 6-7 M28 20 q-6-4-4-9" stroke="#082F7C" stroke-width="2.4" stroke-linecap="round" fill="none"/><g fill="#2A62D0"><circle cx="50.5" cy="37.0" r="5.2"/><circle cx="49.1" cy="43.7" r="5.2"/><circle cx="45.1" cy="49.4" r="5.2"/><circle cx="39.1" cy="53.2" r="5.2"/><circle cx="32.0" cy="54.5" r="5.2"/><circle cx="24.9" cy="53.2" r="5.2"/><circle cx="18.9" cy="49.4" r="5.2"/><circle cx="14.9" cy="43.7" r="5.2"/><circle cx="13.5" cy="37.0" r="5.2"/><circle cx="14.9" cy="30.3" r="5.2"/><circle cx="18.9" cy="24.6" r="5.2"/><circle cx="24.9" cy="20.8" r="5.2"/><circle cx="32.0" cy="19.5" r="5.2"/><circle cx="39.1" cy="20.8" r="5.2"/><circle cx="45.1" cy="24.6" r="5.2"/><circle cx="49.1" cy="30.3" r="5.2"/></g><circle cx="32" cy="37" r="18.5" fill="#2A62D0"/><circle cx="28" cy="31" r="13" fill="#3C74E0" opacity=".55"/><g fill="#F6E7D6"><circle cx="36.9" cy="47.4" r="3.2"/><circle cx="34.1" cy="49.9" r="3.2"/><circle cx="30.2" cy="51.3" r="3.2"/><circle cx="25.8" cy="51.3" r="3.2"/><circle cx="21.9" cy="49.9" r="3.2"/><circle cx="19.1" cy="47.4" r="3.2"/></g><ellipse cx="28" cy="43" rx="10.5" ry="8" fill="#F6E7D6"/><path d="M41 36 q8 2 7 11 q-6 1 -9 -4 q-1 -4 2 -7z" fill="#0C45B0"/><circle cx="19.5" cy="32" r="4.2" fill="#1b0f0a"/><circle cx="18.2" cy="30.6" r="1.6" fill="#fff"/><circle cx="20.8" cy="33.6" r=".7" fill="#fff"/><circle cx="31.5" cy="32" r="3.6" fill="#1b0f0a"/><circle cx="30.4" cy="30.8" r="1.35" fill="#fff"/><circle cx="32.6" cy="33.4" r=".6" fill="#fff"/><ellipse cx="15.5" cy="37.5" rx="3" ry="1.9" fill="#FF8FA3" opacity=".75"/><ellipse cx="35.5" cy="37.5" rx="2.6" ry="1.7" fill="#FF8FA3" opacity=".75"/><path d="M25.6 35.4 L20.6 37.8 L25.8 39.4 Q27.2 37.4 25.6 35.4z" fill="#E8913A"/><path d="M27 55 v4 M25 59 h4 M36 55 v4 M34 59 h4" stroke="#E8913A" stroke-width="2" stroke-linecap="round"/></svg>';
 
   var btn = document.createElement("button");
   btn.type = "button"; btn.className = "ask";
