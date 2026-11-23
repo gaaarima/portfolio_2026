@@ -887,3 +887,4 @@ h1, h2, .display, .cs-title { color: var(--claret); }
 .portrait { display: block; width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
 .brand { color: var(--claret); }
 .ask svg { width: 40px; height: 40px; }
+.brand { gap: 0; }
