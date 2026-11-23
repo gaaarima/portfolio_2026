@@ -95,3 +95,11 @@
 .bp-ba__tag--after { background: #EDE9F9; color: #4b37a0; }
 @media (max-width: 900px) { .bp-grid--5 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .bp-grid--5 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Phone frames wrap each screen exactly: ratio on the screen (content box), no letterboxing */
+.bp-phone__frame { box-sizing: content-box; --r: .46; aspect-ratio: 402 / 874; max-height: none; }
+.bp-phone__frame:has(img[src*="v1-"]) { --r: .5625; aspect-ratio: 9 / 16; }
+.bp-phone__frame img { object-fit: cover; object-position: top; border-radius: 16px; }
+.bp-canvas .bp-phone__frame { max-height: none; max-width: calc(38vh * var(--r)); }
+.bp-evolve .bp-phone__frame { max-height: none; max-width: calc(56vh * var(--r)); }
+@media (max-width: 720px) { .bp-evolve .bp-phone__frame { max-height: none; max-width: calc(70vh * var(--r)); } }
