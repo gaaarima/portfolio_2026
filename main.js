@@ -63,7 +63,7 @@
     });
     // number the visible work rows 01, 02, ...
     var n = 0;
-    document.querySelectorAll(".work-row").forEach(function (row) {
+    document.querySelectorAll(".work-row, .work-filter-item").forEach(function (row) {
       if (row.classList.contains("is-hidden") || row.classList.contains("is-filtered")) return;
       var num = row.querySelector(".work-row__num");
       if (num) num.textContent = ("0" + (++n)).slice(-2);
@@ -108,10 +108,15 @@
       filterBar.querySelectorAll("button").forEach(function (x) {
         var on = x === b; x.classList.toggle("on", on); x.setAttribute("aria-pressed", on ? "true" : "false");
       });
-      document.querySelectorAll(".work-row").forEach(function (row) {
+      document.querySelectorAll(".work-row, .work-filter-item").forEach(function (row) {
         var tags = (row.getAttribute("data-tags") || "").split(/\s+/);
         row.classList.toggle("is-filtered", f !== "all" && tags.indexOf(f) === -1);
       });
+      var list = document.querySelector(".work-list");
+      if (list) {
+        var any = list.querySelector(".work-row:not(.is-filtered)");
+        list.closest("section").classList.toggle("is-filtered", !any);
+      }
       applyPath();
     });
   }
