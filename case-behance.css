@@ -198,3 +198,23 @@
 .bp-steps b { background: rgba(137, 18, 41, .12); color: var(--red); border: 1px solid rgba(137, 18, 41, .22); }
 .bp-steps b::before { content: counter(step) "\00a0\00a0"; }
 @media (max-width: 900px) { .bp-steps li { padding-left: 0; } }
+/* Flow charts on phones: stack every step top to bottom with down arrows */
+.bp-flow__mobile { display: none; }
+@media (max-width: 640px) {
+  .bp-flow { overflow: visible; padding: 1.1rem; }
+  .bp-flow svg { display: none; }
+  .bp-flow__mobile { display: block; }
+  .bp-path { flex-direction: column; align-items: stretch; flex-wrap: nowrap; gap: 0; }
+  .bp-path li { flex-direction: column; align-items: stretch; }
+  .bp-path li + li::before { content: "\2193"; margin: .35rem auto; font-size: 1.1rem; }
+  .bp-path .bp-node, .bp-tree .bp-node { display: block; width: 100%; white-space: normal; }
+  .bp-tree { min-width: 0; justify-items: stretch; }
+  .bp-tree > .bp-node::after { display: none; }
+  .bp-tree__kids { flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: .6rem; margin: .7rem 0 0 1.1rem; padding: 0 0 0 1rem; border-left: 2px solid #15110F; }
+  .bp-tree__kids > li { justify-items: stretch; gap: .25rem; }
+  .bp-tree__kids > li::before { top: 50%; left: -1rem; height: 0; width: 1rem; border-left: 0; border-top: 2px solid #15110F; }
+  .bp-tree__kids > li:has(small)::before { top: 1.4rem; }
+  .bp-tree__kids > li::after { display: none; }
+  .bp-tree__kids small { max-width: none; text-align: left; padding-left: .2rem; }
+  .bp-flow__row + .bp-flow__row { margin-top: 1.2rem; padding-top: 1.2rem; }
+}
