@@ -104,3 +104,4 @@ body.home::before { content: ""; display: block; position: fixed; inset: 0; z-in
   .lightbox__fig img { max-width: 100%; max-height: 60vh; justify-self: center; }
   .lb-meta { margin-block: 0; }
 }
+.home-hero .display em, .home-hero h1 em { color: #891229 !important; -webkit-text-fill-color: #891229; }
