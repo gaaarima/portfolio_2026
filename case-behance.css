@@ -191,3 +191,10 @@
 .bp-tree__kids .bp-node { padding: .6rem .85rem; font-size: .84rem; white-space: nowrap; }
 .bp-tree { min-width: max-content; }
 .bp-cover__text, .bp-cover > * { min-width: 0; } .bp-cover .snapshot__v { overflow-wrap: anywhere; }
+/* Design thinking: no number circles or dashed line; the number sits inside a translucent red pill */
+.bp-steps { counter-reset: step; }
+.bp-steps::before, .bp-steps__n { display: none; }
+.bp-steps li { padding-left: 0; counter-increment: step; }
+.bp-steps b { background: rgba(137, 18, 41, .12); color: var(--red); border: 1px solid rgba(137, 18, 41, .22); }
+.bp-steps b::before { content: counter(step) "\00a0\00a0"; }
+@media (max-width: 900px) { .bp-steps li { padding-left: 0; } }
