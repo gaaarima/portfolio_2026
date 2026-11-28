@@ -218,3 +218,12 @@
   .bp-tree__kids small { max-width: none; text-align: left; padding-left: .2rem; }
   .bp-flow__row + .bp-flow__row { margin-top: 1.2rem; padding-top: 1.2rem; }
 }
+/* Design thinking: "1. Empathize" pills joined by a wavy dotted line */
+.bp-steps b { text-transform: none; letter-spacing: .02em; font-size: .9rem; padding: .35rem .9rem; position: relative; z-index: 1;
+  background: linear-gradient(rgba(137, 18, 41, .12), rgba(137, 18, 41, .12)), var(--ivory); }
+.bp-steps b::before { content: counter(step) ".\00a0"; }
+.bp-steps::before { content: ""; display: block; position: absolute; left: 2%; right: 8%; top: 4px; height: 18px; border: 0; opacity: .55;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='18'%3E%3Cpath d='M0 9 Q11 1 22 9 T44 9' fill='none' stroke='%23891229' stroke-width='2.6' stroke-linecap='round' stroke-dasharray='0 6.5'/%3E%3C/svg%3E") repeat-x left center / 44px 18px; }
+@media (max-width: 900px) { .bp-steps::before { display: none; } }
+.bp-steps::before { top: 8px; right: 14%; opacity: .8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='18'%3E%3Cpath d='M0 9 Q11 1 22 9 T44 9' fill='none' stroke='%23891229' stroke-width='3' stroke-linecap='round' stroke-dasharray='0 6.5'/%3E%3C/svg%3E"); }
