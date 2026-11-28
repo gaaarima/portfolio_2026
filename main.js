@@ -171,3 +171,33 @@
     update();
   }
 })();
+
+/* Design thinking steps: one gentle dotted arc between each pair of pills */
+(function () {
+  var lists = document.querySelectorAll(".bp-steps");
+  if (!lists.length) return;
+  var NS = "http://www.w3.org/2000/svg";
+  function draw() {
+    for (var i = 0; i < lists.length; i++) {
+      var ol = lists[i], old = ol.querySelector(".bp-steps__arcs");
+      if (old) old.remove();
+      if (window.innerWidth <= 900) continue;
+      var pills = ol.querySelectorAll("b"), box = ol.getBoundingClientRect();
+      var svg = document.createElementNS(NS, "svg");
+      svg.setAttribute("class", "bp-steps__arcs"); svg.setAttribute("aria-hidden", "true");
+      svg.setAttribute("width", box.width); svg.setAttribute("height", 60);
+      for (var j = 0; j < pills.length - 1; j++) {
+        var a = pills[j].getBoundingClientRect(), b = pills[j + 1].getBoundingClientRect();
+        var x1 = a.right - box.left + 8, x2 = b.left - box.left - 8, y = a.top - box.top + a.height / 2 + 20;
+        if (x2 - x1 < 16) continue;
+        var p = document.createElementNS(NS, "path");
+        p.setAttribute("d", "M" + x1 + " " + y + " Q" + (x1 + x2) / 2 + " " + (y - 18) + " " + x2 + " " + y);
+        svg.appendChild(p);
+      }
+      ol.appendChild(svg);
+    }
+  }
+  var t; window.addEventListener("resize", function () { clearTimeout(t); t = setTimeout(draw, 120); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw); else window.addEventListener("load", draw);
+  draw();
+})();

@@ -227,3 +227,7 @@
 @media (max-width: 900px) { .bp-steps::before { display: none; } }
 .bp-steps::before { top: 8px; right: 14%; opacity: .8;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='18'%3E%3Cpath d='M0 9 Q11 1 22 9 T44 9' fill='none' stroke='%23891229' stroke-width='3' stroke-linecap='round' stroke-dasharray='0 6.5'/%3E%3C/svg%3E"); }
+/* replace the repeating wave with one arc per gap (drawn by main.js) */
+.bp-steps::before { display: none; }
+.bp-steps__arcs { position: absolute; left: 0; top: -20px; pointer-events: none; overflow: visible; }
+.bp-steps__arcs path { fill: none; stroke: var(--red); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 0 8; opacity: .55; }
